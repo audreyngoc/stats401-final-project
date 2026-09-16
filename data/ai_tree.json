@@ -1,0 +1,786 @@
+{
+  "name": "Artificial intelligence",
+  "article_id": 1164,
+  "children": [
+    {
+      "name": "Machine learning",
+      "article_id": 233488,
+      "relevance": 0.1508201533553315,
+      "global_indegree": 4508,
+      "children": [
+        {
+          "name": "Neural network (machine learning)",
+          "article_id": 21523,
+          "rank": 1,
+          "parent_similarity": 0.12985867200019532,
+          "global_indegree": 2020
+        },
+        {
+          "name": "Data mining",
+          "article_id": 42253,
+          "rank": 2,
+          "parent_similarity": 0.1519854792881007,
+          "global_indegree": 1607
+        },
+        {
+          "name": "Deep learning",
+          "article_id": 32472154,
+          "rank": 3,
+          "parent_similarity": 0.12367227298000466,
+          "global_indegree": 1450
+        },
+        {
+          "name": "Computer science",
+          "article_id": 5323,
+          "rank": 4,
+          "parent_similarity": 0.10735747437708323,
+          "global_indegree": 9772
+        },
+        {
+          "name": "Geoffrey Hinton",
+          "article_id": 507174,
+          "rank": 5,
+          "parent_similarity": 0.12575144180918352,
+          "global_indegree": 1019
+        },
+        {
+          "name": "Google DeepMind",
+          "article_id": 41755648,
+          "rank": 6,
+          "parent_similarity": 0.10816851626966237,
+          "global_indegree": 1254
+        },
+        {
+          "name": "Neuro-symbolic AI",
+          "article_id": 66170649,
+          "rank": 7,
+          "parent_similarity": 0.1406654351197984,
+          "global_indegree": 518
+        },
+        {
+          "name": "Theoretical computer science",
+          "article_id": 323392,
+          "rank": 8,
+          "parent_similarity": 0.11504818404292466,
+          "global_indegree": 797
+        },
+        {
+          "name": "Self-supervised learning",
+          "article_id": 67902375,
+          "rank": 9,
+          "parent_similarity": 0.12519950625879434,
+          "global_indegree": 556
+        },
+        {
+          "name": "Pattern recognition",
+          "article_id": 126706,
+          "rank": 10,
+          "parent_similarity": 0.12633488211336155,
+          "global_indegree": 625
+        }
+      ]
+    },
+    {
+      "name": "Natural language processing",
+      "article_id": 21652,
+      "relevance": 0.1552892032107349,
+      "global_indegree": 1664,
+      "children": [
+        {
+          "name": "Cognitive science",
+          "article_id": 5626,
+          "rank": 1,
+          "parent_similarity": 0.12399656862459874,
+          "global_indegree": 2020
+        },
+        {
+          "name": "Computational linguistics",
+          "article_id": 5561,
+          "rank": 2,
+          "parent_similarity": 0.13145513544598036,
+          "global_indegree": 852
+        },
+        {
+          "name": "Machine translation",
+          "article_id": 19980,
+          "rank": 3,
+          "parent_similarity": 0.11959159692970112,
+          "global_indegree": 870
+        },
+        {
+          "name": "Text mining",
+          "article_id": 318439,
+          "rank": 4,
+          "parent_similarity": 0.12507835574389464,
+          "global_indegree": 427
+        },
+        {
+          "name": "Sentiment analysis",
+          "article_id": 6435232,
+          "rank": 5,
+          "parent_similarity": 0.15427047898598029,
+          "global_indegree": 371
+        },
+        {
+          "name": "Data mining",
+          "article_id": 42253,
+          "rank": 6,
+          "parent_similarity": 0.11437704502657117,
+          "global_indegree": 1607
+        },
+        {
+          "name": "Symbolic artificial intelligence",
+          "article_id": 339417,
+          "rank": 7,
+          "parent_similarity": 0.11611814874498642,
+          "global_indegree": 414
+        },
+        {
+          "name": "Natural language generation",
+          "article_id": 301999,
+          "rank": 8,
+          "parent_similarity": 0.12536463235171275,
+          "global_indegree": 266
+        },
+        {
+          "name": "Word-sense disambiguation",
+          "article_id": 67065,
+          "rank": 9,
+          "parent_similarity": 0.1285930981113711,
+          "global_indegree": 227
+        },
+        {
+          "name": "Word embedding",
+          "article_id": 43561218,
+          "rank": 10,
+          "parent_similarity": 0.11508277160521595,
+          "global_indegree": 568
+        }
+      ]
+    },
+    {
+      "name": "Generative AI",
+      "article_id": 73291755,
+      "relevance": 0.1338709540705433,
+      "global_indegree": 1510,
+      "children": [
+        {
+          "name": "Generative pre-trained transformer",
+          "article_id": 72970020,
+          "rank": 1,
+          "parent_similarity": 0.17328075964987952,
+          "global_indegree": 825
+        },
+        {
+          "name": "AI boom",
+          "article_id": 73291899,
+          "rank": 2,
+          "parent_similarity": 0.16574990442914628,
+          "global_indegree": 1165
+        },
+        {
+          "name": "Large language model",
+          "article_id": 73248112,
+          "rank": 3,
+          "parent_similarity": 0.14172203589804655,
+          "global_indegree": 1236
+        },
+        {
+          "name": "AI art",
+          "article_id": 60639760,
+          "rank": 4,
+          "parent_similarity": 0.16465496414487252,
+          "global_indegree": 973
+        },
+        {
+          "name": "Google DeepMind",
+          "article_id": 41755648,
+          "rank": 5,
+          "parent_similarity": 0.11253079953057807,
+          "global_indegree": 1254
+        },
+        {
+          "name": "Prompt engineering",
+          "article_id": 69071767,
+          "rank": 6,
+          "parent_similarity": 0.14106296838166887,
+          "global_indegree": 575
+        },
+        {
+          "name": "Speech recognition",
+          "article_id": 29468,
+          "rank": 7,
+          "parent_similarity": 0.11273538865758903,
+          "global_indegree": 1408
+        },
+        {
+          "name": "Chatbot",
+          "article_id": 148349,
+          "rank": 8,
+          "parent_similarity": 0.12182847063439281,
+          "global_indegree": 879
+        },
+        {
+          "name": "Applications of artificial intelligence",
+          "article_id": 15893057,
+          "rank": 9,
+          "parent_similarity": 0.15621574841412772,
+          "global_indegree": 497
+        },
+        {
+          "name": "Speech synthesis",
+          "article_id": 42799,
+          "rank": 10,
+          "parent_similarity": 0.11624048806847052,
+          "global_indegree": 1114
+        }
+      ]
+    },
+    {
+      "name": "Problem solving",
+      "article_id": 1467948,
+      "relevance": 0.1349746946643327,
+      "global_indegree": 1246,
+      "children": [
+        {
+          "name": "Computer science",
+          "article_id": 5323,
+          "rank": 1,
+          "parent_similarity": 0.12021561776713813,
+          "global_indegree": 9772
+        },
+        {
+          "name": "Herbert A. Simon",
+          "article_id": 14205,
+          "rank": 2,
+          "parent_similarity": 0.13241428056241342,
+          "global_indegree": 2214
+        },
+        {
+          "name": "Automated theorem proving",
+          "article_id": 2546,
+          "rank": 3,
+          "parent_similarity": 0.20870551693553877,
+          "global_indegree": 967
+        },
+        {
+          "name": "Decision-making",
+          "article_id": 265752,
+          "rank": 4,
+          "parent_similarity": 0.12307530159063435,
+          "global_indegree": 1504
+        },
+        {
+          "name": "Simulation",
+          "article_id": 43444,
+          "rank": 5,
+          "parent_similarity": 0.12627291244885175,
+          "global_indegree": 1205
+        },
+        {
+          "name": "Cognitive science",
+          "article_id": 5626,
+          "rank": 6,
+          "parent_similarity": 0.11608830936757322,
+          "global_indegree": 2020
+        },
+        {
+          "name": "Heuristic",
+          "article_id": 63452,
+          "rank": 7,
+          "parent_similarity": 0.1577329132610083,
+          "global_indegree": 751
+        },
+        {
+          "name": "Critical thinking",
+          "article_id": 276872,
+          "rank": 8,
+          "parent_similarity": 0.12404598607112044,
+          "global_indegree": 1535
+        },
+        {
+          "name": "Logic programming",
+          "article_id": 17927,
+          "rank": 9,
+          "parent_similarity": 0.1810665676151026,
+          "global_indegree": 706
+        },
+        {
+          "name": "Allen Newell",
+          "article_id": 287300,
+          "rank": 10,
+          "parent_similarity": 0.12451900338378183,
+          "global_indegree": 898
+        }
+      ]
+    },
+    {
+      "name": "Transformer (deep learning)",
+      "article_id": 61603971,
+      "relevance": 0.1229431072616757,
+      "global_indegree": 1350,
+      "children": [
+        {
+          "name": "Large language model",
+          "article_id": 73248112,
+          "rank": 1,
+          "parent_similarity": 0.20438085829010647,
+          "global_indegree": 1236
+        },
+        {
+          "name": "Generative pre-trained transformer",
+          "article_id": 72970020,
+          "rank": 2,
+          "parent_similarity": 0.1650792231541183,
+          "global_indegree": 825
+        },
+        {
+          "name": "BERT (language model)",
+          "article_id": 62026514,
+          "rank": 3,
+          "parent_similarity": 0.22791463458341135,
+          "global_indegree": 787
+        },
+        {
+          "name": "Speech recognition",
+          "article_id": 29468,
+          "rank": 4,
+          "parent_similarity": 0.12684349601891703,
+          "global_indegree": 1408
+        },
+        {
+          "name": "Attention Is All You Need",
+          "article_id": 75477752,
+          "rank": 5,
+          "parent_similarity": 0.24999092541872073,
+          "global_indegree": 608
+        },
+        {
+          "name": "Neural network (machine learning)",
+          "article_id": 21523,
+          "rank": 6,
+          "parent_similarity": 0.11278529307865388,
+          "global_indegree": 2020
+        },
+        {
+          "name": "Vision transformer",
+          "article_id": 68212199,
+          "rank": 7,
+          "parent_similarity": 0.21670573095520948,
+          "global_indegree": 534
+        },
+        {
+          "name": "Recurrent neural network",
+          "article_id": 1706303,
+          "rank": 8,
+          "parent_similarity": 0.2104598776073876,
+          "global_indegree": 578
+        },
+        {
+          "name": "Self-supervised learning",
+          "article_id": 67902375,
+          "rank": 9,
+          "parent_similarity": 0.13637712601322158,
+          "global_indegree": 556
+        },
+        {
+          "name": "Long short-term memory",
+          "article_id": 10711453,
+          "rank": 10,
+          "parent_similarity": 0.15996704735398426,
+          "global_indegree": 610
+        }
+      ]
+    },
+    {
+      "name": "Knowledge representation and reasoning",
+      "article_id": 16920,
+      "relevance": 0.1518847545651294,
+      "global_indegree": 908,
+      "children": [
+        {
+          "name": "Ontology (information science)",
+          "article_id": 49681,
+          "rank": 1,
+          "parent_similarity": 0.14302278577448574,
+          "global_indegree": 777
+        },
+        {
+          "name": "Logic programming",
+          "article_id": 17927,
+          "rank": 2,
+          "parent_similarity": 0.17883254836733714,
+          "global_indegree": 706
+        },
+        {
+          "name": "Expert system",
+          "article_id": 10136,
+          "rank": 3,
+          "parent_similarity": 0.1939962498826914,
+          "global_indegree": 592
+        },
+        {
+          "name": "Knowledge base",
+          "article_id": 239497,
+          "rank": 4,
+          "parent_similarity": 0.1733609390464587,
+          "global_indegree": 620
+        },
+        {
+          "name": "Symbolic artificial intelligence",
+          "article_id": 339417,
+          "rank": 5,
+          "parent_similarity": 0.207113996476504,
+          "global_indegree": 414
+        },
+        {
+          "name": "Prolog",
+          "article_id": 23485,
+          "rank": 6,
+          "parent_similarity": 0.12396406240178928,
+          "global_indegree": 910
+        },
+        {
+          "name": "Automated theorem proving",
+          "article_id": 2546,
+          "rank": 7,
+          "parent_similarity": 0.12473550849966271,
+          "global_indegree": 967
+        },
+        {
+          "name": "Knowledge-based systems",
+          "article_id": 1377612,
+          "rank": 8,
+          "parent_similarity": 0.26227006624209964,
+          "global_indegree": 371
+        },
+        {
+          "name": "Reasoning system",
+          "article_id": 31103500,
+          "rank": 9,
+          "parent_similarity": 0.2308090391860732,
+          "global_indegree": 345
+        },
+        {
+          "name": "Automated reasoning",
+          "article_id": 2884728,
+          "rank": 10,
+          "parent_similarity": 0.1401728046050642,
+          "global_indegree": 482
+        }
+      ]
+    },
+    {
+      "name": "Artificial intelligence in video games",
+      "article_id": 1654769,
+      "relevance": 0.1206486544559022,
+      "global_indegree": 1439,
+      "children": [
+        {
+          "name": "Video game programmer",
+          "article_id": 311632,
+          "rank": 1,
+          "parent_similarity": 0.1278415767127674,
+          "global_indegree": 7825
+        },
+        {
+          "name": "Role-playing video game",
+          "article_id": 356777,
+          "rank": 2,
+          "parent_similarity": 0.11242426215973958,
+          "global_indegree": 3971
+        },
+        {
+          "name": "First-person shooter",
+          "article_id": 25395149,
+          "rank": 3,
+          "parent_similarity": 0.12331801498008042,
+          "global_indegree": 2895
+        },
+        {
+          "name": "Adventure game",
+          "article_id": 26757970,
+          "rank": 4,
+          "parent_similarity": 0.10665482744187416,
+          "global_indegree": 3896
+        },
+        {
+          "name": "History of artificial intelligence",
+          "article_id": 2894560,
+          "rank": 5,
+          "parent_similarity": 0.12932778256384617,
+          "global_indegree": 441
+        },
+        {
+          "name": "Game engine",
+          "article_id": 170581,
+          "rank": 6,
+          "parent_similarity": 0.1036044068396528,
+          "global_indegree": 7627
+        },
+        {
+          "name": "Multiplayer video game",
+          "article_id": 350680,
+          "rank": 7,
+          "parent_similarity": 0.1025468423767779,
+          "global_indegree": 13452
+        },
+        {
+          "name": "Non-player character",
+          "article_id": 29077530,
+          "rank": 8,
+          "parent_similarity": 0.1168714509289826,
+          "global_indegree": 2556
+        },
+        {
+          "name": "Intelligence",
+          "article_id": 519280,
+          "rank": 9,
+          "parent_similarity": 0.09217466249464025,
+          "global_indegree": 1902
+        },
+        {
+          "name": "Real-time strategy game",
+          "article_id": 77251,
+          "rank": 10,
+          "parent_similarity": 0.12781947884223682,
+          "global_indegree": 1770
+        }
+      ]
+    },
+    {
+      "name": "Reinforcement learning",
+      "article_id": 66294,
+      "relevance": 0.1260553061627716,
+      "global_indegree": 1109,
+      "children": [
+        {
+          "name": "Automated planning and scheduling",
+          "article_id": 1505641,
+          "rank": 1,
+          "parent_similarity": 0.17906432679338335,
+          "global_indegree": 667
+        },
+        {
+          "name": "Intelligent agent",
+          "article_id": 2711317,
+          "rank": 2,
+          "parent_similarity": 0.14622560574643417,
+          "global_indegree": 628
+        },
+        {
+          "name": "Q-learning",
+          "article_id": 1281850,
+          "rank": 3,
+          "parent_similarity": 0.23187342917899156,
+          "global_indegree": 468
+        },
+        {
+          "name": "Mathematical optimization",
+          "article_id": 52033,
+          "rank": 4,
+          "parent_similarity": 0.11594080264947002,
+          "global_indegree": 1693
+        },
+        {
+          "name": "Reinforcement learning from human feedback",
+          "article_id": 73200355,
+          "rank": 5,
+          "parent_similarity": 0.11992593965748484,
+          "global_indegree": 566
+        },
+        {
+          "name": "Operations research",
+          "article_id": 43476,
+          "rank": 6,
+          "parent_similarity": 0.08895098423044767,
+          "global_indegree": 2080
+        },
+        {
+          "name": "Markov chain",
+          "article_id": 60876,
+          "rank": 7,
+          "parent_similarity": 0.13553175806123524,
+          "global_indegree": 786
+        },
+        {
+          "name": "Monte Carlo tree search",
+          "article_id": 40528449,
+          "rank": 8,
+          "parent_similarity": 0.13899425592915546,
+          "global_indegree": 461
+        },
+        {
+          "name": "Monte Carlo method",
+          "article_id": 56098,
+          "rank": 9,
+          "parent_similarity": 0.11397336952771972,
+          "global_indegree": 830
+        },
+        {
+          "name": "Multi-agent system",
+          "article_id": 938833,
+          "rank": 10,
+          "parent_similarity": 0.09946808876096828,
+          "global_indegree": 611
+        }
+      ]
+    },
+    {
+      "name": "Computer vision",
+      "article_id": 6596,
+      "relevance": 0.1117580283652224,
+      "global_indegree": 2036,
+      "children": [
+        {
+          "name": "Augmented reality",
+          "article_id": 85631,
+          "rank": 1,
+          "parent_similarity": 0.10509715728992813,
+          "global_indegree": 2304
+        },
+        {
+          "name": "Visualization (graphics)",
+          "article_id": 660850,
+          "rank": 2,
+          "parent_similarity": 0.09902456872906854,
+          "global_indegree": 1009
+        },
+        {
+          "name": "Simultaneous localization and mapping",
+          "article_id": 763951,
+          "rank": 3,
+          "parent_similarity": 0.10738337660793404,
+          "global_indegree": 518
+        },
+        {
+          "name": "3D modeling",
+          "article_id": 30873116,
+          "rank": 4,
+          "parent_similarity": 0.09834924729498974,
+          "global_indegree": 881
+        },
+        {
+          "name": "Photogrammetry",
+          "article_id": 552840,
+          "rank": 5,
+          "parent_similarity": 0.10960371856252088,
+          "global_indegree": 779
+        },
+        {
+          "name": "Facial recognition system",
+          "article_id": 602401,
+          "rank": 6,
+          "parent_similarity": 0.09441479864696066,
+          "global_indegree": 1165
+        },
+        {
+          "name": "Interdisciplinarity",
+          "article_id": 15201,
+          "rank": 7,
+          "parent_similarity": 0.08626306286776488,
+          "global_indegree": 1970
+        },
+        {
+          "name": "Emotion recognition",
+          "article_id": 48198256,
+          "rank": 8,
+          "parent_similarity": 0.09765983528060027,
+          "global_indegree": 413
+        },
+        {
+          "name": "Computer graphics",
+          "article_id": 18567210,
+          "rank": 9,
+          "parent_similarity": 0.0918461110777267,
+          "global_indegree": 2003
+        },
+        {
+          "name": "Machine vision",
+          "article_id": 172088,
+          "rank": 10,
+          "parent_similarity": 0.1935892075921163,
+          "global_indegree": 243
+        }
+      ]
+    },
+    {
+      "name": "Artificial general intelligence",
+      "article_id": 586357,
+      "relevance": 0.1386970643432261,
+      "global_indegree": 841,
+      "children": [
+        {
+          "name": "Intelligence",
+          "article_id": 519280,
+          "rank": 1,
+          "parent_similarity": 0.10331534636969104,
+          "global_indegree": 1902
+        },
+        {
+          "name": "Cognitive science",
+          "article_id": 5626,
+          "rank": 2,
+          "parent_similarity": 0.0985032751052541,
+          "global_indegree": 2020
+        },
+        {
+          "name": "Existential risk from artificial intelligence",
+          "article_id": 46583121,
+          "rank": 3,
+          "parent_similarity": 0.14090384996285926,
+          "global_indegree": 588
+        },
+        {
+          "name": "AI alignment",
+          "article_id": 50785023,
+          "rank": 4,
+          "parent_similarity": 0.10547730810588848,
+          "global_indegree": 811
+        },
+        {
+          "name": "Superintelligence",
+          "article_id": 726659,
+          "rank": 5,
+          "parent_similarity": 0.12513504531837583,
+          "global_indegree": 552
+        },
+        {
+          "name": "Philosophy of artificial intelligence",
+          "article_id": 2958015,
+          "rank": 6,
+          "parent_similarity": 0.12619894595462905,
+          "global_indegree": 464
+        },
+        {
+          "name": "Technological singularity",
+          "article_id": 54245,
+          "rank": 7,
+          "parent_similarity": 0.11888985129812847,
+          "global_indegree": 816
+        },
+        {
+          "name": "Google DeepMind",
+          "article_id": 41755648,
+          "rank": 8,
+          "parent_similarity": 0.09517841978584306,
+          "global_indegree": 1254
+        },
+        {
+          "name": "Symbolic artificial intelligence",
+          "article_id": 339417,
+          "rank": 9,
+          "parent_similarity": 0.1252456273490131,
+          "global_indegree": 414
+        },
+        {
+          "name": "AI takeover",
+          "article_id": 813176,
+          "rank": 10,
+          "parent_similarity": 0.1104213741740215,
+          "global_indegree": 664
+        }
+      ]
+    }
+  ]
+}
