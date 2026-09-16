@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Navigating Knowledge
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+
+<body>
+
+    <header>
+        <h1>
+            Navigating Knowledge
+        </h1>
+
+        <p class="subtitle">
+            Exploring computing concepts through
+            Wikipedia's hyperlink network
+        </p>
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <h2>
+                Artificial Intelligence Knowledge Map
+            </h2>
+
+            <p>
+                Starting from the Wikipedia article
+                <strong>Artificial intelligence</strong>,
+                we identify closely related concepts using
+                both textual relevance and Wikipedia's
+                hyperlink structure.
+            </p>
+
+            <p>
+                The first level shows ten concepts strongly
+                related to artificial intelligence. Each
+                branch then expands into ten concepts related
+                to that specific topic.
+            </p>
+
+        </section>
+
+
+        <section class="visualization-section">
+
+            <h2>
+                1. Exploring AI from a Starting Concept
+            </h2>
+
+            <p class="viz-description">
+                This hierarchy shows how Artificial
+                Intelligence branches into related areas.
+                Concepts can appear under more than one branch
+                when they connect to multiple areas of AI.
+            </p>
+
+            <div class="legend">
+
+                <div class="legend-group">
+                    <span class="legend-title">
+                        Node size:
+                    </span>
+            
+                    <span class="legend-item">
+                        <span class="legend-circle seed-size"></span>
+                        Starting article
+                    </span>
+            
+                    <span class="legend-item">
+                        <span class="legend-circle first-size"></span>
+                        First-level concept
+                    </span>
+            
+                    <span class="legend-item">
+                        <span class="legend-circle second-size"></span>
+                        Second-level concept
+                    </span>
+                </div>
+
+
+                <div class="legend-group">
+
+                    <span class="legend-title">
+                        Branch color:
+                    </span>
+
+                    <div id="branch-legend"></div>
+
+                </div>
+
+            </div>
+
+
+            <div id="tree-container">
+
+                <div id="tree"></div>
+
+            </div>
+
+
+            <div class="interaction-plan">
+
+                <h3>
+                    Planned Interaction
+                </h3>
+
+                <p>
+                    In the final version, users will be able
+                    to search for a starting Wikipedia topic,
+                    expand or collapse branches, hover over
+                    concepts for additional information, and
+                    select concepts to highlight them across
+                    the other visualizations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="visualization-section">
+
+            <h2>
+                2. AI Knowledge Network
+            </h2>
+
+            <p class="viz-description">
+                The hierarchical view above shows one possible
+                learning structure, but Wikipedia concepts are not
+                actually organized as a tree. This network reveals
+                the cross-links, hubs, and shared concepts connecting
+                different areas of artificial intelligence.
+            </p>
+            
+
+            <div class="network-encoding">
+
+                <span class="legend-title">
+                    Node size:
+                </span>
+
+                <span>
+                    PageRank within the selected AI network
+                </span>
+
+                <span class="legend-divider">
+                    |
+                </span>
+
+                <span class="legend-title">
+                    Node color:
+                </span>
+
+                <span>
+                    Network community
+                </span>
+
+            </div>
+
+
+            <div id="community-legend"></div>
+
+
+            <div id="network-container">
+
+                <div id="network"></div>
+
+            </div>
+
+
+            <p class="network-note">
+                Hyperlink direction is preserved in the underlying
+                data. Arrowheads are omitted from this overview to
+                reduce visual clutter.
+            </p>
+
+
+            <div class="interaction-plan">
+
+                <h3>
+                    Planned Interaction
+                </h3>
+
+                <p>
+                    Users will be able to zoom and pan, select a
+                    concept to highlight its direct incoming and
+                    outgoing links, hover or click nodes to view
+                    network statistics, and synchronize selections
+                    with the hierarchy and other visualizations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="visualization-section">
+
+            <h2>
+                3. Structural Importance vs. Reader Attention
+            </h2>
+
+            <p class="viz-description">
+                This view compares how structurally prominent an
+                article is within Wikipedia with how much reader
+                attention it received during the past twelve
+                complete months.
+            </p>
+
+            <p class="viz-description">
+                Articles farther to the right receive links from
+                more Wikipedia articles. Articles higher on the
+                chart received more pageviews. Point size represents
+                PageRank within the selected Artificial Intelligence
+                network.
+            </p>
+
+            <div id="scatter-legend"></div>
+
+            <div id="scatter-container">
+
+                <div id="scatter"></div>
+
+            </div>
+
+            <p class="network-note">
+                Both axes use logarithmic scales because article
+                connectivity and pageviews are strongly skewed.
+                Dashed lines show the median values among the
+                selected AI concepts.
+            </p>
+
+
+            <div class="interaction-plan">
+
+                <h3>
+                    Planned Interaction
+                </h3>
+
+                <p>
+                    Users will be able to hover over points to view
+                    article statistics, filter concepts by network
+                    community, select different measures of
+                    structural importance, and click a concept to
+                    highlight the same article in the hierarchy and
+                    force-directed network.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/tree.js"></script>
+    <script src="js/network.js"></script>
+    <script src="js/scatter.js"></script>
+
+</body>
+
+</html>

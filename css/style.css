@@ -1,0 +1,512 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f7f7f8;
+    color: #222;
+}
+
+
+header {
+    padding: 48px 8%;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+
+header h1 {
+    margin: 0 0 8px 0;
+    font-size: 2.5rem;
+}
+
+
+.subtitle {
+    margin: 0;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+
+main {
+    width: min(
+        1500px,
+        94%
+    );
+
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+
+.intro {
+    max-width: 900px;
+    margin: 50px auto;
+    line-height: 1.65;
+}
+
+
+.visualization-section {
+    margin: 60px 0;
+    padding: 32px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+.visualization-section h2 {
+    margin-top: 0;
+}
+
+
+.viz-description {
+    max-width: 900px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    margin:
+        24px 0
+        18px 0;
+}
+
+
+.legend-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.legend-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #444;
+}
+
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 0.85rem;
+    color: #555;
+}
+
+
+.legend-circle {
+    display: inline-block;
+
+    background: #444;
+    border-radius: 50%;
+}
+
+
+.seed-size {
+    width: 16px;
+    height: 16px;
+}
+
+
+.first-size {
+    width: 12px;
+    height: 12px;
+}
+
+
+.second-size {
+    width: 8px;
+    height: 8px;
+}
+
+
+#branch-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap:
+        8px
+        16px;
+}
+
+
+.branch-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 0.82rem;
+    color: #555;
+}
+
+
+.branch-color {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+
+.seed-symbol,
+.level-one-symbol,
+.level-two-symbol {
+    display: inline-block;
+    border-radius: 50%;
+}
+
+
+.seed-symbol {
+    width: 14px;
+    height: 14px;
+
+    background: #111;
+}
+
+
+.level-one-symbol {
+    width: 11px;
+    height: 11px;
+
+    background: #4c78a8;
+}
+
+
+.level-two-symbol {
+    width: 8px;
+    height: 8px;
+
+    background: #aaa;
+}
+
+
+#tree-container {
+    width: 100%;
+    max-height: 850px;
+
+    overflow: auto;
+
+    border:
+        1px solid #e0e0e0;
+
+    background: #fcfcfc;
+}
+
+
+#tree svg {
+    display: block;
+}
+
+
+.tree-link {
+    fill: none;
+    stroke-width: 1.3px;
+    opacity: 0.35;
+}
+
+
+.tree-node circle {
+    stroke: white;
+    stroke-width: 1.5px;
+}
+
+
+.tree-node text {
+    font-size: 11px;
+    dominant-baseline: middle;
+}
+
+
+.tree-node.depth-0 text {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.tree-node.depth-1 text {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.interaction-plan {
+    margin-top: 25px;
+
+    padding: 18px 22px;
+
+    background: #f4f5f7;
+
+    border-left:
+        4px solid #777;
+}
+
+
+.interaction-plan h3 {
+    margin-top: 0;
+}
+
+
+.interaction-plan p {
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+
+.placeholder {
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #888;
+
+    border:
+        2px dashed #ccc;
+
+    background: #fafafa;
+}
+
+/* =========================================================
+   FORCE-DIRECTED NETWORK
+   ========================================================= */
+
+
+.network-encoding {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 22px;
+
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+.legend-divider {
+    color: #bbb;
+    margin: 0 5px;
+}
+
+
+#community-legend {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px 18px;
+
+    margin:
+        14px 0
+        18px 0;
+}
+
+
+.community-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 0.85rem;
+    color: #555;
+}
+
+
+.community-color {
+    display: inline-block;
+
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+}
+
+
+#network-container {
+    width: 100%;
+
+    overflow: hidden;
+
+    border:
+        1px solid #e0e0e0;
+
+    background: #fcfcfc;
+}
+
+
+#network svg {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+.network-link {
+    stroke: #777;
+    stroke-width: 0.6px;
+    opacity: 0.045;
+}
+
+
+.network-node {
+    stroke: white;
+    stroke-width: 1.25px;
+}
+
+
+.network-label {
+    font-size: 11px;
+
+    pointer-events: none;
+
+    paint-order: stroke;
+
+    stroke: white;
+    stroke-width: 3px;
+    stroke-linejoin: round;
+}
+
+
+.network-label.seed-label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.network-label.first-level-label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.network-note {
+    margin-top: 12px;
+
+    font-size: 0.83rem;
+    color: #777;
+    font-style: italic;
+}
+
+/* =========================================================
+   SCATTERPLOT
+   ========================================================= */
+
+
+#scatter-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid #e0e0e0;
+
+    background: #fcfcfc;
+}
+
+
+#scatter svg {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+.scatter-point {
+    stroke: white;
+    stroke-width: 1.2px;
+
+    opacity: 0.82;
+}
+
+
+.scatter-axis text {
+    font-size: 11px;
+    fill: #555;
+}
+
+
+.scatter-axis path,
+.scatter-axis line {
+    stroke: #bbb;
+}
+
+
+.grid line {
+    stroke: #ddd;
+    stroke-opacity: 0.6;
+}
+
+
+.grid path {
+    stroke: none;
+}
+
+
+.median-line {
+    stroke: #777;
+    stroke-width: 1px;
+    stroke-dasharray: 5 5;
+
+    opacity: 0.7;
+}
+
+
+.axis-label {
+    font-size: 13px;
+    font-weight: bold;
+
+    fill: #333;
+}
+
+
+.quadrant-label {
+    font-size: 12px;
+    font-weight: bold;
+
+    fill: #777;
+}
+
+
+.scatter-label {
+    font-size: 10px;
+
+    fill: #222;
+
+    paint-order: stroke;
+
+    stroke: white;
+    stroke-width: 3px;
+    stroke-linejoin: round;
+
+    pointer-events: none;
+}
+
+
+#scatter-legend {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 14px 20px;
+
+    margin: 18px 0;
+}
