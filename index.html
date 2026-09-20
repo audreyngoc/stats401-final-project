@@ -21,13 +21,56 @@
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
+    <style>
+        /* SECTION BOXES */
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        main > section {
+            background: #ffffff;
+            border: 1px solid #e2e2e2;
+            border-radius: 14px;
+            padding: 36px 40px;
+            margin-bottom: 28px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Keep the visualization boxes visually consistent */
+        .visualization-section {
+            background: #ffffff;
+            border: 1px solid #e2e2e2;
+            border-radius: 14px;
+            padding: 36px 40px;
+            margin-bottom: 28px;
+        }
+
+        /* Responsive spacing */
+        @media (max-width: 700px) {
+            main {
+                padding: 24px 16px 60px;
+            }
+
+            main > section {
+                padding: 28px 22px;
+            }
+
+            .visualization-section {
+                padding: 28px 22px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
 
 <header>
     <h1>
-        Navigating Knowledge: An Interactive Exploration of Computing Concepts via Wikipedia’s Hyperlink Network and Reddit’s Discussion
+        Navigating Knowledge
     </h1>
 
     <p class="subtitle">
