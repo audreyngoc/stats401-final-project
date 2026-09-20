@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -10,7 +11,7 @@
     >
 
     <title>
-        Navigating Knowledge
+        Navigating Knowledge: An Interactive Exploration of Computing Concepts via Wikipedia’s Hyperlink Network and Reddit’s Discussion
     </title>
 
     <link
@@ -19,264 +20,786 @@
     >
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
-</head>
 
+</head>
 
 <body>
 
-    <header>
-        <h1>
-            Navigating Knowledge
-        </h1>
+<header>
+    <h1>
+        Navigating Knowledge: An Interactive Exploration of Computing Concepts via Wikipedia’s Hyperlink Network and Reddit’s Discussion
+    </h1>
 
-        <p class="subtitle">
-            Exploring computing concepts through
-            Wikipedia's hyperlink network
+    <p class="subtitle">
+        Exploring computing concepts through
+        Wikipedia's hyperlink network
+    </p>
+</header>
+
+
+<main>
+
+    <section class="intro">
+
+        <h2>
+            Artificial Intelligence Knowledge Map
+        </h2>
+
+        <p>
+            Starting from the Wikipedia article
+            <strong>Artificial intelligence</strong>,
+            we identify closely related concepts using
+            both textual relevance and Wikipedia's
+            hyperlink structure.
         </p>
-    </header>
+
+        <p>
+            The first level shows ten concepts strongly
+            related to artificial intelligence. Each
+            branch then expands into ten concepts related
+            to that specific topic.
+        </p>
+
+    </section>
 
 
-    <main>
+    <section class="dataset-section">
 
-        <section class="intro">
+        <h2>
+            Dataset
+        </h2>
 
-            <h2>
-                Artificial Intelligence Knowledge Map
-            </h2>
+        <p class="viz-description">
+            Our primary dataset is based on the English
+            Wikipedia article <strong>Artificial intelligence</strong>
+            and its related article network. We use Wikipedia
+            hyperlink relationships to represent connections
+            between concepts and Wikimedia pageview data to
+            represent reader attention.
+        </p>
 
-            <p>
-                Starting from the Wikipedia article
-                <strong>Artificial intelligence</strong>,
-                we identify closely related concepts using
-                both textual relevance and Wikipedia's
-                hyperlink structure.
-            </p>
+        <h3>
+            Raw Datasets
+        </h3>
 
-            <p>
-                The first level shows ten concepts strongly
-                related to artificial intelligence. Each
-                branch then expands into ten concepts related
-                to that specific topic.
-            </p>
+        <p>
+            The first raw dataset comes from the English
+            Wikipedia article and its internal hyperlink
+            structure. The Wikipedia data contains article
+            identifiers, article titles, and links between
+            articles. The MediaWiki Action API's
+            <strong>prop=links</strong> module is used to
+            retrieve internal links from Wikipedia pages.
+        </p>
 
-        </section>
+        <p>
+            The second raw dataset comes from the Wikimedia
+            Analytics pageview data. These records contain
+            Wikipedia articles and their pageview counts over
+            a specified time period. Pageviews provide a
+            separate measure of reader attention that can be
+            compared with the structural position of an
+            article in the knowledge network.
+        </p>
+
+        <p>
+            The raw Wikipedia data represents relationships
+            between articles, while the pageview data
+            represents how frequently readers accessed those
+            articles. These datasets are connected through
+            Wikipedia article identifiers and article titles.
+        </p>
+
+        <h3>
+            Processed Datasets
+        </h3>
+
+        <p>
+            We process the raw Wikipedia information into
+            visualization-ready data representing an
+            Artificial Intelligence knowledge map. The main
+            processed hierarchy is rooted at
+            <strong>Artificial intelligence</strong> and
+            contains one root concept, ten first-level
+            concepts, and one hundred second-level concept
+            entries.
+        </p>
+
+        <p>
+            Each first-level concept represents a major area
+            related to Artificial Intelligence and contains
+            ten ranked second-level concepts. For example,
+            <strong>Machine learning</strong> expands into
+            concepts such as Neural network, Data mining,
+            Deep learning, and Pattern recognition, while
+            <strong>Natural language processing</strong>
+            expands into concepts such as Cognitive science,
+            Computational linguistics, Machine translation,
+            and Text mining.
+        </p>
+
+        <p>
+            The processed hierarchical dataset contains
+            different attributes at each level. All concepts
+            have a name and Wikipedia article ID. First-level
+            concepts also contain a relevance score and
+            global in-degree, while second-level concepts
+            contain their rank within the parent branch,
+            parent similarity, and global in-degree.
+        </p>
+
+        <p>
+            These attributes allow us to determine the
+            organization and ranking of concepts within the
+            hierarchy while also retaining information about
+            their structural importance in the broader
+            Wikipedia network.
+        </p>
+
+        <p>
+            Concepts are not necessarily unique to a single
+            branch. Some concepts appear under multiple
+            first-level topics when they are related to
+            several areas of Artificial Intelligence. For
+            example, concepts such as Data mining and Google
+            DeepMind can occur under more than one branch.
+        </p>
+
+        <p>
+            Separately, we also prepare a network
+            representation in which Wikipedia articles are
+            represented as nodes and hyperlink relationships
+            are represented as links. Network analysis
+            provides measures such as PageRank, degree-based
+            connectivity, and community membership that can
+            be used to examine structural importance and
+            relationships between concepts.
+        </p>
+
+        <p>
+            Pageview data is processed separately and then
+            associated with the corresponding Wikipedia
+            articles. This allows the scatterplot to compare
+            structural connectivity with reader attention for
+            the same concepts.
+        </p>
+
+        <h3>
+            Data Cleaning and Processing
+        </h3>
+
+        <p>
+            Before visualization, we cleaned and transformed
+            the collected data so that the different sources
+            could be represented consistently. The main
+            processing steps include:
+        </p>
+
+        <ul>
+
+            <li>
+                <strong>Article identification:</strong>
+                Wikipedia articles are represented using their
+                article IDs and standardized titles so that
+                the same article can be consistently referenced
+                across the processed datasets.
+            </li>
+
+            <li>
+                <strong>Duplicate removal:</strong>
+                Duplicate article records and repeated
+                relationships are removed where necessary to
+                avoid counting the same concept or connection
+                multiple times.
+            </li>
+
+            <li>
+                <strong>Relationship processing:</strong>
+                Internal Wikipedia hyperlinks are transformed
+                into relationships between source and target
+                articles, creating the network structure used
+                by the visualizations.
+            </li>
+
+            <li>
+                <strong>Hierarchy construction:</strong>
+                Related concepts are organized into a
+                hierarchical structure beginning from the
+                Artificial Intelligence article, with ten
+                first-level concepts and ten ranked
+                second-level concepts under each first-level
+                concept.
+            </li>
+
+            <li>
+                <strong>Concept ranking:</strong>
+                Relevance scores are retained for first-level
+                concepts, while rank and parent similarity
+                information are retained for second-level
+                concepts. These values determine the ordering
+                and relationships represented in the displayed
+                hierarchy.
+            </li>
+
+            <li>
+                <strong>Structural information:</strong>
+                Global in-degree is retained for the concepts
+                in the hierarchical dataset to represent the
+                number of incoming Wikipedia links associated
+                with each article in the broader Wikipedia
+                network.
+            </li>
+
+            <li>
+                <strong>Network measures:</strong>
+                Structural measures such as PageRank and
+                connectivity are calculated or retained in the
+                separate processed network dataset and used
+                to encode structural importance visually.
+            </li>
+
+            <li>
+                <strong>Community information:</strong>
+                Network community membership is prepared in
+                the processed network data for use in the
+                node-color encoding of the force-directed
+                network.
+            </li>
+
+            <li>
+                <strong>Pageview processing:</strong>
+                Pageview records are cleaned and matched to
+                the corresponding Wikipedia articles so that
+                reader attention can be compared consistently
+                with network structure.
+            </li>
+
+            <li>
+                <strong>Visualization-ready export:</strong>
+                The processed information is exported into
+                JSON and other structured files that can be
+                loaded directly by D3.js in the website.
+            </li>
+
+        </ul>
+
+        <p class="network-note">
+            The current visualizations use a processed subset
+            of Wikipedia centered on Artificial Intelligence.
+            Therefore, the displayed network represents the
+            scope of our analysis rather than the complete
+            Wikipedia hyperlink network.
+        </p>
+
+    </section>
 
 
-        <section class="visualization-section">
+    <section class="visualization-section">
 
-            <h2>
-                1. Exploring AI from a Starting Concept
-            </h2>
+        <h2>
+            1. Exploring AI from a Starting Concept
+        </h2>
 
-            <p class="viz-description">
-                This hierarchy shows how Artificial
-                Intelligence branches into related areas.
-                Concepts can appear under more than one branch
-                when they connect to multiple areas of AI.
-            </p>
+        <p class="viz-description">
+            This hierarchy shows how Artificial
+            Intelligence branches into related areas.
+            The processed dataset contains one root,
+            ten first-level concepts, and ten ranked
+            second-level concepts under each first-level
+            branch. Concepts can appear under more than
+            one branch when they connect to multiple areas
+            of AI.
+        </p>
 
-            <div class="legend">
+        <p class="viz-description">
+            <strong>Working visualization:</strong>
+            This hierarchy is implemented in D3.js and uses
+            our processed Artificial Intelligence dataset.
+            The displayed nodes and branches are generated
+            from the actual processed concept relationships,
+            rather than from a static mockup or example data.
+        </p>
 
-                <div class="legend-group">
-                    <span class="legend-title">
-                        Node size:
-                    </span>
-            
-                    <span class="legend-item">
-                        <span class="legend-circle seed-size"></span>
-                        Starting article
-                    </span>
-            
-                    <span class="legend-item">
-                        <span class="legend-circle first-size"></span>
-                        First-level concept
-                    </span>
-            
-                    <span class="legend-item">
-                        <span class="legend-circle second-size"></span>
-                        Second-level concept
-                    </span>
-                </div>
+        <div class="legend">
 
-
-                <div class="legend-group">
-
-                    <span class="legend-title">
-                        Branch color:
-                    </span>
-
-                    <div id="branch-legend"></div>
-
-                </div>
-
-            </div>
-
-
-            <div id="tree-container">
-
-                <div id="tree"></div>
-
-            </div>
-
-
-            <div class="interaction-plan">
-
-                <h3>
-                    Planned Interaction
-                </h3>
-
-                <p>
-                    In the final version, users will be able
-                    to search for a starting Wikipedia topic,
-                    expand or collapse branches, hover over
-                    concepts for additional information, and
-                    select concepts to highlight them across
-                    the other visualizations.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <section class="visualization-section">
-
-            <h2>
-                2. AI Knowledge Network
-            </h2>
-
-            <p class="viz-description">
-                The hierarchical view above shows one possible
-                learning structure, but Wikipedia concepts are not
-                actually organized as a tree. This network reveals
-                the cross-links, hubs, and shared concepts connecting
-                different areas of artificial intelligence.
-            </p>
-            
-
-            <div class="network-encoding">
-
+            <div class="legend-group">
                 <span class="legend-title">
                     Node size:
                 </span>
-
-                <span>
-                    PageRank within the selected AI network
+        
+                <span class="legend-item">
+                    <span class="legend-circle seed-size"></span>
+                    Starting article
                 </span>
-
-                <span class="legend-divider">
-                    |
+        
+                <span class="legend-item">
+                    <span class="legend-circle first-size"></span>
+                    First-level concept
                 </span>
+        
+                <span class="legend-item">
+                    <span class="legend-circle second-size"></span>
+                    Second-level concept
+                </span>
+            </div>
+
+
+            <div class="legend-group">
 
                 <span class="legend-title">
-                    Node color:
+                    Branch color:
                 </span>
 
-                <span>
-                    Network community
-                </span>
+                <div id="branch-legend"></div>
 
             </div>
 
-
-            <div id="community-legend"></div>
-
-
-            <div id="network-container">
-
-                <div id="network"></div>
-
-            </div>
+        </div>
 
 
-            <p class="network-note">
-                Hyperlink direction is preserved in the underlying
-                data. Arrowheads are omitted from this overview to
-                reduce visual clutter.
+        <div id="tree-container">
+
+            <div id="tree"></div>
+
+        </div>
+
+
+        <div class="interaction-plan">
+
+            <h3>
+                Interaction / Animation Plan
+            </h3>
+
+            <p>
+                In the final version, users will be able
+                to search for a starting Wikipedia topic,
+                expand or collapse branches, hover over
+                concepts for additional information, and
+                select concepts to highlight them across
+                the other visualizations.
             </p>
 
-
-            <div class="interaction-plan">
-
-                <h3>
-                    Planned Interaction
-                </h3>
-
-                <p>
-                    Users will be able to zoom and pan, select a
-                    concept to highlight its direct incoming and
-                    outgoing links, hover or click nodes to view
-                    network statistics, and synchronize selections
-                    with the hierarchy and other visualizations.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <section class="visualization-section">
-
-            <h2>
-                3. Structural Importance vs. Reader Attention
-            </h2>
-
-            <p class="viz-description">
-                This view compares how structurally prominent an
-                article is within Wikipedia with how much reader
-                attention it received during the past twelve
-                complete months.
+            <p>
+                Expanding and collapsing a branch will use
+                a short transition so that nodes move from
+                their previous positions to their new
+                positions rather than appearing abruptly.
+                This is intended to preserve the user's
+                mental map and make the hierarchy easier to
+                follow.
             </p>
 
-            <p class="viz-description">
-                Articles farther to the right receive links from
-                more Wikipedia articles. Articles higher on the
-                chart received more pageviews. Point size represents
-                PageRank within the selected Artificial Intelligence
+            <p>
+                Hover interactions will provide additional
+                information about a concept, such as its
+                article name and available network
+                attributes. Selecting a concept will allow
+                users to follow the same concept in the
+                network and scatterplot views.
+            </p>
+
+            <p>
+                The purpose of these interactions is to help
+                users progressively explore the knowledge
+                structure without displaying all possible
+                relationships at once.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="visualization-section">
+
+        <h2>
+            2. AI Knowledge Network
+        </h2>
+
+        <p class="viz-description">
+            The hierarchical view above shows one possible
+            learning structure, but Wikipedia concepts are not
+            actually organized as a tree. This network reveals
+            the cross-links, hubs, and shared concepts connecting
+            different areas of artificial intelligence.
+        </p>
+
+        <p class="viz-description">
+            <strong>Working visualization:</strong>
+            This force-directed network is implemented in D3.js
+            using the processed Wikipedia concepts and
+            relationships from our project dataset. Nodes
+            represent articles and links represent relationships
+            between concepts.
+        </p>
+        
+
+        <div class="network-encoding">
+
+            <span class="legend-title">
+                Node size:
+            </span>
+
+            <span>
+                PageRank within the selected AI network
+            </span>
+
+            <span class="legend-divider">
+                |
+            </span>
+
+            <span class="legend-title">
+                Node color:
+            </span>
+
+            <span>
+                Network community
+            </span>
+
+        </div>
+
+
+        <div id="community-legend"></div>
+
+
+        <div id="network-container">
+
+            <div id="network"></div>
+
+        </div>
+
+
+        <p class="network-note">
+            Hyperlink direction is preserved in the underlying
+            data. Arrowheads are omitted from this overview to
+            reduce visual clutter.
+        </p>
+
+
+        <div class="interaction-plan">
+
+            <h3>
+                Interaction / Animation Plan
+            </h3>
+
+            <p>
+                Users will be able to zoom and pan, select a
+                concept to highlight its direct incoming and
+                outgoing links, hover or click nodes to view
+                network statistics, and synchronize selections
+                with the hierarchy and other visualizations.
+            </p>
+
+            <p>
+                Users will also be able to drag nodes within
+                the force-directed layout. The force simulation
+                will continuously update node positions while
+                maintaining the relationships among connected
+                concepts.
+            </p>
+
+            <p>
+                When a node is selected, its directly connected
+                nodes and links will be visually emphasized,
+                while unrelated parts of the network can be
+                visually de-emphasized. This will make local
+                neighborhoods easier to inspect in a dense
                 network.
             </p>
 
-            <div id="scatter-legend"></div>
-
-            <div id="scatter-container">
-
-                <div id="scatter"></div>
-
-            </div>
-
-            <p class="network-note">
-                Both axes use logarithmic scales because article
-                connectivity and pageviews are strongly skewed.
-                Dashed lines show the median values among the
-                selected AI concepts.
+            <p>
+                Zooming and panning are intended to support
+                exploration at different levels of detail.
+                Tooltips or click-based information panels will
+                provide article-level network statistics without
+                requiring users to leave the visualization.
             </p>
 
+        </div>
 
-            <div class="interaction-plan">
-
-                <h3>
-                    Planned Interaction
-                </h3>
-
-                <p>
-                    Users will be able to hover over points to view
-                    article statistics, filter concepts by network
-                    community, select different measures of
-                    structural importance, and click a concept to
-                    highlight the same article in the hierarchy and
-                    force-directed network.
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
+    </section>
 
 
-    <script src="js/tree.js"></script>
-    <script src="js/network.js"></script>
-    <script src="js/scatter.js"></script>
+    <section class="visualization-section">
+
+        <h2>
+            3. Structural Importance vs. Reader Attention
+        </h2>
+
+        <p class="viz-description">
+            This view compares how structurally prominent an
+            article is within Wikipedia with how much reader
+            attention it received during the past twelve
+            complete months.
+        </p>
+
+        <p class="viz-description">
+            Articles farther to the right receive links from
+            more Wikipedia articles. Articles higher on the
+            chart received more pageviews. Point size represents
+            PageRank within the selected Artificial Intelligence
+            network.
+        </p>
+
+        <p class="viz-description">
+            <strong>Working visualization:</strong>
+            This scatterplot is implemented in D3.js using
+            actual processed network and pageview data from
+            the project. Each point represents an article or
+            concept included in the selected Artificial
+            Intelligence network.
+        </p>
+
+        <div id="scatter-legend"></div>
+
+        <div id="scatter-container">
+
+            <div id="scatter"></div>
+
+        </div>
+
+        <p class="network-note">
+            Both axes use logarithmic scales because article
+            connectivity and pageviews are strongly skewed.
+            Dashed lines show the median values among the
+            selected AI concepts.
+        </p>
+
+
+        <div class="interaction-plan">
+
+            <h3>
+                Interaction / Animation Plan
+            </h3>
+
+            <p>
+                Users will be able to hover over points to view
+                article statistics, filter concepts by network
+                community, select different measures of
+                structural importance, and click a concept to
+                highlight the same article in the hierarchy and
+                force-directed network.
+            </p>
+
+            <p>
+                Hovering over a point will display a tooltip
+                containing the article title and relevant
+                network and pageview measures. This allows users
+                to inspect individual observations without
+                placing permanent labels on every point.
+            </p>
+
+            <p>
+                Filtering will allow users to focus on selected
+                communities or subsets of concepts. Points will
+                transition smoothly when the displayed subset
+                changes so that users can understand which
+                observations have been filtered rather than
+                interpreting them as new data.
+            </p>
+
+            <p>
+                Selecting a point will connect the scatterplot
+                to the other visualizations by highlighting the
+                corresponding concept in the hierarchy and
+                network. The purpose is to help users compare
+                structural importance and reader attention for
+                the same concept across multiple views.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="evaluation-section">
+
+        <h2>
+            Evaluation Plan
+        </h2>
+
+        <p>
+            We will evaluate whether the visualizations help
+            users understand the structure of the Artificial
+            Intelligence knowledge network and whether the
+            visual encodings and planned interactions make it
+            easier to explore relationships between concepts.
+            Because the intended audience is new learners,
+            the evaluation will focus particularly on whether
+            users can interpret the visualizations without
+            needing prior knowledge of the network analysis
+            methods.
+        </p>
+
+        <h3>
+            What We Will Evaluate
+        </h3>
+
+        <p>
+            We will evaluate four main aspects of the
+            visualization:
+        </p>
+
+        <ul>
+
+            <li>
+                <strong>Comprehension:</strong>
+                whether users can understand how Artificial
+                Intelligence branches into related concepts
+                and identify relationships between concepts.
+            </li>
+
+            <li>
+                <strong>Structural interpretation:</strong>
+                whether users can identify highly connected
+                concepts, communities, and important
+                relationships in the force-directed network.
+            </li>
+
+            <li>
+                <strong>Comparison:</strong>
+                whether users can correctly interpret the
+                relationship between structural importance
+                and reader attention in the scatterplot.
+            </li>
+
+            <li>
+                <strong>Interaction and usability:</strong>
+                whether users can successfully navigate,
+                select, filter, zoom, hover, and move between
+                the visualizations.
+            </li>
+
+            <li>
+                <strong>Visual encoding:</strong>
+                whether users understand what node size,
+                node color, position, branch structure,
+                and other encodings represent.
+            </li>
+
+        </ul>
+
+        <h3>
+            How We Will Evaluate
+        </h3>
+
+        <p>
+            We will conduct a small usability study with
+            classmates or other students who are not directly
+            involved in developing the visualization. Each
+            participant will be given a short set of concrete
+            tasks based on the research questions and intended
+            user journey.
+        </p>
+
+        <p>
+            Example tasks will include finding a concept at a
+            particular level of the hierarchy, identifying a
+            highly connected or structurally prominent concept
+            in the network, locating a concept with relatively
+            high reader attention in the scatterplot, and
+            tracing the same concept across multiple views.
+        </p>
+
+        <p>
+            Participants will first attempt the tasks without
+            assistance. We will observe where they hesitate,
+            make incorrect interpretations, or have difficulty
+            using an interaction. After completing the tasks,
+            participants will provide short feedback about the
+            clarity, usefulness, readability, and ease of use
+            of the visualizations.
+        </p>
+
+        <h3>
+            Data and Feedback We Will Collect
+        </h3>
+
+        <p>
+            For each participant and task, we will collect:
+        </p>
+
+        <ul>
+
+            <li>
+                <strong>Task completion:</strong>
+                whether the participant successfully completed
+                the requested task.
+            </li>
+
+            <li>
+                <strong>Task time:</strong>
+                approximately how long participants take to
+                complete each task.
+            </li>
+
+            <li>
+                <strong>Errors:</strong>
+                incorrect answers or incorrect interpretations
+                of the visual encodings and data.
+            </li>
+
+            <li>
+                <strong>Interaction difficulties:</strong>
+                observations of hesitation, missed controls,
+                difficulty selecting nodes, or difficulty
+                navigating between visualizations.
+            </li>
+
+            <li>
+                <strong>Qualitative feedback:</strong>
+                participant comments about which parts of the
+                visualization were clear, confusing, useful,
+                or unnecessary.
+            </li>
+
+            <li>
+                <strong>Visual encoding feedback:</strong>
+                whether participants correctly understood the
+                meaning of node size, node color, axes,
+                hierarchy levels, and other visual variables.
+            </li>
+
+            <li>
+                <strong>Overall usability feedback:</strong>
+                participant suggestions for improving the
+                layout, interaction design, labels, legends,
+                tooltips, and navigation.
+            </li>
+
+        </ul>
+
+        <h3>
+            How Evaluation Results Will Be Used
+        </h3>
+
+        <p>
+            We will use the evaluation results to identify
+            specific usability and comprehension problems
+            before the final version. For example, repeated
+            difficulty interpreting an encoding may indicate
+            that the legend or visual variable needs to be
+            changed, while repeated difficulty following a
+            selected concept across views may indicate that
+            linked highlighting or navigation needs to be
+            strengthened.
+        </p>
+
+        <p>
+            The evaluation will therefore inform both visual
+            design and interaction revisions rather than
+            simply measuring whether participants like the
+            visualization.
+        </p>
+
+    </section>
+
+</main>
+
+
+<script src="js/tree.js"></script>
+<script src="js/network.js"></script>
+<script src="js/scatter.js"></script>
 
 </body>
 
