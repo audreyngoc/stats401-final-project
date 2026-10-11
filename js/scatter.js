@@ -17,8 +17,9 @@ const scatterCommunityColors = [
 
 
 d3.csv(
-    "data/ai_nodes_with_pageviews.csv",
+    "data/ai_nodes_enriched.csv",
     d => ({
+        pageviews_status: d.pageviews_status,
         article_id: +d.article_id,
         title: d.title,
 
@@ -56,24 +57,20 @@ d3.csv(
 
 .then(data => {
 
-    // =====================================================
     // Remove invalid values
-    //
     // Log scales cannot display 0.
-    // =====================================================
 
     const filtered =
         data.filter(
             d =>
-                d.global_indegree > 0
+                d.pageviews_status === "complete"
+                && d.global_indegree > 0
                 &&
                 d.total_views_12m > 0
         );
 
 
-    // =====================================================
     // INNER PLOT DIMENSIONS
-    // =====================================================
 
     const innerWidth =
         scatterWidth
@@ -87,9 +84,7 @@ d3.csv(
         - scatterMargin.bottom;
 
 
-    // =====================================================
     // LOG SCALES
-    // =====================================================
 
     const xExtent =
         d3.extent(
@@ -129,9 +124,7 @@ d3.csv(
             ]);
 
 
-    // =====================================================
     // POINT SIZE = PAGERANK
-    // =====================================================
 
     const size =
         d3.scaleSqrt()
@@ -147,9 +140,7 @@ d3.csv(
             ]);
 
 
-    // =====================================================
     // MEDIANS
-    // =====================================================
 
     const medianIndegree =
         d3.median(
@@ -165,9 +156,7 @@ d3.csv(
         );
 
 
-    // =====================================================
     // SVG
-    // =====================================================
 
     const svg =
         d3.select("#scatter")
@@ -196,9 +185,7 @@ d3.csv(
             );
 
 
-    // =====================================================
     // GRID
-    // =====================================================
 
     plot.append("g")
         .attr(
@@ -237,9 +224,7 @@ d3.csv(
         );
 
 
-    // =====================================================
     // MEDIAN QUADRANT LINES
-    // =====================================================
 
     plot.append("line")
         .attr(
@@ -287,9 +272,7 @@ d3.csv(
         );
 
 
-    // =====================================================
     // QUADRANT LABELS
-    // =====================================================
 
     plot.append("text")
         .attr(
@@ -371,23 +354,17 @@ d3.csv(
         );
 
 
-    // =====================================================
     // POINTS
-    // =====================================================
 
     const points =
         plot.append("g")
             .selectAll("circle")
-
             .data(filtered)
-
             .join("circle")
-
             .attr(
                 "class",
                 "scatter-point"
             )
-
             .attr(
                 "cx",
                 d =>
@@ -395,7 +372,6 @@ d3.csv(
                         d.global_indegree
                     )
             )
-
             .attr(
                 "cy",
                 d =>
@@ -403,7 +379,6 @@ d3.csv(
                         d.total_views_12m
                     )
             )
-
             .attr(
                 "r",
                 d => {
@@ -417,7 +392,6 @@ d3.csv(
                     );
                 }
             )
-
             .attr(
                 "fill",
                 d => {
@@ -427,24 +401,17 @@ d3.csv(
                     }
 
                     return (
-                        scatterCommunityColors[
-                            d.community
-                            %
-                            scatterCommunityColors.length
-                        ]
+                        d3.interpolateRainbow((d.community * 0.61803398875) % 1)
                     );
                 }
             );
 
 
-    // =====================================================
     // TOOLTIP
-    // =====================================================
 
     points
         .append("title")
         .text(d => {
-
             return (
                 d.title
                 + "\n12-month pageviews: "
@@ -466,36 +433,29 @@ d3.csv(
         });
 
 
-    // =====================================================
     // LABEL IMPORTANT / INTERESTING POINTS
-    //
     // Keep labels intentionally limited.
-    // =====================================================
 
-    const labelled =
-        filtered.filter(
-            d =>
-                d.is_seed
-                ||
-                d.depth === 1
-                ||
-                d.total_views_12m
-                    >= 500000
-        );
+    const labelled = [...filtered].sort((a,b)=>b.pagerank-a.pagerank).slice(0,15);
 
+    // Shared article-ID selection; Vis 3 remains a full-snapshot overview.
+    points.on('click', (event,d) => window.knowledge?.get(d.article_id) && window.knowledge.select(d.article_id));
+    window.addEventListener('knowledge:selection',event=>{
+        const id=event.detail.articleId;
+        points.attr('opacity',d=>id==null||d.article_id===id?.82:.09)
+            .attr('stroke',d=>d.article_id===id?'#d78527':'white')
+            .attr('stroke-width',d=>d.article_id===id?4:1.2);
+        points.filter(d=>d.article_id===id).raise();
+    });
 
     plot.append("g")
         .selectAll("text")
-
         .data(labelled)
-
         .join("text")
-
         .attr(
             "class",
             "scatter-label"
         )
-
         .attr(
             "x",
             d =>
@@ -507,7 +467,6 @@ d3.csv(
                 )
                 + 5
         )
-
         .attr(
             "y",
             d =>
@@ -516,19 +475,16 @@ d3.csv(
                 )
                 - 4
         )
-
         .text(
             d => d.title
         );
 
 
-    // =====================================================
+
     // AXES
-    // =====================================================
 
     const xAxis =
         d3.axisBottom(x)
-
             .ticks(
                 8,
                 "~s"
@@ -537,7 +493,6 @@ d3.csv(
 
     const yAxis =
         d3.axisLeft(y)
-
             .ticks(
                 8,
                 "~s"
@@ -545,12 +500,10 @@ d3.csv(
 
 
     plot.append("g")
-
         .attr(
             "class",
             "scatter-axis"
         )
-
         .attr(
             "transform",
             `translate(
@@ -558,64 +511,51 @@ d3.csv(
                 ${innerHeight}
             )`
         )
-
         .call(xAxis);
 
 
     plot.append("g")
-
         .attr(
             "class",
             "scatter-axis"
         )
-
         .call(yAxis);
 
 
-    // =====================================================
     // AXIS LABELS
-    // =====================================================
 
     svg.append("text")
-
         .attr(
             "class",
             "axis-label"
         )
-
         .attr(
             "x",
             scatterMargin.left
             + innerWidth / 2
         )
-
         .attr(
             "y",
             scatterHeight - 25
         )
-
         .attr(
             "text-anchor",
             "middle"
         )
-
         .text(
             "Wikipedia in-degree (log scale)"
         );
 
 
     svg.append("text")
-
         .attr(
             "class",
             "axis-label"
         )
-
         .attr(
             "transform",
             "rotate(-90)"
         )
-
         .attr(
             "x",
             -(
@@ -623,25 +563,20 @@ d3.csv(
                 + innerHeight / 2
             )
         )
-
         .attr(
             "y",
             28
         )
-
         .attr(
             "text-anchor",
             "middle"
         )
-
         .text(
             "Pageviews, Sep. 2025–Aug. 2026 (log scale)"
         );
 
 
-    // =====================================================
     // LEGEND
-    // =====================================================
 
     const communities =
         Array.from(
@@ -656,10 +591,7 @@ d3.csv(
         );
 
 
-    const legend =
-        d3.select(
-            "#scatter-legend"
-        );
+    const legend = d3.select("#scatter-legend");
 
 
     legend
@@ -677,18 +609,14 @@ d3.csv(
         .selectAll(
             ".scatter-community-item"
         )
-
         .data(
             communities
         )
-
         .join("span")
-
         .attr(
             "class",
             "community-legend-item"
         )
-
         .html(
             d => `
                 <span
@@ -696,10 +624,7 @@ d3.csv(
                     style="
                         background:
                         ${
-                            scatterCommunityColors[
-                                d %
-                                scatterCommunityColors.length
-                            ]
+                            d3.interpolateRainbow((d * 0.61803398875) % 1)
                         };
                     "
                 ></span>
@@ -708,34 +633,26 @@ d3.csv(
             `
         );
 
-
     legend
         .append("span")
-
         .attr(
             "class",
             "legend-title"
         )
-
         .text(
             "Size: PageRank"
         );
-
 })
 
 
 .catch(error => {
-
     console.error(
         "Error loading scatterplot data:",
         error
     );
-
-
     d3.select("#scatter")
         .append("p")
         .text(
             "Unable to load ai_nodes_with_pageviews.csv."
         );
-
 });

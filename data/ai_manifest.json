@@ -1,0 +1,28 @@
+{
+  "seed": "Artificial intelligence",
+  "article_count": 10000,
+  "directed_link_count": 699092,
+  "group_count": 10,
+  "pageview_start": "20250901",
+  "pageview_end": "20260831",
+  "pageview_coverage": {
+    "complete": 9821,
+    "partial": 177,
+    "missing": 2
+  },
+  "pageview_metric": "Monthly all-access user views for exact article title; redirects not rolled up",
+  "tree_neighbors": "Most 12-month views when complete, otherwise global in-degree",
+  "network_metric": "PageRank on the directed selected-article hyperlink graph",
+  "source_article_csv": "data/visualization/ai/ai_articles_10000.csv",
+  "source_edges_parquet": "data/processed/edges_final.parquet",
+  "enrichment": {
+    "community_method": "Louvain on undirected projection; resolution=1; random seed=401",
+    "detected_community_count": 14,
+    "betweenness_method": "Directed normalized approximation using 32 uniformly sampled sources; seed=401",
+    "metric_scope": "Full selected 10,000-article / 699,092-edge graph",
+    "depth_method": "Directed BFS from article 1164; empty depth means unreachable",
+    "unreachable_count": 15,
+    "source_depth_warning": "Original depth represents selection tiers, not shortest hyperlink distance",
+    "source_community_warning": "Original community is assigned TF-IDF subtopic, not detected graph community"
+  }
+}

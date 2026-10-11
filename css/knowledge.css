@@ -1,0 +1,58 @@
+/* Additions for Vis 1/2. Existing Vis 3 styling stays in style.css. */
+:root { --ink:#172939; --accent:#176a75; --muted:#627583; }
+.data-summary {color:var(--accent);font-size:.9rem;}
+.section-heading {display:flex;gap:18px;align-items:flex-start;}
+.section-number {display:inline-flex;background:#eaf3f3;color:var(--accent);font-size:1.2rem;font-weight:700;border-radius:8px;padding:12px;}
+.section-heading h2 {margin:5px 0 8px;letter-spacing:-.4px;}
+.section-heading p {margin-top:0;}
+.search-form {padding:22px;background:#f5f8f9;border:1px solid #dde7ec;border-radius:8px;margin:18px 0;}
+.search-form>label {font-weight:700;font-size:.85rem;display:block;margin-bottom:8px;}
+.search-row {display:flex;gap:10px;}
+.search-row>input {flex:1;min-width:0;border:1px solid #bccdd7;border-radius:6px;padding:13px;font-size:1rem;}
+.knowledge-section button,.knowledge-section select {font:inherit;border:1px solid #c5d3dd;border-radius:5px;background:#fff;color:var(--ink);padding:8px 12px;cursor:pointer;}
+.knowledge-section button:hover {background:#eaf2f5;} .knowledge-section button:disabled {opacity:.55;cursor:wait;} .knowledge-section button.primary {background:var(--accent);color:white;border-color:var(--accent);font-weight:700;}
+.knowledge-section button[hidden] {display:none;} .knowledge-section input[type=checkbox] {accent-color:var(--accent);}
+.knowledge-section :focus-visible {outline:3px solid #de8c37;outline-offset:3px;}
+.search-options {display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;font-size:.8rem;}
+#search-status {color:var(--muted);font-size:.85rem;min-height:20px;} #search-status.error {color:#a2312e;}
+.view-controls {display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:18px 0;font-size:.85rem;}
+.view-controls>strong {margin-right:auto;font-size:1rem;}
+.view-controls label {display:flex;align-items:center;gap:6px;}
+.view-controls.secondary {background:#f5f8f9;padding:12px;border-radius:6px;gap:14px;}
+.chart-help,.method-note {font-size:.85rem;color:var(--muted);line-height:1.6;}
+.viz-layout {display:grid;grid-template-columns:minmax(0,1fr) 264px;gap:16px;align-items:start;}
+.article-detail {border:1px solid #dce4e9;border-radius:7px;background:#f7fafb;padding:17px;font-size:.83rem;overflow-wrap:anywhere;}
+.article-detail h3 {margin:0 0 16px;font-size:1.1rem;}
+.article-detail dl {margin:0;}
+.article-detail dt {color:#687b87;font-size:.74rem;margin-top:11px;}
+.article-detail dd {margin:4px 0;font-weight:700;}
+.article-detail>a {display:block;margin:16px 0;}
+.article-detail button {font-size:.8rem;width:100%;}
+.detail-scope {color:var(--muted);font-size:.74rem;line-height:1.5;}
+#tree-container {height:560px;max-height:none;border-radius:7px;background:#fcfdfd;}
+#tree svg {max-width:none;}
+.tree-node {cursor:pointer;}
+.tree-node text {font-size:12px;}
+.tree-node .tree-value {font-size:10px;fill:#6e808e;}
+.tree-node .tree-toggle {font-size:16px;font-weight:700;fill:var(--accent);}
+.tree-node.is-selected circle {stroke:#d78527;stroke-width:4px;}
+.tree-node.is-selected .tree-title {font-weight:700;fill:#9a5712;}
+.tree-link {opacity:.5;}
+#branch-legend {margin:12px 0;gap:6px;}
+.branch-legend-item {border-left:4px solid;padding:4px 7px;background:#f7f9fa;font-size:.72rem;}
+#community-legend {margin:12px 0;gap:6px;}
+#community-legend button {font-size:.72rem;text-align:left;padding:7px 9px;}
+#network-container {border-radius:7px;background:#fcfdfd;}
+#network svg {width:100%;min-height:360px;touch-action:none;}
+.network-node {cursor:pointer;stroke-width:1.5px;}
+.network-node.is-selected {stroke:#d78527;stroke-width:4px;}
+.network-label {font-size:11px;fill:var(--ink);}
+.network-link {opacity:unset;}
+footer {text-align:center;font-size:.75rem;color:var(--muted);padding:25px;line-height:1.7;}
+@media(max-width:1050px){.viz-layout {grid-template-columns:minmax(0,1fr);} .article-detail {display:block;} .article-detail dl {display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;} .article-detail dt {margin:0;} .article-detail dd {margin:0;} #tree-container {height:480px;}}
+@media(max-width:650px){.knowledge-section {padding:16px;} .section-number {display:none;} .search-form {padding:12px;} .search-row,.search-options {flex-wrap:wrap;} .search-row>input {flex-basis:100%;} .search-options>label {flex-basis:100%;} .view-controls {gap:8px;} .view-controls label {font-size:.75rem;} .network-label {font-size:12px;}}
+
+.knowledge-nav {display:flex;flex-wrap:wrap;gap:18px;margin-top:22px;font-size:.85rem;}
+.knowledge-nav a,.knowledge-section a {color:var(--accent);text-decoration:none;}
+.knowledge-nav a:hover,.knowledge-section a:hover {text-decoration:underline;}
+.snapshot-insight {padding:14px 18px;background:#f5f8f9;border-left:4px solid var(--accent);font-size:.87rem;line-height:1.6;}

@@ -1,0 +1,26 @@
+{
+  "nodes": 10000,
+  "edges": 699092,
+  "monthly_rows": 118938,
+  "pageview_coverage": {
+    "complete": 9821,
+    "partial": 177,
+    "missing": 2
+  },
+  "detected_communities": 14,
+  "bfs_reachable": 9985,
+  "source_depth_mismatches": 8106,
+  "duplicate_node_ids": 0,
+  "duplicate_edges": 0,
+  "missing_edge_endpoints": 0,
+  "pageview_sum_mismatches": 0,
+  "month_count_mismatches": 0,
+  "directed_bfs_depth_distribution": {
+    "0": 1,
+    "1": 945,
+    "2": 7447,
+    "3": 1576,
+    "4": 15,
+    "5": 1
+  }
+}
