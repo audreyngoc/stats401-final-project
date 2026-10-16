@@ -1,0 +1,52 @@
+/* Vis 6: job market scatterplot and postings listing. */
+:root { --job-match:#d78527; --job-dim:#a9b6bf; --job-base:#7b8f9c; }
+.jobs-status {margin:0 auto 0 0;font-size:.9rem;color:var(--ink);flex:1 1 320px;}
+.jobs-status strong {color:#9a5712;}
+#jobs-title-select {max-width:260px;}
+.jobs-legend {display:flex;flex-wrap:wrap;gap:16px;font-size:.78rem;color:var(--muted);margin:0 0 10px;}
+.jobs-legend span {display:inline-flex;align-items:center;gap:6px;}
+.jobs-legend .swatch {width:11px;height:11px;border-radius:50%;background:var(--job-base);display:inline-block;}
+.jobs-legend .swatch.is-match {background:var(--job-match);}
+.jobs-legend .swatch.is-selected {background:transparent;box-shadow:inset 0 0 0 2.5px var(--ink);}
+
+.jobs-layout {display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:16px;align-items:start;}
+#jobs-chart {position:relative;border-radius:7px;background:#fcfdfd;border:1px solid #e6edf1;}
+#jobs-chart svg {display:block;width:100%;height:auto;touch-action:manipulation;}
+.jobs-grid line {stroke:#e8eef1;}
+.jobs-axis text {font-size:11px;fill:var(--muted);}
+.jobs-axis path,.jobs-axis line {stroke:#c5d3dd;}
+.jobs-axis-title {font-size:12px;fill:var(--muted);}
+.jobs-point {fill:var(--job-base);fill-opacity:.7;stroke:#fcfdfd;stroke-width:1.5px;transition:fill .25s,fill-opacity .25s,r .25s;}
+.jobs-point.is-dim {fill:var(--job-dim);fill-opacity:.45;}
+.jobs-point.is-match {fill:var(--job-match);fill-opacity:.9;}
+.jobs-point.is-selected {stroke:var(--ink);stroke-width:2.5px;fill-opacity:1;}
+.jobs-hover {fill:none;stroke:var(--ink);stroke-width:1.5px;pointer-events:none;}
+.jobs-labels text {font-size:11px;fill:var(--ink);paint-order:stroke;stroke:#fcfdfd;stroke-width:3px;pointer-events:none;}
+.jobs-labels text.is-selected {font-weight:700;}
+.jobs-tooltip {position:absolute;pointer-events:none;background:#fff;border:1px solid #c5d3dd;border-radius:6px;box-shadow:0 4px 14px rgba(23,41,57,.14);padding:10px 12px;font-size:.78rem;max-width:250px;transition:opacity .12s;}
+.jobs-tooltip strong {display:block;font-size:.88rem;margin-bottom:6px;}
+.jobs-tooltip dl {display:grid;grid-template-columns:auto auto;gap:3px 12px;margin:0;}
+.jobs-tooltip dt {color:var(--muted);}
+.jobs-tooltip dd {margin:0;font-weight:700;text-align:right;font-variant-numeric:tabular-nums;}
+.jobs-tooltip p {margin:7px 0 0;color:var(--muted);font-size:.72rem;}
+
+.jobs-listing {border:1px solid #dce4e9;border-radius:7px;background:#f7fafb;display:flex;flex-direction:column;max-height:560px;}
+.jobs-listing-head {padding:14px 16px 10px;border-bottom:1px solid #dce4e9;}
+.jobs-listing-head h3 {margin:0 0 4px;font-size:1.05rem;}
+.jobs-listing-head p {margin:0 0 8px;font-size:.78rem;color:var(--muted);}
+.jobs-listing-head label {font-size:.76rem;display:flex;gap:6px;align-items:center;}
+#jobs-list {list-style:none;margin:0;padding:0;overflow-y:auto;flex:1;}
+.jobs-posting {border-bottom:1px solid #e3eaee;padding:10px 14px;font-size:.78rem;}
+.jobs-posting.is-match {border-left:3px solid var(--job-match);padding-left:11px;}
+.jobs-posting-head {display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+.jobs-posting-head strong {color:var(--ink);}
+.jobs-salary {font-weight:700;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.jobs-skills {display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;}
+.jobs-chip {background:#eaf2f5;color:var(--accent);border-radius:10px;padding:1px 8px;font-size:.7rem;}
+.jobs-chip.is-match {background:#fbe3c6;color:#8a4d10;font-weight:700;}
+.jobs-empty {padding:14px 16px;font-size:.8rem;color:var(--muted);}
+#jobs-more {margin:10px 14px 14px;font-size:.78rem;}
+#jobs-more[hidden] {display:none;}
+
+@media(max-width:1050px){.jobs-layout {grid-template-columns:minmax(0,1fr);} .jobs-listing {max-height:480px;}}
+@media(max-width:650px){#jobs-title-select {max-width:100%;} .jobs-legend {gap:8px 14px;}}

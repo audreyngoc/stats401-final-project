@@ -1,503 +1,626 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            Navigating Knowledge: An Interactive Exploration of Computing Concepts via Wikipedia's
-            Hyperlink Network and Reddit's Discussion
-        </title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-        <link rel="stylesheet" href="css/knowledge.css">
-        <style>
-            /* SECTION BOXES */
-            main {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 40px 24px 80px;
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Navigating Knowledge: An Interactive Exploration of Computing Concepts via
+      Wikipedia's Hyperlink Network and Reddit's Discussion
+    </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="css/knowledge.css" />
+    <link rel="stylesheet" href="css/jobs.css" />
+    <style>
+      /* SECTION BOXES */
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+      }
 
-            main > section {
-                background: #ffffff;
-                border: 1px solid #e2e2e2;
-                border-radius: 14px;
-                padding: 36px 40px;
-                margin-bottom: 28px;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            }
+      main > section {
+        background: #ffffff;
+        border: 1px solid #e2e2e2;
+        border-radius: 14px;
+        padding: 36px 40px;
+        margin-bottom: 28px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
 
-            .visualization-section {
-                background: #ffffff;
-                border: 1px solid #e2e2e2;
-                border-radius: 14px;
-                padding: 36px 40px;
-                margin-bottom: 28px;
-            }
+      .visualization-section {
+        background: #ffffff;
+        border: 1px solid #e2e2e2;
+        border-radius: 14px;
+        padding: 36px 40px;
+        margin-bottom: 28px;
+      }
 
-            /* Responsive spacing */
-            @media (max-width: 700px) {
-                main {
-                    padding: 24px 16px 60px;
-                }
+      /* Responsive spacing */
+      @media (max-width: 700px) {
+        main {
+          padding: 24px 16px 60px;
+        }
 
-                main > section {
-                    padding: 28px 22px;
-                }
+        main > section {
+          padding: 28px 22px;
+        }
 
-                .visualization-section {
-                    padding: 28px 22px;
-                }
-            }
-        </style>
-    </head>
+        .visualization-section {
+          padding: 28px 22px;
+        }
+      }
+    </style>
+  </head>
 
-    <body>
-        <header>
-            <h1>Navigating Knowledge</h1>
-            <p class="subtitle">Exploring computing concepts through Wikipedia's hyperlink network</p>
-            <nav class="knowledge-nav" aria-label="Project navigation">
-                <a href="#dataset">Dataset</a>
-                <a href="#vis1">Popular article paths</a>
-                <a href="#vis2">Knowledge network</a>
-                <a href="#scatter-container">Structure &amp; attention</a>
-                <a href="#evaluation">Evaluation plan</a>
-            </nav>
-        </header>
+  <body>
+    <header>
+      <h1>Navigating Knowledge</h1>
+      <p class="subtitle">
+        Exploring computing concepts through Wikipedia's hyperlink network
+      </p>
+      <nav class="knowledge-nav" aria-label="Project navigation">
+        <a href="#dataset">Dataset</a>
+        <a href="#vis1">Popular article paths</a>
+        <a href="#vis2">Knowledge network</a>
+        <a href="#scatter-container">Structure &amp; attention</a>
+        <a href="#vis6">Knowledge &amp; jobs</a>
+        <a href="#evaluation">Evaluation plan</a>
+      </nav>
+    </header>
 
-        <main>
-            <section class="intro">
-                <h2>Artificial Intelligence Knowledge Map</h2>
-                <p>
-                    Starting with <strong>Artificial intelligence</strong>, explore a collection
-                    of 10,000 Wikipedia articles and their directed hyperlinks. Search for another
-                    article in this collection to change your starting point.
-                </p>
-                <p>
-                    The tree follows popular outgoing article links, while the network reveals structural
-                    communities and reconnections. Compare reader attention with network importance
-                    in the scatterplot.
-                </p>
-                <p id="dataset-summary" class="data-summary">Loading the collected Wikipedia dataset…</p>
-            </section>
+    <main>
+      <section class="intro">
+        <h2>Artificial Intelligence Knowledge Map</h2>
+        <p>
+          Starting with <strong>Artificial intelligence</strong>, explore a
+          collection of 10,000 Wikipedia articles and their directed hyperlinks.
+          Search for another article in this collection to change your starting
+          point.
+        </p>
+        <p>
+          The tree follows popular outgoing article links, while the network
+          reveals structural communities and reconnections. Compare reader
+          attention with network importance in the scatterplot.
+        </p>
+        <p id="dataset-summary" class="data-summary">
+          Loading the collected Wikipedia dataset…
+        </p>
+      </section>
 
-            <section class="dataset-section" id="dataset">
-                <h2>Dataset</h2>
-                <p class="viz-description">
-                    Our analysis uses a fixed subset of English Wikipedia centered on
-                    Artificial intelligence, together with previously collected Wikimedia pageviews.
-                    The website uses only the collected files; searching and expanding branches do
-                    not acquire new data.
-                </p>
-                <h3>Raw Datasets</h3>
-                <p>
-                    The Wikipedia source consists of article identifiers, article titles, and directed
-                    internal hyperlinks. A hyperlink records a source article linking to a target
-                    article. The collected list of exports contain <strong>10,000 unique articles
-                    and 699,092 directed links</strong>. They represent the selected analysis corpus
-                    rather than all of Wikipedia.
-                </p>
-                <p>
-                    The second source is monthly Wikimedia pageview data for <strong>September 2025-August
-                    2026</strong>. It counts all-access human user requests for exact article titles,
-                    rather than unique readers. Redirect-title traffic is not combined with canonical-title
-                    traffic. Both datasets are joined internally using article IDs.
-                </p>
-                <h3>Processed Datasets</h3>
-                <p>
-                    The cleaned node table combines titles, assigned subtopics, directed hyperlink
-                    distance, in-degree and out-degree, PageRank, estimated betweenness, detected
-                    community, and pageview coverage. These provide categorical, ordered, and numerical
-                    attributes for the visualizations.
-                </p>
-                <p>
-                    The original collection used relevance-based selection and assigned ten subtopics.
-                    Those assignments remain available for topic comparisons. Separately, graph
-                    analysis detects <strong>14 network communities</strong>; assigned subtopics
-                    and detected communities are different attributes.
-                </p>
-                <p>
-                    The hierarchy is generated from the selected starting article. It displays up
-                    to ten outgoing links ranked by complete twelve-month pageviews, then up to
-                    ten links from each expanded branch. An article may occur in multiple branches
-                    when paths reconnect. Ancestors are excluded from their own branches, and tree
-                    columns represent exploration steps rather than necessarily the shortest hyperlink
-                    path.
-                </p>
-                <p>
-                    The community overview summarizes reachable articles within the chosen distance.
-                    Article views display a bounded set of nodes and real hyperlinks between them.
-                    Sparse link drawing keeps the overview readable; selecting an article reveals
-                    its incoming and outgoing links among displayed articles.
-                </p>
+      <section class="dataset-section" id="dataset">
+        <h2>Dataset</h2>
+        <p class="viz-description">
+          Our analysis uses a fixed subset of English Wikipedia centered on
+          Artificial intelligence, together with previously collected Wikimedia
+          pageviews. The website uses only the collected files; searching and
+          expanding branches do not acquire new data.
+        </p>
+        <h3>Raw Datasets</h3>
+        <p>
+          The Wikipedia source consists of article identifiers, article titles,
+          and directed internal hyperlinks. A hyperlink records a source article
+          linking to a target article. The collected list of exports contain
+          <strong>10,000 unique articles and 699,092 directed links</strong>.
+          They represent the selected analysis corpus rather than all of
+          Wikipedia.
+        </p>
+        <p>
+          The second source is monthly Wikimedia pageview data for
+          <strong>September 2025-August 2026</strong>. It counts all-access
+          human user requests for exact article titles, rather than unique
+          readers. Redirect-title traffic is not combined with canonical-title
+          traffic. Both datasets are joined internally using article IDs.
+        </p>
+        <h3>Processed Datasets</h3>
+        <p>
+          The cleaned node table combines titles, assigned subtopics, directed
+          hyperlink distance, in-degree and out-degree, PageRank, estimated
+          betweenness, detected community, and pageview coverage. These provide
+          categorical, ordered, and numerical attributes for the visualizations.
+        </p>
+        <p>
+          The original collection used relevance-based selection and assigned
+          ten subtopics. Those assignments remain available for topic
+          comparisons. Separately, graph analysis detects
+          <strong>14 network communities</strong>; assigned subtopics and
+          detected communities are different attributes.
+        </p>
+        <p>
+          The hierarchy is generated from the selected starting article. It
+          displays up to ten outgoing links ranked by complete twelve-month
+          pageviews, then up to ten links from each expanded branch. An article
+          may occur in multiple branches when paths reconnect. Ancestors are
+          excluded from their own branches, and tree columns represent
+          exploration steps rather than necessarily the shortest hyperlink path.
+        </p>
+        <p>
+          The community overview summarizes reachable articles within the chosen
+          distance. Article views display a bounded set of nodes and real
+          hyperlinks between them. Sparse link drawing keeps the overview
+          readable; selecting an article reveals its incoming and outgoing links
+          among displayed articles.
+        </p>
 
-                <h3>Data Cleaning and Processing</h3>
-                <ul>
-                    <li>
-                        <strong>Article identity and integrity:</strong> article IDs provide a consistent
-                        join key. Validation found no duplicate article IDs, duplicate directed
-                        links, self-links, or missing edge endpoints in the graph.
-                    </li>
-                    <li>
-                        <strong>Directed distance:</strong> shortest outgoing hyperlink distance
-                        is calculated using breadth-first search. Original collection tiers are
-                        retained separately. Fifteen articles are unreachable from the Artificial
-                        intelligence seed; their fixed seed distance is blank rather than zero.
-                    </li>
-                    <li>
-                        <strong>Network analysis:</strong> calculated PageRank and degree values describe
-                        the complete selected graph. Communities use Louvain on its undirected projection.
-                        Directed normalized betweenness is estimated from 32 sampled source articles.
-                    </li>
-                    <li>
-                        <strong>Pageview coverage:</strong> 9,821 articles have complete twelve-month
-                        records, 177 have partial records, and two have no records. Partial annual
-                        totals remain blank; observed monthly counts remain available. Popularity
-                        ranking uses complete records only.
-                    </li>
-                    <li>
-                        <strong>Temporal aggregation:</strong> monthly article records can be combined
-                        by assigned subtopic. Group totals include reporting counts so that changing
-                        coverage can be assessed. Missing observations should not be treated as
-                        zero traffic.
-                    </li>
-                    <li>
-                        <strong>Visualization-ready export:</strong> cleaned attributes, directed
-                        edges, monthly pageviews, and compact browser adjacency are supplied alongside
-                        processing code and a data audit.
-                    </li>
-                </ul>
-                <p class="network-note">
-                    The corpus is relevance-selected and includes general subjects and biographies
-                    reached through hyperlinks. It is not a uniform or exhaustive sample of computing
-                    knowledge. Community labels name prominent example articles; they are not formal
-                    subject classifications.
-                </p>
-            </section>
+        <h3>Data Cleaning and Processing</h3>
+        <ul>
+          <li>
+            <strong>Article identity and integrity:</strong> article IDs provide
+            a consistent join key. Validation found no duplicate article IDs,
+            duplicate directed links, self-links, or missing edge endpoints in
+            the graph.
+          </li>
+          <li>
+            <strong>Directed distance:</strong> shortest outgoing hyperlink
+            distance is calculated using breadth-first search. Original
+            collection tiers are retained separately. Fifteen articles are
+            unreachable from the Artificial intelligence seed; their fixed seed
+            distance is blank rather than zero.
+          </li>
+          <li>
+            <strong>Network analysis:</strong> calculated PageRank and degree
+            values describe the complete selected graph. Communities use Louvain
+            on its undirected projection. Directed normalized betweenness is
+            estimated from 32 sampled source articles.
+          </li>
+          <li>
+            <strong>Pageview coverage:</strong> 9,821 articles have complete
+            twelve-month records, 177 have partial records, and two have no
+            records. Partial annual totals remain blank; observed monthly counts
+            remain available. Popularity ranking uses complete records only.
+          </li>
+          <li>
+            <strong>Temporal aggregation:</strong> monthly article records can
+            be combined by assigned subtopic. Group totals include reporting
+            counts so that changing coverage can be assessed. Missing
+            observations should not be treated as zero traffic.
+          </li>
+          <li>
+            <strong>Visualization-ready export:</strong> cleaned attributes,
+            directed edges, monthly pageviews, and compact browser adjacency are
+            supplied alongside processing code and a data audit.
+          </li>
+        </ul>
+        <p class="network-note">
+          The corpus is relevance-selected and includes general subjects and
+          biographies reached through hyperlinks. It is not a uniform or
+          exhaustive sample of computing knowledge. Community labels name
+          prominent example articles; they are not formal subject
+          classifications.
+        </p>
+      </section>
 
-            <section id="vis1" class="visualization-section knowledge-section">
-                <div class="section-heading">
-                    <span class="section-number">01</span>
-                    <div>
-                        <h2>Popular paths from a starting article</h2>
-                        <p class="viz-description">
-                            Search an article title or paste an English Wikipedia URL. Each branch
-                            ranks its outgoing links by complete 12-month pageviews, showing up
-                            to ten at each level.
-                        </p>
-                    </div>
-                </div>
-                <form id="seed-form" class="search-form">
-                    <label for="seed-search">Starting Wikipedia article</label>
-                    <div class="search-row">
-                        <input id="seed-search" list="article-suggestions" value="Artificial intelligence" placeholder="Article title or Wikipedia URL" autocomplete="off" required>
-                        <datalist id="article-suggestions"></datalist>
-                        <button id="search-submit" class="primary" type="submit">Explore article →</button>
-                    </div>
-                    <div class="search-options">
-                        <span>Search the 10,000-article dataset</span>
-                        <button id="reset-seed" type="button">Reset to AI</button>
-                    </div>
-                </form>
-                <p id="search-status" role="status" aria-live="polite">Loading articles and links…</p>
-                <div class="view-controls">
-                    <strong id="current-seed">Artificial intelligence</strong>
-                    <label for="tree-depth">
-                        Tree levels
-                        <select id="tree-depth">
-                            <option value="1">1 level</option>
-                            <option value="2" selected>2 levels</option>
-                        </select>
-                    </label>
-                    <button id="tree-expand">Expand all branches</button>
-                    <button id="tree-collapse">Collapse branches</button>
-                </div>
-                <p class="chart-help">
-                    Click a first-level article to expand or collapse it. Click any article to select
-                    it across the views. Use Tab and Enter for keyboard selection.
-                </p>
-                <div id="branch-legend"></div>
-                <div class="viz-layout">
-                    <div>
-                        <div id="tree-container">
-                            <div id="tree"></div>
-                        </div>
-                        <p id="tree-summary" class="network-note"></p>
-                    </div>
-                    <aside class="article-detail" aria-label="Selected article details">
-                        <p>Select an article to inspect its statistics and highlight its connections.</p>
-                    </aside>
-                </div>
-                <p class="method-note">
-                    Tree columns show exploration steps. An article can also have a shorter hyperlink
-                    path from the seed; its shortest directed distance appears in the details. Snapshot
-                    rankings cover only articles in this collected network. Branch colors identify
-                    paths.
-                </p>
-                <p class="snapshot-insight">
-                    <strong>A popularity-structure contrast:</strong> in the collected dataset, ChatGPT
-                    received about 35.0 million pageviews and Machine learning about 838,000 during
-                    the same period. Machine learning nevertheless has higher PageRank in the selected
-                    graph. Follow an article from the tree into the network to compare these two
-                    perspectives.
-                </p>
-            </section>
+      <section id="vis1" class="visualization-section knowledge-section">
+        <div class="section-heading">
+          <span class="section-number">01</span>
+          <div>
+            <h2>Popular paths from a starting article</h2>
+            <p class="viz-description">
+              Search an article title or paste an English Wikipedia URL. Each
+              branch ranks its outgoing links by complete 12-month pageviews,
+              showing up to ten at each level.
+            </p>
+          </div>
+        </div>
+        <form id="seed-form" class="search-form">
+          <label for="seed-search">Starting Wikipedia article</label>
+          <div class="search-row">
+            <input
+              id="seed-search"
+              list="article-suggestions"
+              value="Artificial intelligence"
+              placeholder="Article title or Wikipedia URL"
+              autocomplete="off"
+              required
+            />
+            <datalist id="article-suggestions"></datalist>
+            <button id="search-submit" class="primary" type="submit">
+              Explore article →
+            </button>
+          </div>
+          <div class="search-options">
+            <span>Search the 10,000-article dataset</span>
+            <button id="reset-seed" type="button">Reset to AI</button>
+          </div>
+        </form>
+        <p id="search-status" role="status" aria-live="polite">
+          Loading articles and links…
+        </p>
+        <div class="view-controls">
+          <strong id="current-seed">Artificial intelligence</strong>
+          <label for="tree-depth">
+            Tree levels
+            <select id="tree-depth">
+              <option value="1">1 level</option>
+              <option value="2" selected>2 levels</option>
+            </select>
+          </label>
+          <button id="tree-expand">Expand all branches</button>
+          <button id="tree-collapse">Collapse branches</button>
+        </div>
+        <p class="chart-help">
+          Click a first-level article to expand or collapse it. Click any
+          article to select it across the views. Use Tab and Enter for keyboard
+          selection.
+        </p>
+        <div id="branch-legend"></div>
+        <div class="viz-layout">
+          <div>
+            <div id="tree-container">
+              <div id="tree"></div>
+            </div>
+            <p id="tree-summary" class="network-note"></p>
+          </div>
+          <aside class="article-detail" aria-label="Selected article details">
+            <p>
+              Select an article to inspect its statistics and highlight its
+              connections.
+            </p>
+          </aside>
+        </div>
+        <p class="method-note">
+          Tree columns show exploration steps. An article can also have a
+          shorter hyperlink path from the seed; its shortest directed distance
+          appears in the details. Snapshot rankings cover only articles in this
+          collected network. Branch colors identify paths.
+        </p>
+        <p class="snapshot-insight">
+          <strong>A popularity-structure contrast:</strong> in the collected
+          dataset, ChatGPT received about 35.0 million pageviews and Machine
+          learning about 838,000 during the same period. Machine learning
+          nevertheless has higher PageRank in the selected graph. Follow an
+          article from the tree into the network to compare these two
+          perspectives.
+        </p>
+      </section>
 
-            <section id="vis2" class="visualization-section knowledge-section">
-                <div class="section-heading">
-                    <span class="section-number">02</span>
-                    <div>
-                        <h2>The knowledge network</h2>
-                        <p class="viz-description">
-                            Discover communities and cross-links beyond the hierarchy. Begin with
-                            a grouped overview, then open a community or inspect articles around
-                            your current seed.
-                        </p>
-                    </div>
-                </div>
-                <div class="view-controls">
-                    <strong id="network-title">Community overview</strong>
-                    <button id="network-back" hidden>← Community overview</button>
-                    <button id="network-articles">Explore seed articles</button>
-                    <button id="network-fit">Fit view</button>
-                    <button id="clear-selection">Clear selection</button>
-                </div>
-                <div class="view-controls secondary">
-                    <label>
-                        Directed distance
-                        <select id="network-depth">
-                            <option value="1">≤ 1 hyperlink</option>
-                            <option value="2" selected>≤ 2 hyperlinks</option>
-                            <option value="3">≤ 3 hyperlinks</option>
-                            <option value="0">All reachable articles</option>
-                        </select>
-                    </label>
-                    <label>
-                        Article limit
-                        <select id="node-limit">
-                            <option value="40">40</option>
-                            <option value="80" selected>80</option>
-                            <option value="160">160</option>
-                        </select>
-                    </label>
-                    <label>
-                        Article size
-                        <select id="size-metric">
-                            <option value="pagerank">PageRank</option>
-                            <option value="local_indegree">In-degree</option>
-                            <option value="betweenness">Betweenness (estimated)</option>
-                        </select>
-                    </label>
-                    <label>
-                        Article links
-                        <select id="edge-mode">
-                            <option value="backbone">Sparse overview</option>
-                            <option value="all">All visible links</option>
-                        </select>
-                    </label>
-                    <label>
-                        <input type="checkbox" id="show-labels" checked>
-                        Key labels
-                    </label>
-                </div>
-                <p id="network-summary" role="status" class="chart-help"></p>
-                <div id="community-legend"></div>
-                <div class="viz-layout">
-                    <div>
-                        <div id="network-container">
-                            <div id="network"></div>
-                        </div>
-                        <p id="links-summary" class="network-note"></p>
-                    </div>
-                    <aside class="article-detail" aria-label="Selected network article details">
-                        <p>Select an article to inspect its statistics and highlight its connections.</p>
-                    </aside>
-                </div>
-                <p class="method-note">
-                    Drag nodes; scroll to zoom; drag the background to pan. In the overview, circle
-                    area represents article count and line width represents directed cross-community
-                    link count. In article views, size represents the chosen metric; color represents
-                    a detected community. Selecting an article shows all its incoming and outgoing
-                    links among displayed articles, including links omitted from the sparse overview.
-                </p>
-                <p class="method-note">
-                    Snapshot communities use Louvain on the undirected projection of all 699,092
-                    links. Degree and PageRank use the directed full snapshot. Betweenness uses
-                    32 sampled sources. Overview labels name the two highest-PageRank articles in
-                    each community, rather than formal subject categories.
-                </p>
-                <p class="snapshot-insight">
-                    <strong>What counts as an important hub?</strong> Semantic Scholar and JSTOR
-                    have the highest PageRank values in this selected graph. Their prominence shows
-                    why a structurally important article need not itself be a foundational AI concept.
-                    Community and link context help interpret the ranking.
-                </p>
-            </section>
+      <section id="vis2" class="visualization-section knowledge-section">
+        <div class="section-heading">
+          <span class="section-number">02</span>
+          <div>
+            <h2>The knowledge network</h2>
+            <p class="viz-description">
+              Discover communities and cross-links beyond the hierarchy. Begin
+              with a grouped overview, then open a community or inspect articles
+              around your current seed.
+            </p>
+          </div>
+        </div>
+        <div class="view-controls">
+          <strong id="network-title">Community overview</strong>
+          <button id="network-back" hidden>← Community overview</button>
+          <button id="network-articles">Explore seed articles</button>
+          <button id="network-fit">Fit view</button>
+          <button id="clear-selection">Clear selection</button>
+        </div>
+        <div class="view-controls secondary">
+          <label>
+            Directed distance
+            <select id="network-depth">
+              <option value="1">≤ 1 hyperlink</option>
+              <option value="2" selected>≤ 2 hyperlinks</option>
+              <option value="3">≤ 3 hyperlinks</option>
+              <option value="0">All reachable articles</option>
+            </select>
+          </label>
+          <label>
+            Article limit
+            <select id="node-limit">
+              <option value="40">40</option>
+              <option value="80" selected>80</option>
+              <option value="160">160</option>
+            </select>
+          </label>
+          <label>
+            Article size
+            <select id="size-metric">
+              <option value="pagerank">PageRank</option>
+              <option value="local_indegree">In-degree</option>
+              <option value="betweenness">Betweenness (estimated)</option>
+            </select>
+          </label>
+          <label>
+            Article links
+            <select id="edge-mode">
+              <option value="backbone">Sparse overview</option>
+              <option value="all">All visible links</option>
+            </select>
+          </label>
+          <label>
+            <input type="checkbox" id="show-labels" checked />
+            Key labels
+          </label>
+        </div>
+        <p id="network-summary" role="status" class="chart-help"></p>
+        <div id="community-legend"></div>
+        <div class="viz-layout">
+          <div>
+            <div id="network-container">
+              <div id="network"></div>
+            </div>
+            <p id="links-summary" class="network-note"></p>
+          </div>
+          <aside
+            class="article-detail"
+            aria-label="Selected network article details"
+          >
+            <p>
+              Select an article to inspect its statistics and highlight its
+              connections.
+            </p>
+          </aside>
+        </div>
+        <p class="method-note">
+          Drag nodes; scroll to zoom; drag the background to pan. In the
+          overview, circle area represents article count and line width
+          represents directed cross-community link count. In article views, size
+          represents the chosen metric; color represents a detected community.
+          Selecting an article shows all its incoming and outgoing links among
+          displayed articles, including links omitted from the sparse overview.
+        </p>
+        <p class="method-note">
+          Snapshot communities use Louvain on the undirected projection of all
+          699,092 links. Degree and PageRank use the directed full snapshot.
+          Betweenness uses 32 sampled sources. Overview labels name the two
+          highest-PageRank articles in each community, rather than formal
+          subject categories.
+        </p>
+        <p class="snapshot-insight">
+          <strong>What counts as an important hub?</strong> Semantic Scholar and
+          JSTOR have the highest PageRank values in this selected graph. Their
+          prominence shows why a structurally important article need not itself
+          be a foundational AI concept. Community and link context help
+          interpret the ranking.
+        </p>
+      </section>
 
-            <section class="visualization-section">
-                <h2>3. Structural Importance vs. Reader Attention</h2>
-                <p class="viz-description">
-                    This view compares how structurally prominent an article is within Wikipedia
-                    with how much reader attention it received from September 2025 through August
-                    2026.
-                </p>
-                <p class="viz-description">
-                    Articles farther to the right receive links from more Wikipedia articles. Articles
-                    higher on the chart received more pageviews. Point size represents PageRank
-                    within the selected Artificial Intelligence network.
-                </p>
-                <p class="viz-description">
-                    <strong>Working visualization:</strong> This scatterplot is implemented in D3.js
-                    using actual processed network and pageview data from the project. Each point
-                    represents an article or concept included in the selected Artificial Intelligence
-                    network.
-                </p>
-                <div id="scatter-legend"></div>
-                <div id="scatter-container">
-                    <div id="scatter"></div>
-                </div>
-                <p class="network-note">
-                    Both axes use logarithmic scales because article connectivity and pageviews
-                    are strongly skewed. Dashed lines show the median values among the selected
-                    AI concepts.
-                </p>
-                <div class="interaction-plan">
-                    <h3>Interaction / Animation Plan</h3>
-                    <p>
-                        Users will be able to hover over points to view article statistics, filter
-                        concepts by network community, select different measures of structural importance,
-                        and click a concept to highlight the same article in the hierarchy and force-directed
-                        network.
-                    </p>
-                    <p>
-                        Hovering over a point will display a tooltip containing the article title
-                        and relevant network and pageview measures. This allows users to inspect
-                        individual observations without placing permanent labels on every point.
-                    </p>
-                    <p>
-                        Filtering will allow users to focus on selected communities or subsets of
-                        concepts. Points will transition smoothly when the displayed subset changes
-                        so that users can understand which observations have been filtered rather
-                        than interpreting them as new data.
-                    </p>
-                    <p>
-                        Selecting a point will connect the scatterplot to the other visualizations
-                        by highlighting the corresponding concept in the hierarchy and network.
-                        The purpose is to help users compare structural importance and reader attention
-                        for the same concept across multiple views.
-                    </p>
-                </div>
-            </section>
+      <section class="visualization-section">
+        <h2>3. Structural Importance vs. Reader Attention</h2>
+        <p class="viz-description">
+          This view compares how structurally prominent an article is within
+          Wikipedia with how much reader attention it received from September
+          2025 through August 2026.
+        </p>
+        <p class="viz-description">
+          Articles farther to the right receive links from more Wikipedia
+          articles. Articles higher on the chart received more pageviews. Point
+          size represents PageRank within the selected Artificial Intelligence
+          network.
+        </p>
+        <p class="viz-description">
+          <strong>Working visualization:</strong> This scatterplot is
+          implemented in D3.js using actual processed network and pageview data
+          from the project. Each point represents an article or concept included
+          in the selected Artificial Intelligence network.
+        </p>
+        <div id="scatter-legend"></div>
+        <div id="scatter-container">
+          <div id="scatter"></div>
+        </div>
+        <p class="network-note">
+          Both axes use logarithmic scales because article connectivity and
+          pageviews are strongly skewed. Dashed lines show the median values
+          among the selected AI concepts.
+        </p>
+        <div class="interaction-plan">
+          <h3>Interaction / Animation Plan</h3>
+          <p>
+            Users will be able to hover over points to view article statistics,
+            filter concepts by network community, select different measures of
+            structural importance, and click a concept to highlight the same
+            article in the hierarchy and force-directed network.
+          </p>
+          <p>
+            Hovering over a point will display a tooltip containing the article
+            title and relevant network and pageview measures. This allows users
+            to inspect individual observations without placing permanent labels
+            on every point.
+          </p>
+          <p>
+            Filtering will allow users to focus on selected communities or
+            subsets of concepts. Points will transition smoothly when the
+            displayed subset changes so that users can understand which
+            observations have been filtered rather than interpreting them as new
+            data.
+          </p>
+          <p>
+            Selecting a point will connect the scatterplot to the other
+            visualizations by highlighting the corresponding concept in the
+            hierarchy and network. The purpose is to help users compare
+            structural importance and reader attention for the same concept
+            across multiple views.
+          </p>
+        </div>
+      </section>
 
-            <section class="evaluation-section" id="evaluation">
-                <h2>Evaluation Plan</h2>
-                <p>
-                    We will evaluate whether the visualizations help users understand the structure
-                    of the Artificial Intelligence knowledge network and whether the visual encodings
-                    and planned interactions make it easier to explore relationships between concepts.
-                    Because the intended audience is new learners, the evaluation will focus particularly
-                    on whether users can interpret the visualizations without needing prior knowledge
-                    of the network analysis methods.
-                </p>
-                <h3>What We Will Evaluate</h3>
-                <p>We will evaluate four main aspects of the visualization:</p>
-                <ul>
-                    <li>
-                        <strong>Comprehension:</strong> whether users can understand how Artificial
-                        Intelligence branches into related concepts and identify relationships between
-                        concepts.
-                    </li>
-                    <li>
-                        <strong>Structural interpretation:</strong> whether users can identify highly
-                        connected concepts, communities, and important relationships in the force-directed
-                        network.
-                    </li>
-                    <li>
-                        <strong>Comparison:</strong> whether users can correctly interpret the relationship
-                        between structural importance and reader attention in the scatterplot.
-                    </li>
-                    <li>
-                        <strong>Interaction and usability:</strong> whether users can successfully
-                        navigate, select, filter, zoom, hover, and move between the visualizations.
-                    </li>
-                    <li>
-                        <strong>Visual encoding:</strong> whether users understand what node size,
-                        node color, position, branch structure, and other encodings represent.
-                    </li>
-                </ul>
-                <h3>How We Will Evaluate</h3>
-                <p>
-                    We will conduct a small usability study with classmates or other students who
-                    are not directly involved in developing the visualization. Each participant
-                    will be given a short set of concrete tasks based on the research questions
-                    and intended user journey.
-                </p>
-                <p>
-                    Example tasks will include finding a concept at a particular level of the hierarchy,
-                    identifying a highly connected or structurally prominent concept in the network,
-                    locating a concept with relatively high reader attention in the scatterplot,
-                    and tracing the same concept across multiple views.
-                </p>
-                <p>
-                    Participants will first attempt the tasks without assistance. We will observe
-                    where they hesitate, make incorrect interpretations, or have difficulty using
-                    an interaction. After completing the tasks, participants will provide short
-                    feedback about the clarity, usefulness, readability, and ease of use of the
-                    visualizations.
-                </p>
-                <h3>Data and Feedback We Will Collect</h3>
-                <p>For each participant and task, we will collect:</p>
-                <ul>
-                    <li>
-                        <strong>Task completion:</strong> whether the participant successfully completed
-                        the requested task.
-                    </li>
-                    <li>
-                        <strong>Task time:</strong> approximately how long participants take to
-                        complete each task.
-                    </li>
-                    <li>
-                        <strong>Errors:</strong> incorrect answers or incorrect interpretations
-                        of the visual encodings and data.
-                    </li>
-                    <li>
-                        <strong>Interaction difficulties:</strong> observations of hesitation, missed
-                        controls, difficulty selecting nodes, or difficulty navigating between visualizations.
-                    </li>
-                    <li>
-                        <strong>Qualitative feedback:</strong> participant comments about which
-                        parts of the visualization were clear, confusing, useful, or unnecessary.
-                    </li>
-                    <li>
-                        <strong>Visual encoding feedback:</strong> whether participants correctly
-                        understood the meaning of node size, node color, axes, hierarchy levels,
-                        and other visual variables.
-                    </li>
-                    <li>
-                        <strong>Overall usability feedback:</strong> participant suggestions for
-                        improving the layout, interaction design, labels, legends, tooltips, and
-                        navigation.
-                    </li>
-                </ul>
-                <h3>How Evaluation Results Will Be Used</h3>
-                <p>
-                    We will use the evaluation results to identify specific usability and comprehension
-                    problems before the final version. For example, repeated difficulty interpreting
-                    an encoding may indicate that the legend or visual variable needs to be changed,
-                    while repeated difficulty following a selected concept across views may indicate
-                    that linked highlighting or navigation needs to be strengthened.
-                </p>
-                <p>
-                    The evaluation will therefore inform both visual design and interaction revisions
-                    rather than simply measuring whether participants like the visualization.
-                </p>
-            </section>
-        </main>
-        
-        <script src="js/knowledge.js"></script>
-        <script src="js/tree.js"></script>
-        <script src="js/network.js"></script>
-        <script src="js/scatter.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+      <section id="vis6" class="visualization-section knowledge-section">
+        <div class="section-heading">
+          <span class="section-number">06</span>
+          <div>
+            <h2>From knowledge to jobs</h2>
+            <p class="viz-description">
+              Each point is an IT job title. Titles higher up appear in more job
+              postings; titles farther right offer a higher mean salary. Select
+              an article in the views above to highlight the jobs whose postings
+              ask for it, then click a point to list its postings.
+            </p>
+          </div>
+        </div>
+        <p id="jobs-summary" class="data-summary">Loading job postings…</p>
+        <div class="view-controls">
+          <p
+            id="jobs-skill-status"
+            role="status"
+            aria-live="polite"
+            class="jobs-status"
+          >
+            Select a Wikipedia article above to highlight jobs that ask for it.
+          </p>
+          <label for="jobs-title-select">
+            Job title
+            <select id="jobs-title-select"></select>
+          </label>
+        </div>
+        <div class="jobs-legend" aria-hidden="true">
+          <span
+            ><i class="swatch is-match"></i>Postings require the skill (larger =
+            higher share)</span
+          >
+          <span><i class="swatch"></i>Other job titles</span>
+          <span><i class="swatch is-selected"></i>Listed on the right</span>
+        </div>
+        <div class="jobs-layout">
+          <div id="jobs-chart"></div>
+          <aside class="jobs-listing" aria-labelledby="jobs-list-title">
+            <div class="jobs-listing-head">
+              <h3 id="jobs-list-title">Job postings</h3>
+              <p id="jobs-list-meta"></p>
+              <label
+                ><input type="checkbox" id="jobs-only-matches" /> Only postings
+                that require this skill</label
+              >
+            </div>
+            <ul id="jobs-list"></ul>
+            <button id="jobs-more" type="button" hidden>Show more</button>
+          </aside>
+        </div>
+        <p class="method-note">
+          Data: 8,797 IT job postings from the Mendeley “Job Dataset for IT
+          Professionals”. The vertical axis counts postings that share a job
+          title, used as a measure of demand. A posting’s salary is the midpoint
+          of its listed range; a title’s salary is the mean of its postings’
+          midpoints. The dataset does not state a currency, so salaries are
+          shown in US dollars. Both axes use log scales because a few titles
+          dominate.
+        </p>
+        <p class="method-note">
+          A posting requires an article’s skill when the article’s title appears
+          as a whole word in the posting’s listed skills. Qualifiers such as
+          “(programming language)” are dropped before matching. Titles are
+          counted as written, so spelling variants such as “Andriod Developer”
+          remain separate.
+        </p>
+      </section>
+
+      <section class="evaluation-section" id="evaluation">
+        <h2>Evaluation Plan</h2>
+        <p>
+          We will evaluate whether the visualizations help users understand the
+          structure of the Artificial Intelligence knowledge network and whether
+          the visual encodings and planned interactions make it easier to
+          explore relationships between concepts. Because the intended audience
+          is new learners, the evaluation will focus particularly on whether
+          users can interpret the visualizations without needing prior knowledge
+          of the network analysis methods.
+        </p>
+        <h3>What We Will Evaluate</h3>
+        <p>We will evaluate four main aspects of the visualization:</p>
+        <ul>
+          <li>
+            <strong>Comprehension:</strong> whether users can understand how
+            Artificial Intelligence branches into related concepts and identify
+            relationships between concepts.
+          </li>
+          <li>
+            <strong>Structural interpretation:</strong> whether users can
+            identify highly connected concepts, communities, and important
+            relationships in the force-directed network.
+          </li>
+          <li>
+            <strong>Comparison:</strong> whether users can correctly interpret
+            the relationship between structural importance and reader attention
+            in the scatterplot.
+          </li>
+          <li>
+            <strong>Interaction and usability:</strong> whether users can
+            successfully navigate, select, filter, zoom, hover, and move between
+            the visualizations.
+          </li>
+          <li>
+            <strong>Visual encoding:</strong> whether users understand what node
+            size, node color, position, branch structure, and other encodings
+            represent.
+          </li>
+        </ul>
+        <h3>How We Will Evaluate</h3>
+        <p>
+          We will conduct a small usability study with classmates or other
+          students who are not directly involved in developing the
+          visualization. Each participant will be given a short set of concrete
+          tasks based on the research questions and intended user journey.
+        </p>
+        <p>
+          Example tasks will include finding a concept at a particular level of
+          the hierarchy, identifying a highly connected or structurally
+          prominent concept in the network, locating a concept with relatively
+          high reader attention in the scatterplot, and tracing the same concept
+          across multiple views.
+        </p>
+        <p>
+          Participants will first attempt the tasks without assistance. We will
+          observe where they hesitate, make incorrect interpretations, or have
+          difficulty using an interaction. After completing the tasks,
+          participants will provide short feedback about the clarity,
+          usefulness, readability, and ease of use of the visualizations.
+        </p>
+        <h3>Data and Feedback We Will Collect</h3>
+        <p>For each participant and task, we will collect:</p>
+        <ul>
+          <li>
+            <strong>Task completion:</strong> whether the participant
+            successfully completed the requested task.
+          </li>
+          <li>
+            <strong>Task time:</strong> approximately how long participants take
+            to complete each task.
+          </li>
+          <li>
+            <strong>Errors:</strong> incorrect answers or incorrect
+            interpretations of the visual encodings and data.
+          </li>
+          <li>
+            <strong>Interaction difficulties:</strong> observations of
+            hesitation, missed controls, difficulty selecting nodes, or
+            difficulty navigating between visualizations.
+          </li>
+          <li>
+            <strong>Qualitative feedback:</strong> participant comments about
+            which parts of the visualization were clear, confusing, useful, or
+            unnecessary.
+          </li>
+          <li>
+            <strong>Visual encoding feedback:</strong> whether participants
+            correctly understood the meaning of node size, node color, axes,
+            hierarchy levels, and other visual variables.
+          </li>
+          <li>
+            <strong>Overall usability feedback:</strong> participant suggestions
+            for improving the layout, interaction design, labels, legends,
+            tooltips, and navigation.
+          </li>
+        </ul>
+        <h3>How Evaluation Results Will Be Used</h3>
+        <p>
+          We will use the evaluation results to identify specific usability and
+          comprehension problems before the final version. For example, repeated
+          difficulty interpreting an encoding may indicate that the legend or
+          visual variable needs to be changed, while repeated difficulty
+          following a selected concept across views may indicate that linked
+          highlighting or navigation needs to be strengthened.
+        </p>
+        <p>
+          The evaluation will therefore inform both visual design and
+          interaction revisions rather than simply measuring whether
+          participants like the visualization.
+        </p>
+      </section>
+    </main>
+
+    <script src="js/knowledge.js"></script>
+    <script src="js/tree.js"></script>
+    <script src="js/network.js"></script>
+    <script src="js/scatter.js"></script>
+    <script src="js/jobs.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
