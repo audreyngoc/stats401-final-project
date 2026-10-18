@@ -52,6 +52,37 @@
           padding: 28px 22px;
         }
       }
+
+      /* FINAL PROJECT REPORT */
+      #final-report { scroll-margin-top: 20px; }
+      #final-report .section-number { min-width: 3.5rem; text-align: center; }
+      #final-report .report-authors { font-weight: 600; color: #475569; margin: 15px 0 22px; }
+      #final-report .report-toolbar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border-radius: 10px; padding: 16px 18px; background: #f3f8f8; margin-bottom: 20px; font-size: .94rem; color: #475569; }
+      #final-report .report-download { background: #165e66; color: #fff; font-weight: 600; text-decoration: none; display: inline-block; padding: 10px 16px; border-radius: 8px; }
+      #final-report .report-download:hover, #final-report .report-download:focus-visible { background: #10474e; text-decoration: underline; }
+      #final-report .report-toc { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 0 24px; margin-bottom: 22px; border-bottom: 1px solid #e2e8f0; }
+      #final-report .report-toc a { color: #165e66; border: 1px solid #cbdfe1; background: #fff; text-decoration: none; font-size: .89rem; border-radius: 999px; padding: 7px 12px; }
+      #final-report .report-toc a:hover, #final-report .report-toc a:focus-visible { background: #e7f3f3; text-decoration: underline; }
+      #final-report .report-prose { max-width: 900px; margin: 0 auto; }
+      #final-report .report-chapter { scroll-margin-top: 24px; margin-top: 32px; }
+      #final-report .report-chapter + .report-chapter { border-top: 1px solid #e2e8f0; padding-top: 24px; }
+      #final-report .report-chapter h3 { color: #193f48; font-size: 1.4rem; margin: 0 0 16px; }
+      #final-report .report-chapter p { font-size: 1rem; line-height: 1.8; color: #364152; margin: 0 0 18px; }
+      #final-report .report-result { padding: 12px 0 28px; border-bottom: 1px solid #e6eaee; }
+      #final-report .report-result:last-child { border-bottom: 0; }
+      #final-report .report-result h4 { margin: 0 0 12px; font-size: 1.12rem; }
+      #final-report .report-result h4 a { color: #204b53; text-decoration: none; }
+      #final-report .report-result h4 a:hover { text-decoration: underline; }
+      #final-report .report-figure { margin: 18px 0 0; padding: 18px; border: 1px solid #e0e7e7; border-radius: 12px; background: #f8fafb; text-align: center; }
+      #final-report .report-figure img { display: block; width: 100%; max-width: 840px; height: auto; margin: 0 auto; border-radius: 5px; }
+      #final-report .report-figure figcaption { font-size: .87rem; color: #566575; padding-top: 12px; line-height: 1.5; }
+      #final-report .report-figure figcaption a { color: #165e66; }
+      @media (max-width: 700px) {
+        #final-report .report-toolbar { padding: 13px; }
+        #final-report .report-toc { gap: 6px; }
+        #final-report .report-figure { padding: 8px; }
+        #final-report .report-chapter h3 { font-size: 1.2rem; }
+      }
     </style>
   </head>
 
@@ -69,7 +100,7 @@
         <a href="#vis4">Pageview streamgraph</a>
         <a href="#vis5">Comparative streamgraph</a>
         <a href="#vis6">Knowledge &amp; jobs</a>
-        <a href="#evaluation">Evaluation plan</a>
+        <a href="#final-report">Final report</a>
       </nav>
     </header>
 
@@ -615,7 +646,7 @@
         </div>
 
         <div class="comparison-meta">
-          <span>September 2025 – August 2026</span>
+          <span>September 2025 - August 2026</span>
           <span>10 topics</span>
           <span>Two sources, one timeline</span>
         </div>
@@ -777,19 +808,310 @@
         <p class="method-note">
           Data: 8,797 IT job postings from the Mendeley “Job Dataset for IT
           Professionals”. The vertical axis counts postings that share a job
-          title, used as a measure of demand. A posting’s salary is the midpoint
-          of its listed range; a title’s salary is the mean of its postings’
+          title, used as a measure of demand. A posting's salary is the midpoint
+          of its listed range; a title's salary is the mean of its postings'
           midpoints. The dataset does not state a currency, so salaries are
           shown in US dollars. Both axes use log scales because a few titles
           dominate.
         </p>
         <p class="method-note">
-          A posting requires an article’s skill when the article’s title appears
-          as a whole word in the posting’s listed skills. Qualifiers such as
+          A posting requires an article's skill when the article's title appears
+          as a whole word in the posting's listed skills. Qualifiers such as
           “(programming language)” are dropped before matching. Titles are
           counted as written, so spelling variants such as “Andriod Developer”
           remain separate.
         </p>
+      </section>
+
+      <section id="final-report" class="final-report-section" aria-labelledby="final-report-title">
+        <div class="section-heading">
+          <span class="section-number">REPORT</span>
+          <div>
+            <h2 id="final-report-title">Final Project Report</h2>
+            <p class="viz-description">Navigating Knowledge: Connecting Concepts, Communities, and Careers</p>
+          </div>
+        </div>
+        <p class="report-authors">Christine Herbst, Ly Minh Ngoc (Audrey) Tran, and Temuulen Enkhtamir</p>
+        <div class="report-toolbar">
+          <a class="report-download" href="assets/final-report/final-project-report.pdf" download>Download original PDF &darr;</a>
+          <span>Read the complete report below, including all six figures.</span>
+        </div>
+        <nav class="report-toc" aria-label="Final report contents">
+          <a href="#report-introduction">Introduction</a>
+          <a href="#report-method">Method</a>
+          <a href="#report-results">Results</a>
+          <a href="#report-discussion">Discussion</a>
+          <a href="#report-conclusion">Conclusion</a>
+          <a href="#report-roles">Team contributions</a>
+        </nav>
+        <div class="report-prose">
+          <section id="report-introduction" class="report-chapter">
+            <h3>Introduction</h3>
+            <p>Wikipedia contains extensive information about computing, but its article-by-article 
+              format can make an unfamiliar field difficult to navigate. A beginner exploring 
+              artificial intelligence, for example, encounters many related concepts without 
+              necessarily understanding how they connect, which deserve attention, or how they 
+              relate to practical interests. Our project addresses this problem by organizing articles 
+              and their relationships into an interactive knowledge map, supplemented by Reddit 
+              discussions and job board postings.
+            </p>
+            <p>Our intended audience is learners seeking an initial understanding of computing and 
+              emerging technologies. We ask how a topic expands through hyperlinks, which concepts 
+              occupy important network positions, and where apparently separate branches reconnect. 
+              We also examine whether structural importance corresponds to popularity, how attention 
+              changes over time, and how Wikipedia readership compares with online discussion. A 
+              career-oriented extension connects this exploration with occupations.
+            </p>
+            <p>Visualization is appropriate because these questions involve relationships, 
+              distributions, and temporal patterns that are difficult to communicate through article 
+              lists. The views support complementary tasks: following a manageable learning path, 
+              inspecting connections, comparing importance with attention, and investigating trends. 
+              Together, they provide several ways to explore a field without requiring users to 
+              understand network analysis before beginning.
+            </p>
+
+          </section>
+          <section id="report-method" class="report-chapter">
+            <h3>Method</h3>
+            <p>We processed English Wikipedia dumps using Python, converting article text exported by 
+              WikiExtractor and hyperlink records into Parquet tables. Separate Python scripts parsed 
+              compressed SQL dumps for page links, link targets, pages, and redirects. We standardized 
+              titles, retained the main article namespace, resolved redirects, and removed duplicate 
+              links and unresolved destinations. PyArrow supported batch conversion, while DuckDB 
+              performed large joins with configurable memory limits and temporary disk storage.
+            </p>
+            <p>Starting from Artificial Intelligence, we selected 10,000 articles across ten subtopics. 
+              Using scikit-learn, we generated TF-IDF vectors from article titles and up to 6,000 
+              characters of opening text, ranking candidates by their similarity to the parent article 
+              (75%), seed article (10%), and global in-degree (15%). Selection alternated across 
+              branches to distribute articles among subtopics.
+            </p>
+            <p>We constructed a directed graph containing hyperlinks between selected articles and 
+              calculated in-degree, out-degree, and PageRank. Using NetworkX, we detected Louvain 
+              communities on an undirected graph version and estimated betweenness centrality to 
+              identify potential bridges. Directed breadth-first search measured shortest hyperlink 
+              distances from the seed. Detected communities and shortest-path distances were 
+              distinguished from assigned subtopics and original selection tiers.
+            </p>
+            <p>We collected monthly Wikimedia pageviews for September 2025 through August 2026 for 
+              each article. CSV and JSON exports supplied article attributes, edges, adjacency lists, 
+              communities, tree structures, and temporal summaries to the interface. Validation 
+              checked graph size, duplicate records, month coverage, and consistency between monthly 
+              and annual pageview totals.
+            </p>
+            <p>We collected r/computerscience data through the SocialCrawl API using Python, combining 
+              paginated posts from “new,” comment trees from highly commented posts, and searches 
+              for thirty computing-related terms. Requests budgets and incremental saving supported 
+              resumable collection. After excluding media-only, URL-only, deleted, and removed 
+              content, we retained 604 posts and 1,051 comments, with comments drawn from 105 
+              threads. The dataset spans May 2025-October 2026 and was exported as JSONL and CSV.
+            </p>
+            <p>We also used Rahman et al.'s “Job Dataset for IT Professionals,” containing 8,797 
+              postings with job titles, descriptions, skills, experience requirements, and salary 
+              ranges. Trimming whitespace reduced 254 distinct titles to 246, and requirements were 
+              parsed into skill lists. Salary bounds were standardized to thousands, and each job 
+              title's mean salary was calculated by averaging midpoints of its postings' salary 
+              ranges.
+            </p>
+            <p>The interface uses HTML, CSS, JavaScript, and D3.js. Preprocessed CSV and JSON files 
+              support browser rendering, while consistent article identifiers enable coordinated 
+              selection, highlighting, and filtering across views.
+            </p>
+
+          </section>
+          <section id="report-results" class="report-chapter">
+            <h3>Results</h3>
+            
+            <div class="report-result" id="report-figure-1">
+              <h4>
+                <a href="#vis1" aria-label="Go to interactive visualization 1">1. Seed Article Search and 
+                  Hierarchal Tree</a>
+              </h4>
+              <p>The tree establishes an entry point through an article title or Wikipedia URL. Its
+                 proposed structure displays the ten most popular connected topics, followed by another 
+                 level of related topics. Users expand or collapse branches and limit depth, progressively 
+                 revealing detail. It addresses how a field expands from a familiar starting concept and 
+                 offers a manageable route through a much larger graph. Branching exposes candidate 
+                 learning directions, although popularity-based selection can exclude less visible 
+                 concepts.
+                </p>
+
+              <figure class="report-figure">
+                <a href="assets/final-report/figure-1.png" target="_blank" rel="noopener" title="View Figure 1 at full resolution">
+                  <img src="assets/final-report/figure-1.png" alt="Figure 1: screenshot of the Seed Article Search and Hierarchal Tree visualization" loading="lazy" />
+                </a>
+                <figcaption>Figure 1. Screenshot from the final report. <a href="#vis1">Explore the interactive version &rarr;</a></figcaption>
+              </figure>
+            </div>
+
+            <div class="report-result" id="report-figure-2">
+              <h4>
+                <a href="#vis2" aria-label="Go to interactive visualization 2">2. Force Directed Knowledge Network</a>
+              </h4>
+              <p>The network complements the tree by displaying relationships that a single-parent hierarchy 
+                cannot preserve. Articles appear as nodes and hyperlinks as edges; size and color can 
+                communicate structural importance and topic grouping. Zooming, panning, selecting nodes, and 
+                highlighting neighbors support local inspection. This view addresses hubs, bridges, clusters, 
+                and reconnections. It lets users investigate whether topics separated in the tree share articles
+                 or links.
+                </p>
+
+              <figure class="report-figure">
+                <a href="assets/final-report/figure-2.png" target="_blank" rel="noopener" title="View Figure 2 at full resolution">
+                  <img src="assets/final-report/figure-2.png" alt="Figure 2: screenshot of the Force Directed Knowledge Network visualization" loading="lazy" />
+                </a>
+                <figcaption>Figure 2. Screenshot from the final report. <a href="#vis2">Explore the interactive version &rarr;</a></figcaption>
+              </figure>
+            </div>
+
+            <div class="report-result" id="report-figure-3">
+              <h4>
+                <a href="#vis3" aria-label="Go to interactive visualization 3">3. Structural Important and Popularity Scatterplot</a>
+              </h4>
+              <p>The scatterplot compares a network measure with Wikipedia pageviews, placing each 
+                article according to its structural position and reader attention. Quadrants help 
+                organize comparisons between relatively high and low values. Hover details and topic 
+                filters support identifying individual articles and investigating outliers. The question 
+                is whether highly connected or central concepts also attract substantial attention. 
+                Articles combining high importance with low attention are candidates for further 
+                exploration, but that classification depends on the selected measure and quadrant 
+                thresholds.
+              </p>
+
+              <figure class="report-figure">
+                <a href="assets/final-report/figure-3.png" target="_blank" rel="noopener" title="View Figure 3 at full resolution">
+                  <img src="assets/final-report/figure-3.png" alt="Figure 3: screenshot of the Structural Important and Popularity Scatterplot visualization" loading="lazy" />
+                </a>
+                <figcaption>Figure 3. Screenshot from the final report. <a href="#vis3">Explore the interactive version &rarr;</a></figcaption>
+              </figure>
+            </div>
+
+            <div class="report-result" id="report-figure-4">
+              <h4>
+                <a href="#vis4" aria-label="Go to interactive visualization 4">4. Pageview Streamgraph</a>
+              </h4>
+              <p>The pageview streamgraph represents attention over time through colored layers whose 
+                thickness indicates pageviews for selected concepts or groups. Topic selection and 
+                filtering help users compare sustained attention with temporary increases. It 
+                addresses whether interest is stable, emerging, or declining within the observation 
+                period. Broad layers indicate larger contributions, while changing thickness reveals 
+                temporal variation.
+              </p>
+
+              <figure class="report-figure">
+                <a href="assets/final-report/figure-4.png" target="_blank" rel="noopener" title="View Figure 4 at full resolution">
+                  <img src="assets/final-report/figure-4.png" alt="Figure 4: screenshot of the Pageview Streamgraph visualization" loading="lazy" />
+                </a>
+                <figcaption>Figure 4. Screenshot from the final report. <a href="#vis4">Explore the interactive version &rarr;</a></figcaption>
+              </figure>
+            </div>
+
+            <div class="report-result" id="report-figure-5">
+              <h4>
+                <a href="#vis5" aria-label="Go to interactive visualization 5">5. Wikipedia and Reddit Comparative Streamgraph</a>
+              </h4>
+              <p>The comparative view places Wikipedia attention above a central baseline and Reddit 
+                discussion below it. Corresponding concepts and aligned time intervals support 
+                inspecting similarities and differences between reading and discussion. Concept or 
+                subreddit filtering helps narrow the comparison. It supports investigating coincident 
+                peaks, possible timing differences, and concepts primarily in one source, subject to 
+                sampling and concept-matching limitations
+              </p>
+
+              <figure class="report-figure">
+                <a href="assets/final-report/figure-5.png" target="_blank" rel="noopener" title="View Figure 5 at full resolution">
+                  <img src="assets/final-report/figure-5.png" alt="Figure 5: screenshot of the Wikipedia and Reddit Comparative Streamgraph visualization" loading="lazy" />
+                </a>
+                <figcaption>Figure 5. Screenshot from the final report. <a href="#vis5">Explore the interactive version &rarr;</a></figcaption>
+              </figure>
+            </div>
+
+            <div class="report-result" id="report-figure-6">
+              <h4>
+                <a href="#vis6" aria-label="Go to interactive visualization 6">6. Career Exploration Extension</a>
+              </h4>
+              <p>The sixth view connects knowledge areas with occupations through a scatterplot mapping 
+                mean salary versus number of postings. Searching by job identifies associated topics, 
+                while searching by seed article identifies related occupations. It extends discovery 
+                toward practical learning decisions by helping users assemble areas to investigate for 
+                a career interest.
+              </p>
+
+              <figure class="report-figure">
+                <a href="assets/final-report/figure-6.png" target="_blank" rel="noopener" title="View Figure 6 at full resolution">
+                  <img src="assets/final-report/figure-6.png" alt="Figure 6: screenshot of the Career Exploration Extension visualization" loading="lazy" />
+                </a>
+                <figcaption>Figure 6. Screenshot from the final report. <a href="#vis6">Explore the interactive version &rarr;</a></figcaption>
+              </figure>
+            </div>
+          </section>
+          <section id="report-discussion" class="report-chapter">
+            <h3>Discussion</h3>
+            <p>Our design combines complementary visualizations and interactions to help users explore 
+              computing concepts, compare their importance and popularity, and understand how they 
+              connect. The data includes articles, directed links, network attributes, temporal 
+              attention measures, discussion concepts, and occupation associations. The tasks include 
+              locating concepts, exploring relationships, comparing attributes, detecting outliers, 
+              and examining change. Trees and node-link diagrams represent structure; a scatterplot 
+              supports quantitative comparison; streamgraphs communicate changing composition. 
+              Search, filtering, selection, and details on demand reduce the amount of information 
+              users must process simultaneously.
+            </p>
+            <p>A strength is the combination of complementary views. The tree supports a focused 
+              starting path, while the graph reveals relationships omitted by hierarchical 
+              presentation. The scatterplot separates different meanings of importance, and temporal 
+              views add context beyond a single popularity ranking. Consistent concept labels and 
+              coordinated selections can help users carry questions between these representations.
+            </p>
+            <p>The same choices introduce weaknesses. Showing only popular neighbors makes the tree 
+              manageable, but biases exploration toward already visible articles. A force-directed 
+              graph can become a dense tangle, and layout movement can disrupt the user's mental map. 
+              Cluster filtering, selective labels, restrained edge opacity, and stable positions 
+              would improve readability. Selection should retain enough surrounding context to avoid 
+              making a local neighborhood appear disconnected from the broader field.
+            </p>
+            <p>Data limitations also constrain interpretation. Wikipedia hyperlinks are editorial 
+              associations, pageviews measure attention rather than understanding, and selected 
+              Reddit communities represent a limited discussion sample. Concept matching may merge 
+              distinct meanings, or miss synonyms. Improvements should prioritize concise annotations, 
+              metric definitions, visible quadrant thresholds, and a clear explanation of the Reddit 
+              sample size. Preserve network context during highlighting, stabilize layouts, reduce 
+              edge clutter, and check color accessibility. Future work could manually audit Reddit 
+              classifications and report accuracy against a reliable reference set.
+            </p>
+          </section>
+
+          <section id="report-conclusion" class="report-chapter">
+            <h3>Conclusion</h3>
+            <p>The project reframes computing knowledge as something to explore through several 
+              complementary lenses. The tree offers a starting path, the network reveals relationships 
+              beyond a hierarchy, the scatterplot distinguishes structural prominence from reader 
+              attention, and the two streamgraphs show how attention and classified discussion are 
+              distributed over time. The key interpretive lesson is that these measures answer 
+              different questions: network structure is not popularity, pageviews are not 
+              understanding, and a small Reddit sample is not a measure of public opinion. Used 
+              together, the views help learners generate better questions, discover connections 
+              worth following, and decide what to investigate next. The career extension adds a 
+              practical route from knowledge areas to occupations, while requiring users to treat 
+              job-posting summaries as exploratory evidence rather than guarantees.
+            </p>
+          </section>
+
+          <section id="report-roles" class="report-chapter">
+            <h3>Roles and Responsibilities</h3>
+            <p>Christine Herbst collected and cleaned all Wikipedia data used in the project, 
+              completed Visualizations 1 and 2, covering the search and hierarchical tree and 
+              the force-directed knowledge network, and was the primary coder for the interim 
+              check-in, and primary writer for the final report. Temuulen Enkhatmir collected and 
+              cleaned Reddit data and job board data used in the project, as well as completed 
+              Visualizations 3 and 6, covering the structural-importance versus popularity scatterplot 
+              and the career connection map. Audrey was the primary writer for the proposal and 
+              interim check-in, did finishing touches on the final report, and completed 
+              Visualizations 4 and 5, covering the pageview streamgraph and the Wikipedia-Reddit 
+              comparative streamgraph. All three members completed the poster.
+            </p>
+          </section>
+        </div>
       </section>
     </main>
 
