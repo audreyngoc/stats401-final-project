@@ -294,19 +294,12 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000`. If a visualization does not load, inspect the browser console and Network tab for missing files, incorrect relative paths, or data-loading errors. Check `package.json` and `package-lock.json` for any additional project-specific scripts or dependencies.
 
-## Team responsibilities
+## Roles and Responsibilities
 
--   **Christine Herbst:** Wikipedia data acquisition and cleaning;
-    seed-article tree and force-directed network.
--   **Temuulen Enkhtamir:** Reddit and job-posting data
-    acquisition/cleaning; structural-importance versus popularity and
-    career-exploration visualizations.
--   **Ly Minh Ngoc (Audrey) Tran:** proposal and interim writing;
-    Wikipedia pageview and Wikipedia--Reddit streamgraphs; interaction
-    design, webpage layout, and styling.
--   **All team members:** planning, design decisions, integration,
-    testing, interpretation, documentation, and presentation
-    preparation.
+- **Christine Herbst:** collected and cleaned Wikipedia data; prepared the Wikipedia data pipeline; implemented Visualizations 1 and 2 (seed-article search/tree and force-directed network); contributed to the interim check-in and final report.
+- **Temuulen Enkhtamir:** collected and cleaned Reddit and job-posting data; prepared related data-processing outputs; implemented Visualizations 3 and 6 (structural-importance versus popularity and career exploration).
+- **Ly Minh Ngoc (Audrey) Tran:** led proposal and interim-check-in writing; implemented Visualizations 4 and 5 (Wikipedia pageview streamgraph and Wikipedia–Reddit comparative streamgraph); contributed to interaction design, webpage layout, and styling.
+- **All team members:** contributed to project planning, visualization design decisions, integration, testing, interpretation, documentation, and presentation preparation.
 
 ## Project deliverables
 
