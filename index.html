@@ -444,7 +444,7 @@
           among the selected AI concepts.
         </p>
       </section>
-      
+
       <section id="vis4" class="visualization-section">
         <div class="section-heading">
           <span class="section-number">04</span>
@@ -457,7 +457,7 @@
             </p>
           </div>
         </div>
-        
+
         <!-- Collapsible topic filter -->
         <div class="streamgraph-controls" id="streamgraph-filter">
           <button
@@ -465,8 +465,8 @@
             id="streamgraph-filter-toggle"
             type="button"
             aria-expanded="false"
-            aria-controls="streamgraph-filter-content">
-
+            aria-controls="streamgraph-filter-content"
+          >
             <span class="streamgraph-filter-heading">
               <span class="streamgraph-filter-icon">☷</span>
               <span>
@@ -476,18 +476,21 @@
             </span>
 
             <span class="streamgraph-filter-right">
-              <span id="streamgraph-selected-count"
-                    class="streamgraph-selected-count">
+              <span
+                id="streamgraph-selected-count"
+                class="streamgraph-selected-count"
+              >
                 10 selected
               </span>
               <span class="streamgraph-chevron" aria-hidden="true">⌄</span>
             </span>
           </button>
 
-          <div id="streamgraph-filter-content"
-              class="streamgraph-filter-content"
-              hidden>
-
+          <div
+            id="streamgraph-filter-content"
+            class="streamgraph-filter-content"
+            hidden
+          >
             <div class="streamgraph-filter-actions">
               <span class="streamgraph-filter-hint">
                 Select one or more topics
@@ -497,16 +500,15 @@
                 <button id="streamgraph-select-all" type="button">
                   Select all
                 </button>
-                <button id="streamgraph-clear" type="button">
-                  Clear
-                </button>
+                <button id="streamgraph-clear" type="button">Clear</button>
               </div>
             </div>
 
-            <div id="streamgraph-topics"
-                class="streamgraph-topic-list"
-                aria-label="Filter topics">
-            </div>
+            <div
+              id="streamgraph-topics"
+              class="streamgraph-topic-list"
+              aria-label="Filter topics"
+            ></div>
           </div>
         </div>
 
@@ -516,8 +518,8 @@
             <div>
               <h3>Explore the timeline</h3>
               <p>
-                Play the timeline or drag the slider to explore changes
-                in Wikipedia pageviews month by month.
+                Play the timeline or drag the slider to explore changes in
+                Wikipedia pageviews month by month.
               </p>
             </div>
 
@@ -530,14 +532,16 @@
             <button
               id="streamgraph-play"
               type="button"
-              aria-label="Play timeline">
+              aria-label="Play timeline"
+            >
               ▶ Play
             </button>
 
             <button
               id="streamgraph-reset"
               type="button"
-              aria-label="Reset timeline">
+              aria-label="Reset timeline"
+            >
               ↺ Reset
             </button>
 
@@ -551,17 +555,15 @@
               aria-label="Choose month in the timeline"
             />
 
-            <span id="streamgraph-timeline-label">
-              1 / 12
-            </span>
+            <span id="streamgraph-timeline-label"> 1 / 12 </span>
           </div>
 
           <!-- Updates as the timeline progresses -->
           <div
             id="streamgraph-month-summary"
             class="streamgraph-month-summary"
-            aria-live="polite">
-          </div>
+            aria-live="polite"
+          ></div>
         </div>
 
         <!-- Loading status and topic legend -->
@@ -572,8 +574,8 @@
         <div
           id="streamgraph-legend"
           class="streamgraph-legend"
-          aria-label="Topic color legend">
-        </div>
+          aria-label="Topic color legend"
+        ></div>
 
         <!-- Main streamgraph and hover tooltip -->
         <div id="streamgraph-chart-wrap">
@@ -582,27 +584,32 @@
           <div
             id="streamgraph-tooltip"
             class="streamgraph-tooltip"
-            role="status">
-          </div>
+            role="status"
+          ></div>
         </div>
 
         <!-- Methodology note -->
         <p id="streamgraph-method" class="method-note">
-          Each colored band represents a computing topic. Follow a band across the timeline to explore changes in its monthly Wikipediapageviews. Thicker bands indicate more pageviews.
-          Monthly pageview totals are aggregated by topic. The streamgraph
-          uses a wiggle baseline, so vertical position is relative rather
-          than an absolute pageview measure. 
+          Each colored band represents a computing topic. Follow a band across
+          the timeline to explore changes in its monthly Wikipediapageviews.
+          Thicker bands indicate more pageviews. Monthly pageview totals are
+          aggregated by topic. The streamgraph uses a wiggle baseline, so
+          vertical position is relative rather than an absolute pageview
+          measure.
         </p>
       </section>
 
-      <section id="vis5" class="visualization-section comparative-streamgraph-section">
+      <section
+        id="vis5"
+        class="visualization-section comparative-streamgraph-section"
+      >
         <div class="section-heading">
           <span class="section-number">05</span>
           <div>
             <h2>Wikipedia and Reddit: Comparing Computing Topics Over Time</h2>
             <p class="viz-description">
-              Explore how attention to ten computing topics changes across Wikipedia
-              pageviews and a sample of r/computerscience discussions.
+              Explore how attention to ten computing topics changes across
+              Wikipedia pageviews and a sample of r/computerscience discussions.
             </p>
           </div>
         </div>
@@ -614,16 +621,13 @@
         </div>
 
         <div class="comparison-chart-card">
-
           <div class="comparison-topbar">
             <div>
               <h3>Explore a topic</h3>
               <p>Select a topic to highlight it across both streams.</p>
             </div>
 
-            <button id="comparison-reset" type="button">
-              Reset
-            </button>
+            <button id="comparison-reset" type="button">Reset</button>
           </div>
 
           <div
@@ -669,36 +673,38 @@
 
           <div class="comparison-method-content">
             <p>
-              Each topic keeps the same color across both streams. Band thickness
-              represents its share within that source for the month. Wikipedia
-              shares use pageviews across the ten selected topics; Reddit shares
-              use classified topic assignments. These percentages have different
-              denominators and should not be interpreted as equivalent amounts
-              of activity.
+              Each topic keeps the same color across both streams. Band
+              thickness represents its share within that source for the month.
+              Wikipedia shares use pageviews across the ten selected topics;
+              Reddit shares use classified topic assignments. These percentages
+              have different denominators and should not be interpreted as
+              equivalent amounts of activity.
             </p>
 
             <p>
               <strong>Topic selection:</strong>
-              Selecting or deselecting topics changes the composition of both streams.
-              When some topics are hidden, the remaining bands are recalculated to sum
-              to 100% of the selected topics for each source and month.
-            </p>
-            
-            <p>
-              <strong>Reddit sample:</strong>
-              We used a random sample of posts from r/computerscience to examine
-              whether discussions in the collected sample covered the same computing
-              topics as the Wikipedia data. Of 427 collected posts in the study period,
-              31 matched at least one selected topic, producing 34 topic assignments
-              because a post can match more than one topic. The sample is small, so
-              monthly patterns should be interpreted cautiously and not as a measure
-              of overall Reddit interest.
+              Selecting or deselecting topics changes the composition of both
+              streams. When some topics are hidden, the remaining bands are
+              recalculated to sum to 100% of the selected topics for each source
+              and month.
             </p>
 
             <p>
-              <strong>Missing data:</strong> December 2025 has no classified Reddit
-              posts. The gap represents missing classified evidence, not proof
-              that relevant discussions did not occur.
+              <strong>Reddit sample:</strong>
+              We used a random sample of posts from r/computerscience to examine
+              whether discussions in the collected sample covered the same
+              computing topics as the Wikipedia data. Of 427 collected posts in
+              the study period, 31 matched at least one selected topic,
+              producing 34 topic assignments because a post can match more than
+              one topic. The sample is small, so monthly patterns should be
+              interpreted cautiously and not as a measure of overall Reddit
+              interest.
+            </p>
+
+            <p>
+              <strong>Missing data:</strong> December 2025 has no classified
+              Reddit posts. The gap represents missing classified evidence, not
+              proof that relevant discussions did not occur.
             </p>
 
             <p>
@@ -783,119 +789,6 @@
           “(programming language)” are dropped before matching. Titles are
           counted as written, so spelling variants such as “Andriod Developer”
           remain separate.
-        </p>
-      </section>
-
-      <section class="evaluation-section" id="evaluation">
-        <h2>Evaluation Plan</h2>
-        <p>
-          We will evaluate whether the visualizations help users understand the
-          structure of the Artificial Intelligence knowledge network and whether
-          the visual encodings and planned interactions make it easier to
-          explore relationships between concepts. Because the intended audience
-          is new learners, the evaluation will focus particularly on whether
-          users can interpret the visualizations without needing prior knowledge
-          of the network analysis methods.
-        </p>
-        <h3>What We Will Evaluate</h3>
-        <p>We will evaluate four main aspects of the visualization:</p>
-        <ul>
-          <li>
-            <strong>Comprehension:</strong> whether users can understand how
-            Artificial Intelligence branches into related concepts and identify
-            relationships between concepts.
-          </li>
-          <li>
-            <strong>Structural interpretation:</strong> whether users can
-            identify highly connected concepts, communities, and important
-            relationships in the force-directed network.
-          </li>
-          <li>
-            <strong>Comparison:</strong> whether users can correctly interpret
-            the relationship between structural importance and reader attention
-            in the scatterplot.
-          </li>
-          <li>
-            <strong>Interaction and usability:</strong> whether users can
-            successfully navigate, select, filter, zoom, hover, and move between
-            the visualizations.
-          </li>
-          <li>
-            <strong>Visual encoding:</strong> whether users understand what node
-            size, node color, position, branch structure, and other encodings
-            represent.
-          </li>
-        </ul>
-        <h3>How We Will Evaluate</h3>
-        <p>
-          We will conduct a small usability study with classmates or other
-          students who are not directly involved in developing the
-          visualization. Each participant will be given a short set of concrete
-          tasks based on the research questions and intended user journey.
-        </p>
-        <p>
-          Example tasks will include finding a concept at a particular level of
-          the hierarchy, identifying a highly connected or structurally
-          prominent concept in the network, locating a concept with relatively
-          high reader attention in the scatterplot, and tracing the same concept
-          across multiple views.
-        </p>
-        <p>
-          Participants will first attempt the tasks without assistance. We will
-          observe where they hesitate, make incorrect interpretations, or have
-          difficulty using an interaction. After completing the tasks,
-          participants will provide short feedback about the clarity,
-          usefulness, readability, and ease of use of the visualizations.
-        </p>
-        <h3>Data and Feedback We Will Collect</h3>
-        <p>For each participant and task, we will collect:</p>
-        <ul>
-          <li>
-            <strong>Task completion:</strong> whether the participant
-            successfully completed the requested task.
-          </li>
-          <li>
-            <strong>Task time:</strong> approximately how long participants take
-            to complete each task.
-          </li>
-          <li>
-            <strong>Errors:</strong> incorrect answers or incorrect
-            interpretations of the visual encodings and data.
-          </li>
-          <li>
-            <strong>Interaction difficulties:</strong> observations of
-            hesitation, missed controls, difficulty selecting nodes, or
-            difficulty navigating between visualizations.
-          </li>
-          <li>
-            <strong>Qualitative feedback:</strong> participant comments about
-            which parts of the visualization were clear, confusing, useful, or
-            unnecessary.
-          </li>
-          <li>
-            <strong>Visual encoding feedback:</strong> whether participants
-            correctly understood the meaning of node size, node color, axes,
-            hierarchy levels, and other visual variables.
-          </li>
-          <li>
-            <strong>Overall usability feedback:</strong> participant suggestions
-            for improving the layout, interaction design, labels, legends,
-            tooltips, and navigation.
-          </li>
-        </ul>
-        <h3>How Evaluation Results Will Be Used</h3>
-        <p>
-          We will use the evaluation results to identify specific usability and
-          comprehension problems before the final version. For example, repeated
-          difficulty interpreting an encoding may indicate that the legend or
-          visual variable needs to be changed, while repeated difficulty
-          following a selected concept across views may indicate that linked
-          highlighting or navigation needs to be strengthened.
-        </p>
-        <p>
-          The evaluation will therefore inform both visual design and
-          interaction revisions rather than simply measuring whether
-          participants like the visualization.
         </p>
       </section>
     </main>
