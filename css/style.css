@@ -436,6 +436,43 @@ main {
     stroke-width: 1.2px;
 
     opacity: 0.82;
+
+    cursor: pointer;
+
+    transition: opacity 0.3s;
+}
+
+
+/* State classes, not attributes: the rule above
+   would override SVG presentation attributes. */
+
+.scatter-point.is-dimmed {
+    opacity: 0.09;
+}
+
+
+.scatter-point.is-hidden {
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.scatter-point.is-selected {
+    opacity: 1;
+
+    stroke: #d78527;
+    stroke-width: 3px;
+}
+
+
+.scatter-highlight circle {
+    fill: none;
+
+    stroke: #d78527;
+    stroke-width: 2px;
+
+    pointer-events: none;
 }
 
 
@@ -499,6 +536,19 @@ main {
     stroke-linejoin: round;
 
     pointer-events: none;
+}
+
+
+.scatter-highlight-label {
+    font-size: 13px;
+    font-weight: bold;
+
+    fill: #9a5712;
+}
+
+
+#scatter-legend .community-legend-item.is-muted {
+    opacity: 0.35;
 }
 
 

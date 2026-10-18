@@ -374,7 +374,7 @@
         </p>
       </section>
 
-      <section class="visualization-section">
+      <section class="visualization-section knowledge-section">
         <h2>3. Structural Importance vs. Reader Attention</h2>
         <p class="viz-description">
           This view compares how structurally prominent an article is within
@@ -393,6 +393,21 @@
           from the project. Each point represents an article or concept included
           in the selected Artificial Intelligence network.
         </p>
+        <div class="view-controls">
+          <label for="scatter-community">
+            Community
+            <select id="scatter-community">
+              <option value="">All communities</option>
+            </select>
+          </label>
+          <button id="scatter-reset" type="button">Reset highlight</button>
+        </div>
+        <p
+          id="scatter-status"
+          class="chart-help"
+          role="status"
+          aria-live="polite"
+        ></p>
         <div id="scatter-legend"></div>
         <div id="scatter-container">
           <div id="scatter"></div>

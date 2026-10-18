@@ -16,46 +16,53 @@ const scatterCommunityColors = [
 ];
 
 
-d3.csv(
-    "data/ai_nodes_enriched.csv",
-    d => ({
-        pageviews_status: d.pageviews_status,
-        article_id: +d.article_id,
-        title: d.title,
+Promise.all([
+    d3.csv(
+        "data/ai_nodes_enriched.csv",
+        d => ({
+            pageviews_status: d.pageviews_status,
+            article_id: +d.article_id,
+            title: d.title,
 
-        depth: +d.depth,
+            depth: +d.depth,
 
-        global_indegree:
-            +d.global_indegree,
+            global_indegree:
+                +d.global_indegree,
 
-        local_indegree:
-            +d.local_indegree,
+            local_indegree:
+                +d.local_indegree,
 
-        local_outdegree:
-            +d.local_outdegree,
+            local_outdegree:
+                +d.local_outdegree,
 
-        pagerank:
-            +d.pagerank,
+            pagerank:
+                +d.pagerank,
 
-        betweenness:
-            +d.betweenness,
+            betweenness:
+                +d.betweenness,
 
-        community:
-            +d.community,
+            community:
+                +d.community,
 
-        is_seed:
-            d.is_seed === "True"
-            || d.is_seed === "true",
+            is_seed:
+                d.is_seed === "True"
+                || d.is_seed === "true",
 
-        total_views_12m:
-            +d.total_views_12m,
+            total_views_12m:
+                +d.total_views_12m,
 
-        avg_daily_views:
-            +d.avg_daily_views
-    })
-)
+            avg_daily_views:
+                +d.avg_daily_views
+        })
+    ),
 
-.then(data => {
+    // Community names for the filter menu.
+    d3.json(
+        "data/ai_communities.json"
+    )
+])
+
+.then(([data, communityInfo]) => {
 
     // Remove invalid values
     // Log scales cannot display 0.
@@ -138,6 +145,16 @@ d3.csv(
                 4,
                 14
             ]);
+
+
+    // The seed article is drawn larger than the PageRank scale.
+
+    const radius =
+        d => d.is_seed
+            ? 16
+            : size(
+                d.pagerank
+            );
 
 
     // MEDIANS
@@ -381,16 +398,7 @@ d3.csv(
             )
             .attr(
                 "r",
-                d => {
-
-                    if (d.is_seed) {
-                        return 16;
-                    }
-
-                    return size(
-                        d.pagerank
-                    );
-                }
+                radius
             )
             .attr(
                 "fill",
@@ -434,49 +442,33 @@ d3.csv(
 
 
     // LABEL IMPORTANT / INTERESTING POINTS
-    // Keep labels intentionally limited.
+    // Keep labels intentionally limited: the top PageRank
+    // articles among the points currently shown.
 
-    const labelled = [...filtered].sort((a,b)=>b.pagerank-a.pagerank).slice(0,15);
+    const labelLayer =
+        plot.append("g");
 
-    // Shared article-ID selection; Vis 3 remains a full-snapshot overview.
-    points.on('click', (event,d) => window.knowledge?.get(d.article_id) && window.knowledge.select(d.article_id));
-    window.addEventListener('knowledge:selection',event=>{
-        const id=event.detail.articleId;
-        points.attr('opacity',d=>id==null||d.article_id===id?.82:.09)
-            .attr('stroke',d=>d.article_id===id?'#d78527':'white')
-            .attr('stroke-width',d=>d.article_id===id?4:1.2);
-        points.filter(d=>d.article_id===id).raise();
-    });
 
-    plot.append("g")
-        .selectAll("text")
-        .data(labelled)
-        .join("text")
+    // HIGHLIGHT
+    // Ring and label for the article selected in any view.
+
+    const highlight =
+        plot.append("g")
+            .attr(
+                "class",
+                "scatter-highlight"
+            )
+            .attr(
+                "display",
+                "none"
+            );
+
+    highlight.append("circle");
+
+    highlight.append("text")
         .attr(
             "class",
-            "scatter-label"
-        )
-        .attr(
-            "x",
-            d =>
-                x(
-                    d.global_indegree
-                )
-                + size(
-                    d.pagerank
-                )
-                + 5
-        )
-        .attr(
-            "y",
-            d =>
-                y(
-                    d.total_views_12m
-                )
-                - 4
-        )
-        .text(
-            d => d.title
+            "scatter-label scatter-highlight-label"
         );
 
 
@@ -605,7 +597,7 @@ d3.csv(
         );
 
 
-    legend
+    const legendItems = legend
         .selectAll(
             ".scatter-community-item"
         )
@@ -642,6 +634,247 @@ d3.csv(
         .text(
             "Size: PageRank"
         );
+
+
+    // COMMUNITY FILTER
+
+    const communityCounts =
+        d3.rollup(
+            filtered,
+            v => v.length,
+            d => d.community
+        );
+
+
+    const communitySelect =
+        d3.select("#scatter-community");
+
+
+    communitySelect
+        .selectAll(
+            "option.community-option"
+        )
+        .data(
+            communities
+        )
+        .join("option")
+        .attr(
+            "class",
+            "community-option"
+        )
+        .attr(
+            "value",
+            d => d
+        )
+        .text(d => {
+            const label =
+                communityInfo.find(
+                    c => c.id === d
+                )?.label;
+
+            return (
+                `Community ${d + 1}`
+                + (label ? ` · ${label}` : "")
+                + ` (${d3.format(",")(communityCounts.get(d))})`
+            );
+        });
+
+
+    // FILTER + SELECTION STATE
+    // The filter hides other communities; the selection is
+    // shared with the other views through article IDs.
+
+    let activeCommunity = null;
+
+    let selectedId =
+        window.knowledge?.selectedId ?? null;
+
+
+    function update() {
+
+        const visible =
+            d => activeCommunity == null
+                || d.community === activeCommunity;
+
+        const selected =
+            filtered.find(
+                d => d.article_id === selectedId
+            );
+
+        const showSelected =
+            selected != null
+            && visible(selected);
+
+
+        points
+            .classed(
+                "is-hidden",
+                d => !visible(d)
+            )
+            .classed(
+                "is-dimmed",
+                d => showSelected
+                    && visible(d)
+                    && d !== selected
+            )
+            .classed(
+                "is-selected",
+                d => showSelected
+                    && d === selected
+            );
+
+        if (showSelected) {
+            points
+                .filter(
+                    d => d === selected
+                )
+                .raise();
+        }
+
+
+        legendItems.classed(
+            "is-muted",
+            d => activeCommunity != null
+                && d !== activeCommunity
+        );
+
+
+        const labelled =
+            filtered
+                .filter(
+                    d => visible(d)
+                        && d !== selected
+                )
+                .sort(
+                    (a, b) => b.pagerank - a.pagerank
+                )
+                .slice(0, 15);
+
+        labelLayer
+            .selectAll("text")
+            .data(
+                labelled,
+                d => d.article_id
+            )
+            .join("text")
+            .attr(
+                "class",
+                "scatter-label"
+            )
+            .attr(
+                "x",
+                d =>
+                    x(
+                        d.global_indegree
+                    )
+                    + radius(d)
+                    + 5
+            )
+            .attr(
+                "y",
+                d =>
+                    y(
+                        d.total_views_12m
+                    )
+                    - 4
+            )
+            .text(
+                d => d.title
+            );
+
+
+        highlight.attr(
+            "display",
+            showSelected ? null : "none"
+        );
+
+        if (showSelected) {
+
+            const cx = x(selected.global_indegree);
+            const cy = y(selected.total_views_12m);
+            const r = radius(selected);
+
+            // Flip the label to the left near the right edge.
+            const flip = cx > innerWidth * 0.75;
+
+            highlight.select("circle")
+                .attr("cx", cx)
+                .attr("cy", cy)
+                .attr("r", r + 6);
+
+            highlight.select("text")
+                .attr("x", flip ? cx - r - 10 : cx + r + 10)
+                .attr("y", cy - r - 6)
+                .attr("text-anchor", flip ? "end" : "start")
+                .text(selected.title);
+        }
+
+
+        const shownText =
+            activeCommunity == null
+                ? `Showing all ${d3.format(",")(filtered.length)} articles.`
+                : `Showing ${d3.format(",")(communityCounts.get(activeCommunity))} of ${d3.format(",")(filtered.length)} articles (Community ${activeCommunity + 1}).`;
+
+        const node =
+            window.knowledge?.get(selectedId);
+
+        let selectionText;
+
+        if (selectedId == null) {
+            selectionText = "Select an article in any view to highlight it here.";
+        } else if (!selected) {
+            selectionText = `${node?.title ?? "The selected article"} is not plotted because it lacks a complete 12-month pageview record.`;
+        } else if (!showSelected) {
+            selectionText = `${selected.title} is in Community ${selected.community + 1}, which the filter is hiding.`;
+        } else {
+            selectionText = `${selected.title} is highlighted in orange.`;
+        }
+
+        d3.select("#scatter-status")
+            .text(
+                `${shownText} ${selectionText}`
+            );
+    }
+
+
+    communitySelect.on(
+        "change",
+        event => {
+            const value = event.target.value;
+            activeCommunity = value === "" ? null : +value;
+            update();
+        }
+    );
+
+
+    // Resetting the highlight clears the shared selection,
+    // so the other views deselect the article too.
+    d3.select("#scatter-reset")
+        .on(
+            "click",
+            () => window.knowledge?.select(null)
+        );
+
+
+    // Clicking a point selects it across all views.
+    points.on(
+        "click",
+        (event, d) =>
+            window.knowledge?.get(d.article_id)
+            && window.knowledge.select(d.article_id)
+    );
+
+
+    window.addEventListener(
+        "knowledge:selection",
+        event => {
+            selectedId = event.detail.articleId;
+            update();
+        }
+    );
+
+
+    update();
 })
 
 
@@ -653,6 +886,6 @@ d3.csv(
     d3.select("#scatter")
         .append("p")
         .text(
-            "Unable to load ai_nodes_with_pageviews.csv."
+            "Unable to load the scatterplot data."
         );
 });
