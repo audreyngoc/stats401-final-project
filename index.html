@@ -97,8 +97,9 @@
         <p class="viz-description">
           Our analysis uses a fixed subset of English Wikipedia centered on
           Artificial intelligence, together with previously collected Wikimedia
-          pageviews. The website uses only the collected files; searching and
-          expanding branches do not acquire new data.
+          pageviews, a sample of r/computerscience posts and comments, and an IT
+          job-postings dataset. The website uses only the collected files;
+          searching and expanding branches do not acquire new data.
         </p>
         <h3>Raw Datasets</h3>
         <p>
@@ -115,6 +116,26 @@
           human user requests for exact article titles, rather than unique
           readers. Redirect-title traffic is not combined with canonical-title
           traffic. Both datasets are joined internally using article IDs.
+        </p>
+        <p>
+          We collected r/computerscience data through the SocialCrawl API using
+          Python, combining paginated posts from “new,” comment trees from
+          highly commented posts, and searches for thirty computing-related
+          terms. Request budgets and incremental saving supported resumable
+          collection. After excluding media-only, URL-only, deleted, and removed
+          content, we retained <strong>604 posts and 1,051 comments</strong>,
+          with comments drawn from 105 threads. The dataset spans
+          <strong>May 2025-October 2026</strong> and was exported as JSONL and
+          CSV.
+        </p>
+        <p>
+          We also used Rahman et al.’s “Job Dataset for IT Professionals,”
+          containing <strong>8,797 postings</strong> with job titles,
+          descriptions, skills, experience requirements, and salary ranges.
+          Trimming whitespace reduced 254 distinct titles to 246, and
+          requirements were parsed into skill lists. Salary bounds were
+          standardized to thousands, and each job title’s mean salary was
+          calculated by averaging midpoints of its postings’ salary ranges.
         </p>
         <h3>Processed Datasets</h3>
         <p>
