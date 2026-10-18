@@ -3,3 +3,6 @@ node_modules
 */node_modules
 .DS_Store
 */.DS_Store
+.env
+data/reddit/state.json
+data/reddit_sc/state.json
