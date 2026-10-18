@@ -184,43 +184,119 @@ bibliographic citation and license/terms here before final submission.
 
 ## Repository guide
 
-The following files are specifically used by the temporal
-visualizations; verify the current repository before relying on this
-list as a complete inventory.
+The following directory tree documents the main project files, visualization code, datasets, and data-processing scripts. It includes all files currently present in the `scripts/`, `data/`, `css/`, and `js/` directories.
 
 ```text
 .
-├── proposal.md                 # Formatted project proposal
-├── assets/                     # Reference figures embedded in proposal.md
-├── index.html                  # Main project website
-├── data/
-│   ├── ai_subtopic_monthly.csv # Monthly Wikipedia subtopic pageviews
-│   ├── reddit_sc/              # SocialCrawl JSONL/CSV outputs
-│   ├── reddit/                 # Official Reddit API outputs, if collected
-│   ├── reddit_topic_matches.csv
-│   ├── reddit_topic_summary.csv
-│   └── reddit_subtopic_monthly.csv
-├── scripts/
-│   ├── socialcrawl_scraper.py  # SocialCrawl collection
-│   ├── reddit_scraper.py      # Official Reddit Data API collection
-│   ├── inspect_reddit_data.py
-│   ├── audit_reddit_candidates.py
-│   ├── classify_reddit_topics.py
-│   ├── review_reddit_matches.py
-│   └── build_reddit_monthly.py
+├── index.html
+├── README.md
+├── proposal.md
+├── .gitignore
+├── package.json
+├── package-lock.json
+│
+├── assets/                                  # Supporting figures and images for project documentation
+│
+├── css/
+│   ├── comparative-streamgraph.css          # Styles for the Wikipedia–Reddit comparison
+│   ├── jobs.css                             # Styles for career exploration
+│   ├── knowledge.css                        # Styles for knowledge-tree and network views
+│   ├── streamgraph.css                      # Styles for the Wikipedia pageview streamgraph
+│   └── style.css                            # Global website layout and shared styles
+│
 ├── js/
-│   ├── streamgraph.js          # Wikipedia pageview streamgraph
-│   └── comparative-streamgraph.js
-└── css/
-    ├── style.css               # Shared website styles
-    ├── streamgraph.css
-    └── comparative-streamgraph.css
+│   ├── app.js                               # Initializes shared application behavior and article data
+│   ├── comparative-streamgraph.js           # Visualization 5: Wikipedia–Reddit comparison
+│   ├── jobs.js                              # Visualization 6: career exploration
+│   ├── knowledge.js                         # Shared knowledge-graph data and article-selection logic
+│   ├── network.js                           # Visualization 2: force-directed knowledge network
+│   ├── scatter.js                           # Visualization 3: structural importance versus popularity
+│   ├── streamgraph.js                       # Visualization 4: Wikipedia pageview streamgraph
+│   └── tree.js                              # Visualization 1: seed-article search and hierarchical tree
+│
+├── data/
+│   ├── ai_adjacency.json                    # Article adjacency information for network exploration
+│   ├── ai_articles_10000.csv                # Article dataset containing the selected 10,000 articles
+│   ├── ai_communities.json                  # Detected knowledge-network communities
+│   ├── ai_edges.csv                         # Edge list representing article hyperlinks
+│   ├── ai_graph.json                        # Graph data in JSON format
+│   ├── ai_group_106238.json                 # Article-group data for group ID 106238
+│   ├── ai_group_1467948.json                # Article-group data for group ID 1467948
+│   ├── ai_group_1654769.json                # Article-group data for group ID 1654769
+│   ├── ai_group_16920.json                  # Article-group data for group ID 16920
+│   ├── ai_group_21652.json                  # Article-group data for group ID 21652
+│   ├── ai_group_233488.json                 # Article-group data for group ID 233488
+│   ├── ai_group_265752.json                 # Article-group data for group ID 265752
+│   ├── ai_group_43476.json                  # Article-group data for group ID 43476
+│   ├── ai_group_586357.json                 # Article-group data for group ID 586357
+│   ├── ai_group_73291755.json               # Article-group data for group ID 73291755
+│   ├── ai_groups.json                       # Collection of article groups
+│   ├── ai_manifest.json                     # Dataset metadata and graph summary
+│   ├── ai_neighbors.json                    # Neighbor information for knowledge-network exploration
+│   ├── ai_nodes.csv                         # Article nodes and core metadata
+│   ├── ai_nodes_enriched.csv                # Enriched article metadata and network attributes
+│   ├── ai_nodes_with_pageviews.csv          # Article metadata combined with pageview information
+│   ├── ai_pageviews_failures.csv            # Records of pageview retrieval failures
+│   ├── ai_pageviews_monthly.csv             # Monthly Wikipedia pageview records
+│   ├── ai_pageviews_summary.csv             # Summary statistics for Wikipedia pageviews
+│   ├── ai_subtopic_monthly.csv              # Monthly Wikipedia pageviews aggregated by subtopic
+│   ├── ai_tree.json                         # Hierarchical article-tree data
+│   ├── ai_validation.json                   # Data-validation results
+│   ├── archive.zip                          # Archived data files
+│   │
+│   ├── Job Dataset for IT Professionals/
+│   │   ├── CleanData_jotpars.csv             # Cleaned version of the original job-posting dataset
+│   │   ├── Dataset_jotpars.csv               # Original job-posting dataset
+│   │   └── source.txt                        # Source information for the job dataset
+│   │
+│   ├── jobs_postings.csv                    # Processed job-posting data for career exploration
+│   │
+│   ├── reddit_sc/
+│   │   ├── comments.csv                     # Collected Reddit comments in CSV format
+│   │   ├── comments.jsonl                   # Collected Reddit comments in JSON Lines format
+│   │   ├── posts.csv                        # Collected Reddit posts in CSV format
+│   │   └── posts.jsonl                      # Collected Reddit posts in JSON Lines format
+│   │
+│   ├── reddit_subtopic_monthly.csv          # Monthly Reddit topic assignments for Visualization 5
+│   ├── reddit_topic_matches.csv             # Post-level Reddit topic-classification results
+│   └── reddit_topic_summary.csv             # Summary of Reddit topic-classification results
+│
+└── scripts/
+    ├── AI_10000_pipeline_README.md           # Documentation for the 10,000-article data pipeline
+    ├── audit_reddit_candidates.py            # Audits Reddit candidate records and potential topic matches
+    ├── build_graph.py                        # Builds the knowledge graph from article and link data
+    ├── build_reddit_monthly.py               # Aggregates classified Reddit topics by month
+    ├── check_interactions.cjs                # Checks or tests website interactions
+    ├── classify_reddit_topics.py             # Applies keyword-based, multi-label Reddit topic classification
+    ├── collect_ai_visualization_data.py      # Collects and prepares data for the AI knowledge visualizations
+    ├── compute_global_indegree.py             # Computes global in-degree values for articles
+    ├── create_ai_10000_csv.py                # Creates a CSV dataset for the selected 10,000 articles
+    ├── extract_redirects.py                  # Extracts Wikipedia redirect information
+    ├── inspect_reddit_data.py                # Inspects collected Reddit records
+    ├── json_to_parquet.py                    # Converts JSON data into Parquet format
+    ├── prepare_jobs.py                       # Prepares job-posting data for career exploration
+    ├── prepare_visualizations.py              # Prepares datasets for the visualizations
+    ├── resolve_redirects.py                  # Resolves Wikipedia redirects
+    ├── review_reddit_matches.py              # Supports review of Reddit topic-classification matches
+    ├── socialcrawl_scraper.py                # Collects Reddit posts and comments through SocialCrawl
+    └── sql_links_to_parquet.py               # Converts SQL link data into Parquet format
 ```
 
-The file tree above documents the files identified during project
-development and is not guaranteed to include every current file. Confirm
-paths and stylesheet references against the current `main` branch before
-submitting.
+### How the files work together
+
+- **Knowledge graph and article exploration (Visualizations 1–3):** The data-processing scripts collect, clean, and organize Wikipedia article and hyperlink data. The resulting node, edge, adjacency, community, and tree datasets support the seed-article tree, force-directed network, and structural-importance versus popularity scatterplot.
+
+- **Wikipedia attention over time (Visualization 4):** `data/ai_pageviews_monthly.csv` and `data/ai_subtopic_monthly.csv` contain monthly pageview data used to examine attention to computing subtopics. `js/streamgraph.js` and `css/streamgraph.css` implement and style the streamgraph.
+
+- **Wikipedia–Reddit comparison (Visualization 5):** The collected Reddit records in `data/reddit_sc/` are processed into topic-classification and monthly aggregation files. `js/comparative-streamgraph.js` and `css/comparative-streamgraph.css` display the comparison.
+
+- **Career exploration (Visualization 6):** The original and cleaned job-posting files are stored in `data/Job Dataset for IT Professionals/`. `scripts/prepare_jobs.py` prepares job data, and `data/jobs_postings.csv` supplies processed information for `js/jobs.js`, styled by `css/jobs.css`.
+
+- **Shared website structure:** `index.html` integrates the visualization components. The files `js/app.js` and `js/knowledge.js` support shared application behavior, while `css/style.css` provides global styling.
+
+- **Reproducibility and validation:** The scripts in `scripts/` document the data-processing workflow, and `data/ai_validation.json` stores validation results. `scripts/check_interactions.cjs` supports interaction checks.
+
+This guide describes the files present in the repository listing. Individual outputs may represent intermediate processing stages, archived data, or final datasets used by the website. Refer to `scripts/AI_10000_pipeline_README.md` for additional details about the Wikipedia article pipeline and the data-collection instructions elsewhere in this README for the Reddit collection workflow.
 
 ## Run locally
 
