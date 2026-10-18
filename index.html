@@ -38,6 +38,21 @@
         margin-bottom: 28px;
       }
 
+      /* Short task-oriented guidance that complements, rather than replaces, methods */
+      .chart-help {
+        margin: 14px 0 18px;
+        line-height: 1.6;
+      }
+
+      .network-note ul {
+        margin: 10px 0;
+        padding-left: 22px;
+      }
+
+      .network-note li {
+        margin: 6px 0;
+      }
+
       /* Responsive spacing */
       @media (max-width: 700px) {
         main {
@@ -100,7 +115,10 @@
         <a href="#vis4">Pageview streamgraph</a>
         <a href="#vis5">Comparative streamgraph</a>
         <a href="#vis6">Knowledge &amp; jobs</a>
+<<<<<<< HEAD
         <a href="#final-report">Final report</a>
+=======
+>>>>>>> 698f73f (Update index.html for story-telling)
       </nav>
     </header>
 
@@ -108,16 +126,41 @@
       <section class="intro">
         <h2>Artificial Intelligence Knowledge Map</h2>
         <p>
-          Starting with <strong>Artificial intelligence</strong>, explore a
-          collection of 10,000 Wikipedia articles and their directed hyperlinks.
-          Search for another article in this collection to change your starting
-          point.
+          When you enter an unfamiliar area of computing, you may need to answer
+          several different questions: <strong>Where should I begin? Which ideas
+          connect to one another? Which concepts are central, popular, changing
+          over time, or useful for a career?</strong> This interactive knowledge
+          map brings together several views to help you investigate those
+          questions instead of relying on a single ranking of importance.
+        </p>
+        <p>
+          The original proposal envisioned a guided entry point for computing and
+          emerging technologies, followed by exploration of article paths,
+          network structure, reader attention, online discussion, and career
+          connections. The final website follows that journey using a fixed
+          collection of 10,000 Wikipedia articles centered on
+          <strong>Artificial intelligence</strong>, monthly pageviews, a small
+          collected Reddit sample, and IT job postings. You can choose another
+          starting article within the collected corpus, but the website does not
+          fetch new Wikipedia pages.
         </p>
         <p>
           The tree follows popular outgoing article links, while the network
           reveals structural communities and reconnections. Compare reader
           attention with network importance in the scatterplot.
         </p>
+        <div class="network-note">
+          <strong>Choose the question that matches your goal:</strong>
+          <ul>
+            <li><strong>I'm new to a topic:</strong> start with the article paths and follow related concepts.</li>
+            <li><strong>I want to understand connections:</strong> open the network to find communities, hubs, and cross-links.</li>
+            <li><strong>I want to compare importance and popularity:</strong> use the scatterplot to compare links and pageviews.</li>
+            <li><strong>I want to see what changes:</strong> use the timelines to explore topic attention by month and source.</li>
+            <li><strong>I want to connect knowledge to work:</strong> use the career view to find job titles whose postings mention a selected article as a skill.</li>
+          </ul>
+          The sections are designed to build on one another, but you can also jump
+          directly to the view that best fits your question.
+        </div>
         <p id="dataset-summary" class="data-summary">
           Loading the collected Wikipedia dataset…
         </p>
@@ -252,9 +295,18 @@
           <div>
             <h2>Popular paths from a starting article</h2>
             <p class="viz-description">
-              Search an article title or paste an English Wikipedia URL. Each
-              branch ranks its outgoing links by complete 12-month pageviews,
-              showing up to ten at each level.
+              Begin with Artificial intelligence or search for another article
+              in the collected corpus. Each branch ranks its outgoing links by
+              complete 12-month pageviews, showing up to ten at each level. This
+              creates a guided route into the topic rather than a complete list
+              of every possible connection.
+            </p>
+            <p class="chart-help">
+              <strong>Use this view when:</strong> you want a manageable starting
+              point or want to see how a concept leads to related topics.
+              <strong>Try this:</strong> search for an article you recognize,
+              expand a branch, and select an article to inspect its details and
+              connections in the other views.
             </p>
           </div>
         </div>
@@ -328,6 +380,13 @@
           article from the tree into the network to compare these two
           perspectives.
         </p>
+        <p class="story-bridge">
+          <strong>From a learning path to a map of the field:</strong> the tree
+          helps a beginner move step by step, but it simplifies a network in
+          which one article can connect to many branches. The next view widens
+          the lens to reveal communities, cross-links, and reconnections that a
+          hierarchy cannot fully show.
+        </p>
       </section>
 
       <section id="vis2" class="visualization-section knowledge-section">
@@ -339,6 +398,14 @@
               Discover communities and cross-links beyond the hierarchy. Begin
               with a grouped overview, then open a community or inspect articles
               around your current seed.
+            </p>
+            <p class="chart-help">
+              <strong>Use this view when:</strong> you want to see whether
+              concepts belong to a wider cluster or connect across branches.
+              <strong>Try this:</strong> open a community, adjust directed
+              distance or article limit, then select a node to inspect its
+              displayed incoming and outgoing links. Use the size metric control
+              to compare different measures of structural importance.
             </p>
           </div>
         </div>
@@ -428,6 +495,13 @@
           be a foundational AI concept. Community and link context help
           interpret the ranking.
         </p>
+        <p class="story-bridge">
+          <strong>From connections to importance:</strong> the network shows how
+          articles are positioned relative to one another, but position alone
+          does not tell us what readers pay attention to. The scatterplot brings
+          these perspectives together, comparing incoming links with pageviews
+          and using point size to show PageRank.
+        </p>
       </section>
 
       <section id="vis3" class="visualization-section knowledge-section">
@@ -441,6 +515,17 @@
               through August 2026. Choose a community to show only its articles,
               then click a point to select it across the views.
             </p>
+<<<<<<< HEAD
+=======
+            <p class="chart-help">
+              <strong>Use this view when:</strong> you want to distinguish being
+              well-connected from receiving many pageviews. <strong>Try this:</strong>
+              compare points above and below the median lines, filter to a community,
+              and inspect outliers. Remember that the horizontal axis shows in-degree,
+              while point size represents PageRank; these are related but different
+              measures.
+            </p>
+>>>>>>> 698f73f (Update index.html for story-telling)
           </div>
         </div>
         <div class="view-controls">
@@ -485,6 +570,14 @@
               Explore how attention to computing concepts changes over time.
               Select topics to compare emerging, declining, and sustained
               popularity across Wikipedia.
+            </p>
+            <p class="chart-help">
+              <strong>Use this view when:</strong> you want to investigate whether
+              attention to a topic rises, falls, or remains comparatively steady.
+              <strong>Try this:</strong> filter to a few topics, play the timeline
+              or move month by month, and hover over a band to inspect its value.
+              The streamgraph emphasizes changes in the topic mix; its vertical
+              position is not an absolute ranking.
             </p>
           </div>
         </div>
@@ -622,11 +715,26 @@
         <!-- Methodology note -->
         <p id="streamgraph-method" class="method-note">
           Each colored band represents a computing topic. Follow a band across
+<<<<<<< HEAD
           the timeline to explore changes in its monthly Wikipediapageviews.
           Thicker bands indicate more pageviews. Monthly pageview totals are
           aggregated by topic. The streamgraph uses a wiggle baseline, so
           vertical position is relative rather than an absolute pageview
           measure.
+=======
+          the timeline to explore changes in its monthly Wikipedia pageviews.
+          Thicker bands indicate more pageviews. Monthly pageview totals are
+          aggregated by topic. The streamgraph uses a wiggle baseline, so
+          vertical position is relative rather than an absolute pageview measure.
+        </p>
+        <p class="story-bridge">
+          <strong>From reading to discussion:</strong> pageviews show which
+          articles receive attention on Wikipedia, but they do not show which
+          topics people discuss in a community. The next view compares topic
+          shares in Wikipedia pageviews with keyword-classified matches in the
+          collected Reddit posts. This is a small, supplementary sample, so the
+          comparison is about topic mix—not total audience size or public opinion.
+>>>>>>> 698f73f (Update index.html for story-telling)
         </p>
       </section>
 
@@ -641,6 +749,14 @@
             <p class="viz-description">
               Explore how attention to ten computing topics changes across
               Wikipedia pageviews and a sample of r/computerscience discussions.
+            </p>
+            <p class="chart-help">
+              <strong>Use this view when:</strong> you want to compare which
+              topics make up Wikipedia reading activity and the classified
+              discussions in the collected Reddit sample. <strong>Try this:</strong>
+              select a topic in the shared legend and compare its band across
+              both streams. The percentages use different denominators, so compare
+              relative topic mix—not total activity or the size of the audiences.
             </p>
           </div>
         </div>
@@ -746,6 +862,17 @@
           </div>
         </details>
 
+        <p class="story-bridge">
+          <strong>From exploring knowledge to applying it:</strong> the original
+          project aimed to connect concepts with real-world occupations. The
+          final implementation makes this a career-exploration view: select a
+          Wikipedia article to highlight job titles whose postings list that
+          skill, then inspect the postings behind a title. It does not provide
+          the originally imagined job-search entry point or a complete map of
+          every occupation-to-concept relationship, but it offers a practical
+          connection between the knowledge map and employment data.
+        </p>
+
         <div
           id="comparison-tooltip"
           class="comparison-tooltip"
@@ -761,9 +888,18 @@
             <h2>From knowledge to jobs</h2>
             <p class="viz-description">
               Each point is an IT job title. Titles higher up appear in more job
-              postings; titles farther right offer a higher mean salary. Select
-              an article in the views above to highlight the jobs whose postings
-              ask for it, then click a point to list its postings.
+              postings; titles farther right have a higher mean of the listed
+              salary-range midpoints. Select an article in the views above to
+              highlight job titles whose postings mention it as a skill, then
+              click a point to inspect its postings.
+            </p>
+            <p class="chart-help">
+              <strong>Use this view when:</strong> you want to explore how a
+              concept may connect to skills named in job postings. <strong>Try
+              this:</strong> select an article in an earlier view, compare the
+              highlighted job titles, and click a title to inspect the supporting
+              postings. Treat these matches as keyword-based evidence, not proof
+              that a job requires deep knowledge of the whole Wikipedia topic.
             </p>
           </div>
         </div>
@@ -821,6 +957,7 @@
           counted as written, so spelling variants such as “Andriod Developer”
           remain separate.
         </p>
+<<<<<<< HEAD
       </section>
 
       <section id="final-report" class="final-report-section" aria-labelledby="final-report-title">
@@ -1112,6 +1249,22 @@
             </p>
           </section>
         </div>
+=======
+        <p class="story-ending">
+          <strong>Use the views together to make a more informed judgment.</strong>
+          The tree helps you choose where to explore; the network shows how
+          concepts connect beyond a single path; the scatterplot separates
+          structural position from reader attention; the timelines show how topic
+          shares change across months and sources; and the career view provides
+          a practical way to inspect skills mentioned in job postings. These
+          views address different parts of the original proposal's learner
+          journey, but they do not produce one universal ranking of concepts.
+          Popularity is not the same as structural importance, Reddit matches are
+          limited and keyword-based, and job-skill matches depend on the wording
+          in the dataset. Use each view to investigate a question, then compare
+          its evidence with the other views before drawing a conclusion.
+        </p>
+>>>>>>> 698f73f (Update index.html for story-telling)
       </section>
     </main>
 
