@@ -376,7 +376,7 @@
         </p>
       </section>
 
-      <section class="visualization-section">
+      <section class="visualization-section knowledge-section">
         <h2>3. Structural Importance vs. Reader Attention</h2>
         <p class="viz-description">
           This view compares how structurally prominent an article is within
@@ -395,6 +395,21 @@
           from the project. Each point represents an article or concept included
           in the selected Artificial Intelligence network.
         </p>
+        <div class="view-controls">
+          <label for="scatter-community">
+            Community
+            <select id="scatter-community">
+              <option value="">All communities</option>
+            </select>
+          </label>
+          <button id="scatter-reset" type="button">Reset highlight</button>
+        </div>
+        <p
+          id="scatter-status"
+          class="chart-help"
+          role="status"
+          aria-live="polite"
+        ></p>
         <div id="scatter-legend"></div>
         <div id="scatter-container">
           <div id="scatter"></div>
@@ -404,35 +419,6 @@
           pageviews are strongly skewed. Dashed lines show the median values
           among the selected AI concepts.
         </p>
-        <div class="interaction-plan">
-          <h3>Interaction / Animation Plan</h3>
-          <p>
-            Users will be able to hover over points to view article statistics,
-            filter concepts by network community, select different measures of
-            structural importance, and click a concept to highlight the same
-            article in the hierarchy and force-directed network.
-          </p>
-          <p>
-            Hovering over a point will display a tooltip containing the article
-            title and relevant network and pageview measures. This allows users
-            to inspect individual observations without placing permanent labels
-            on every point.
-          </p>
-          <p>
-            Filtering will allow users to focus on selected communities or
-            subsets of concepts. Points will transition smoothly when the
-            displayed subset changes so that users can understand which
-            observations have been filtered rather than interpreting them as new
-            data.
-          </p>
-          <p>
-            Selecting a point will connect the scatterplot to the other
-            visualizations by highlighting the corresponding concept in the
-            hierarchy and network. The purpose is to help users compare
-            structural importance and reader attention for the same concept
-            across multiple views.
-          </p>
-        </div>
       </section>
       
       <section id="vis4" class="visualization-section">
