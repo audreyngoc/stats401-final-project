@@ -1,0 +1,606 @@
+﻿id,created_at,subreddit,title,matched_topics,match_evidence,num_topics_matched
+1x5bcqx,2026-10-13T22:56:59.000Z,computerscience,How do I create logic gate sequences in real life applications?,,,0
+1x4sf8q,2026-10-13T09:51:16.000Z,computerscience,Interfaces,,,0
+1x3x6e6,2026-10-12T09:17:53.000Z,computerscience,A good example of iteration vs recursion,,,0
+1x2xhyt,2026-10-11T03:13:01.000Z,computerscience,Implementation of Andreas Bjorklund's algorithm for determining hamiltonicity,Problem solving,Problem solving: hamiltonicity,1
+1x19j4h,2026-10-09T02:17:48.000Z,computerscience,Advices for someone looking to get into Language Technology?,Natural language processing,Natural language processing: language technology,1
+1x13ugj,2026-10-08T21:48:23.000Z,computerscience,Architecture/systems Research papers not very quantitative?,,,0
+1x05mtg,2026-10-07T19:20:21.000Z,computerscience,Want to learn more about the convergence of computer logic & formal logic in communication theory,,,0
+1x03rli,2026-10-07T18:08:53.000Z,computerscience,"Is C an ""Assembly-like"" Language?",,,0
+1wz8dmz,2026-10-06T17:18:19.000Z,computerscience,A linkedlist is a skewed directed graph,,,0
+1wx1hw0,2026-10-03T23:53:29.000Z,computerscience,I need advice on how to assign values to base 6 tryte value sets,,,0
+1wug3bn,2026-09-30T20:36:33.000Z,computerscience,"procedural programming, object oriented programming and functional programming",,,0
+1wstdvg,2026-09-28T22:46:04.000Z,computerscience,“Modern” Intro Books,,,0
+1wrduyr,2026-09-27T07:28:22.000Z,computerscience,How do hashsets/maps have O(1) time complexity?,,,0
+1wq6c45,2026-09-25T20:01:52.000Z,computerscience,Recently accepted into a highly published research group…and I have no clue what I’m doing,Machine learning,Machine learning: machine learning,1
+1wpxhda,2026-09-25T14:15:08.000Z,computerscience,Are we Turing complete?,,,0
+1wpi7lw,2026-09-25T00:28:36.000Z,computerscience,"Leonard Kleinrock- Epic Name, Epic Career",,,0
+1wpa2uv,2026-09-24T18:47:51.000Z,computerscience,Educational Password Cracking Game?,,,0
+1wnty74,2026-09-23T02:47:32.000Z,computerscience,How to do research on the side?,,,0
+1wnjl9t,2026-09-22T19:37:45.000Z,computerscience,I have a question about file compression,,,0
+1wn3jec,2026-09-22T08:18:54.000Z,computerscience,"Where can I get a digital copy of Computer Systems: A Programmer's Perspective (3rd Edition, US Edition)?",,,0
+1wmb3pt,2026-09-21T12:15:52.000Z,computerscience,Why is there fear that quantum computers could break cryptography?,,,0
+1wk2337,2026-09-18T20:52:05.000Z,computerscience,Math and Programming,,,0
+1whkp53,2026-09-16T02:36:26.000Z,computerscience,Any info on ordered type systems?,,,0
+1wh3qd2,2026-09-15T15:35:15.000Z,computerscience,What is Tail Call Optimization?,,,0
+1wfr8v0,2026-09-14T02:40:41.000Z,computerscience,Question about DNF and CNF,,,0
+1wfd7bt,2026-09-13T17:02:00.000Z,computerscience,"Turning The Frickin' Bits Gay!—Creating non-binary bits with current technology, and the applications it might benefit",,,0
+1weneme,2026-09-12T20:31:28.000Z,computerscience,Where can I get the fly brain ?,,,0
+1wcpzp9,2026-09-10T17:36:26.000Z,computerscience,Is the Choice Between an Interpreter or Compiler Defined By the Language?,,,0
+1wcil2d,2026-09-10T13:01:48.000Z,computerscience,Computer science and math,,,0
+1wbvudb,2026-09-09T19:36:50.000Z,computerscience,Want to Learn About Databases in Depth and understand Underlying Mechanisms,,,0
+1wavlqa,2026-09-08T17:50:51.000Z,computerscience,Looking for a data structure that maps indexes to values (like an array) but that is only populated once and then deletes values by index in sublinear time,,,0
+1w4f039,2026-09-01T15:18:58.000Z,computerscience,Does Replacing Instructions that Do Nothing with NOPs Change Anything?,,,0
+1w1vrta,2026-08-29T19:35:02.000Z,computerscience,How is program synthesis more convenient?,Knowledge representation and reasoning; Problem solving,Knowledge representation and reasoning: program synthesis | Problem solving: program synthesis,2
+1w15fdt,2026-08-28T22:48:48.000Z,computerscience,What research areas are you excited about?,,,0
+1w0zz4z,2026-08-28T19:17:13.000Z,computerscience,how often have your RAG issues actually turned out to be document parsing issues?,,,0
+1vxtjq8,2026-08-25T08:07:19.000Z,computerscience,My self-built tool to learn concurrency,,,0
+1vx8pim,2026-08-24T17:05:23.000Z,computerscience,How Are Split Caches Handled with Thread Coordination?,,,0
+1vvm34i,2026-08-22T19:51:09.000Z,computerscience,Operating Systems Research Advice / Recommendations,,,0
+1vv6wky,2026-08-22T08:37:29.000Z,computerscience,Favourite yet Easy to read book on operating systems?,,,0
+1vup8hm,2026-08-21T18:56:03.000Z,computerscience,What is the right way to read a white/research paper,,,0
+1vu5wa6,2026-08-21T04:16:11.000Z,computerscience,"algorithm, c, assembly, rust, computer organisations & architecture , microprocessor, OS, theory of computation",,,0
+1vu4sje,2026-08-21T03:22:18.000Z,computerscience,How to level up to actual projects?,,,0
+1vu2xf1,2026-08-21T01:54:49.000Z,computerscience,Are Output I/Os Faster than Disc Reads?,,,0
+1vqnzm7,2026-08-17T10:00:06.000Z,computerscience,Struggling with Formal language automata theory,,,0
+1vp8o9s,2026-08-15T17:26:10.000Z,computerscience,A (possibly) novel way to optimize merge sorting,,,0
+1vn369k,2026-08-13T06:48:45.000Z,computerscience,Is turing award 2012 the most important turing award and the most important work of the last 40 years?,,,0
+1vm8x9j,2026-08-12T09:10:25.000Z,computerscience,"I've created TrackLog: a collection of Prolog libraries, examples, and guidelines for building a personal knowledge base in pure logic",Knowledge representation and reasoning,Knowledge representation and reasoning: knowledge base,1
+1vkj91b,2026-08-10T12:19:28.000Z,computerscience,"Looking for standard Graph Problems with 2 Vertices (Shortest Path, Reachability, LCA in DAG, Max Flow)  No variations/twists please!",Problem solving,"Problem solving: shortest path, max flow",1
+1vke3v5,2026-08-10T07:32:10.000Z,computerscience,"Can we average the following pathological function in a useful way, described in the post, with programming?",,,0
+1vjv3ag,2026-08-09T17:01:04.000Z,computerscience,Why Did Computers Settle on 8-Bit Bytes?,,,0
+1viviwy,2026-08-08T13:04:23.000Z,computerscience,Learning C language still fundamental?,Generative AI,Generative AI: llm,1
+1vijh1j,2026-08-08T02:04:38.000Z,computerscience,"Solving QUBO with Gurobi: branch-and-bound, heuristics, and optimality gaps",Operations research,"Operations research: combinatorial optimization, quadratic unconstrained binary optimization, branch-and-bound",1
+1vhop9p,2026-08-07T02:53:11.000Z,computerscience,How relevant are Software Analysis & Testing and Cryptography to a research track in Formal Verification and Formal Methods?,Knowledge representation and reasoning,"Knowledge representation and reasoning: formal verification, formal methods",1
+1vhm4a9,2026-08-07T00:52:58.000Z,computerscience,The creation of PING,,,0
+1vhg878,2026-08-06T20:46:13.000Z,computerscience,how important is the underlying architecture behind the current artificial intelligence boom?,Machine learning,Machine learning: training data,1
+1vgknf0,2026-08-05T21:29:59.000Z,computerscience,Is the Hardware for ARIA (Autonomous Reconnaissance Intelligence Integration Analyst) actually real or just cool Hollywood set design?,,,0
+1vfet93,2026-08-04T16:12:12.000Z,computerscience,Automated Plagiarism with LLM-Remixers,Generative AI,Generative AI: llm,1
+1vc6bx0,2026-07-31T23:06:23.000Z,computerscience,"Educational Paradox! 
+When we teach reading and writing, we start with the alphabet and then build words.",,,0
+1vc0uvj,2026-07-31T19:33:16.000Z,computerscience,How my experimental research browser became the fastest in the world,,,0
+1vaupdi,2026-07-30T14:08:47.000Z,computerscience,is recursion really hard,,,0
+1va69zu,2026-07-29T19:25:29.000Z,computerscience,Base 2 numerical representation in binary matching numbers in base 10?,,,0
+1v8qayp,2026-07-28T06:44:08.000Z,computerscience,"Pattern Recognition (Elsevier): ""With Editor"" status date changed, but status didn't. Is this normal? [R]",,,0
+1v8hcjg,2026-07-27T23:45:45.000Z,computerscience,General Definition of Reinforcement Learning,Machine learning,"Machine learning: machine learning, reinforcement learning",1
+1v86ri3,2026-07-27T17:18:38.000Z,computerscience,Theory of computation: Proof that a language is context free,,,0
+1v65yjs,2026-07-25T11:33:31.000Z,computerscience,I've found a typo in CLRS Appendix B.5 Trees (definition of tree lacks V != ∅),,,0
+1v59xlz,2026-07-24T12:26:02.000Z,computerscience,IQA-T1: Evidence‑Based Image Quality Assessment with MLLMs,Machine learning,Machine learning: reinforcement learning,1
+1v4hve2,2026-07-23T15:53:26.000Z,computerscience,Questions about saving mashine code in memory *im new to computer science,,,0
+1v4gmtx,2026-07-23T15:08:52.000Z,computerscience,P = NP and digital security?,,,0
+1v3hwm6,2026-07-22T14:33:38.000Z,computerscience,Why does the CPU’s size matter?,,,0
+1v3fy44,2026-07-22T13:18:50.000Z,computerscience,Does Wait-Free require Garbage-Free?,,,0
+1v38ore,2026-07-22T07:11:47.000Z,computerscience,Is it possible to have pixels run on 1 PC per pixel?,,,0
+1v373an,2026-07-22T05:45:01.000Z,computerscience,How does Lean work?,,,0
+1v2tj5v,2026-07-21T20:02:11.000Z,computerscience,how would you introduce comsci to a person who knows nothing about computers and programming and such ?,,,0
+1v27ku3,2026-07-21T04:03:07.000Z,computerscience,what’s the connection between union-find and the inverse ackermann function?,,,0
+1v0t689,2026-07-19T15:15:18.000Z,computerscience,Just tried learning through docs and believe me it's the best way :),,,0
+1uzvctx,2026-07-18T13:02:56.000Z,computerscience,It feels fundamentally wrong to use packages without understanding concepts under the hood,,,0
+1uywsoa,2026-07-17T11:18:17.000Z,computerscience,How many truly concurrent operations occur on a home computer?,,,0
+1uy2zy1,2026-07-16T13:31:49.000Z,computerscience,Suggest books that bridge the gap between pop science and textbooks.,,,0
+1uxgdbc,2026-07-15T19:47:49.000Z,computerscience,hi dumbass here,,,0
+1uwptki,2026-07-15T00:03:54.000Z,computerscience,question about RAM,,,0
+1uv1010,2026-07-13T04:11:16.000Z,computerscience,How are folders with files in it being stored in data?,,,0
+1uuarv4,2026-07-12T09:32:29.000Z,computerscience,How to solve problems,,,0
+1uu48ci,2026-07-12T03:36:05.000Z,computerscience,What are the limits of lock-free data-structures?,,,0
+1uslly3,2026-07-10T11:59:39.000Z,computerscience,Genetic Algorithms vs PPO,,,0
+1uqsq3q,2026-07-08T13:29:07.000Z,computerscience,Unicode's Transliteration Rules Are Turing-Complete,,,0
+1upyh4x,2026-07-07T15:29:37.000Z,computerscience,Any Widely Used CRC-32 that Stays 0 When Padded With Null Bytes?,,,0
+1upjtbd,2026-07-07T03:50:46.000Z,computerscience,There's a part in Turing's halting problem proof that I don't understand,,,0
+1uoslbt,2026-07-06T09:40:25.000Z,computerscience,How far can you go with simple logic?,,,0
+1uo9da9,2026-07-05T18:20:10.000Z,computerscience,"There no name for 2 bits. We have byte for 8, nibble for 4, bit for 1, but nothing for 2?",,,0
+1ungg2a,2026-07-04T18:32:43.000Z,computerscience,I need help building an ALU in Minecraft,,,0
+1ulrk4y,2026-07-02T19:11:06.000Z,computerscience,"Would it be possible to build a motherboard that supports multiple types of memory, or does the CPU itself have to support it?",,,0
+1ujnqxx,2026-06-30T12:24:40.000Z,computerscience,"Why does everyone use an unordered set/hashmap for ""jewels-and-stones"" problem",,,0
+1ui3swr,2026-06-28T17:50:58.000Z,computerscience,Made my own statically typed bytecode VM language (Oli-Nat) in C from scratch!,,,0
+1uh8p4x,2026-06-27T17:31:50.000Z,computerscience,Is Pattern Recognition and Machine Learning still relevant?,Machine learning,"Machine learning: machine learning, deep learning, pattern recognition and machine learning",1
+1ucvaoy,2026-06-22T20:03:07.000Z,computerscience,Is SaaS dead — or is generic software becoming a feature?,,,0
+1ucktnz,2026-06-22T13:37:32.000Z,computerscience,Is there an exact state compression for this ordered queue process?,,,0
+1uchuyl,2026-06-22T11:21:39.000Z,computerscience,Can someone explain DSSS (Direct Sequence Spread Spectrum) to me?,,,0
+1ubvdgn,2026-06-21T17:08:24.000Z,computerscience,Classic 2005 MARS MIPS simulator Restoration and Modernization!,,,0
+1ubs9fr,2026-06-21T15:01:46.000Z,computerscience,Formal Verification and Mechanistic Interpretability?,Generative AI; Knowledge representation and reasoning,Generative AI: llm | Knowledge representation and reasoning: formal verification,2
+1uapsey,2026-06-20T06:59:52.000Z,computerscience,How to learn Computer Architecture properly?,,,0
+1uan0dl,2026-06-20T04:24:39.000Z,computerscience,Newbie with some computer science questions!,,,0
+1u9v9jl,2026-06-19T07:24:42.000Z,computerscience,"How can a physical computer be built without arithmetic, set theory, or quantifiers?",Knowledge representation and reasoning,Knowledge representation and reasoning: theorem proving,1
+1u8s74j,2026-06-18T01:01:06.000Z,computerscience,Help with dynamic programming,,,0
+1u84z53,2026-06-17T09:05:46.000Z,computerscience,Neuromorphic Photonics (neur computing + silicon ph) & Low-Energy Computing - UK Parliament currently discussing,,,0
+1u7jzlf,2026-06-16T17:23:33.000Z,computerscience,Do Branches Taken Happen More Often in Prediction,,,0
+1u5d0yk,2026-06-14T05:56:24.000Z,computerscience,Is OOP cache unfriendly by design or is the real problem just how we use heap memory?,,,0
+1u3ot5p,2026-06-12T07:51:12.000Z,computerscience,🚀 Introducing Robust-U1: Teaching MLLMs to Self-Recover Corrupted Visual Content,,,0
+1u3aywb,2026-06-11T20:46:40.000Z,computerscience,Base 27 Number System: “Cube³”,,,0
+1u1n7gg,2026-06-10T00:45:45.000Z,computerscience,Automata and software development,,,0
+1tyxxac,2026-06-07T00:53:16.000Z,computerscience,Is it possible to write/copy a Unicode character that doesn't exist yet?,,,0
+1tyq8pn,2026-06-06T19:20:26.000Z,computerscience,Strategies for handling blurry/pixelated frames in large-scale real-time CCTV computer vision pipelines,,,0
+1twtm8l,2026-06-04T16:59:57.000Z,computerscience,"How beneficial are books, if you struggle with some concepts they discuss?",,,0
+1twq24c,2026-06-04T14:55:23.000Z,computerscience,Is Retyping and Translating textbooks too inefficient for Computer Science / Cyber Security?,,,0
+1twpra4,2026-06-04T14:44:36.000Z,computerscience,Books about data collection methodologies?,,,0
+1tte4d1,2026-06-01T01:51:39.000Z,computerscience,Forgetting what you study,,,0
+1ttdmn5,2026-06-01T01:28:38.000Z,computerscience,Implementing Coucelle‘s theorem,,,0
+1tt1gho,2026-05-31T17:23:13.000Z,computerscience,History of telecommunications book recommendation,,,0
+1tt13qj,2026-05-31T17:09:57.000Z,computerscience,I want to expand my knowledge,,,0
+1tr93hi,2026-05-29T17:27:24.000Z,computerscience,"I want to learn computer science for fun and skill, where should I start?",,,0
+1tqjavp,2026-05-28T22:53:07.000Z,computerscience,Are Software Engineers Real Engineers?,,,0
+1tq2unb,2026-05-28T12:58:00.000Z,computerscience,Anyone have a good video playlist on automata and complexity?,,,0
+1tp6srp,2026-05-27T14:12:44.000Z,computerscience,Where are we actually in quantum computing?,,,0
+1toemcv,2026-05-26T17:53:18.000Z,computerscience,Best academic book for a better understanding of inner workings of C++,,,0
+1tmj84k,2026-05-24T17:55:42.000Z,computerscience,Technology Growth,,,0
+1tm069z,2026-05-24T03:03:17.000Z,computerscience,Looking for resources for studying for the CompTia A+ Exams,,,0
+1tk0q5q,2026-05-21T22:53:57.000Z,computerscience,After how much time have you fully understood Theoretical Computer Science?,,,0
+1thwxwd,2026-05-19T19:08:07.000Z,computerscience,inventing a sorting algorithm with as few comparisons as possible for k-ary sorters?,,,0
+1tgoor6,2026-05-18T14:41:04.000Z,computerscience,Centralized traffic engineering?,,,0
+1tfm90a,2026-05-17T10:56:46.000Z,computerscience,Learn operating systems as an experienced programmer,,,0
+1tf2txn,2026-05-16T19:16:14.000Z,computerscience,Is there any useful connection between formal grammars and linear algebra?,,,0
+1tclpjm,2026-05-14T03:07:22.000Z,computerscience,"What is the purpose of Ionic, Capacitor, Angular etc.",,,0
+1tcil6v,2026-05-14T00:52:38.000Z,computerscience,"People who have made simulated computers, do you do 1 or 2 byte-words?",,,0
+1tc75in,2026-05-13T17:47:26.000Z,computerscience,Is context vs. admissible evidence an under-specified problem in LLM systems?,Generative AI,Generative AI: llm,1
+1taepm8,2026-05-11T20:03:32.000Z,computerscience,Straight to the point :,,,0
+1ta3dn7,2026-05-11T13:30:18.000Z,computerscience,Frame: a DSL for state machines that transpiles to 17 languages,,,0
+1t7z7pf,2026-05-09T08:35:29.000Z,computerscience,"3NF: Isn't ""the key, the whole key, and nothing but the key"" a misleading definition?",,,0
+1t6lisy,2026-05-07T19:55:07.000Z,computerscience,Question....,Generative AI,Generative AI: llm,1
+1t69s1e,2026-05-07T12:57:17.000Z,computerscience,Interested in learning how to code for scientific and engineering applications and problem solving rather than web or mobile development,Problem solving,Problem solving: problem solving,1
+1t5y6op,2026-05-07T02:54:28.000Z,computerscience,"Tried explaining how the encryption protecting WhatsApp, HTTPS, and banking actually works, using the maths behind RSA and hash collisions, feedback open",,,0
+1t5azv8,2026-05-06T12:09:25.000Z,computerscience,The Forking Lemma,,,0
+1t53spw,2026-05-06T05:33:01.000Z,computerscience,CAMM2 vs DIMMs,,,0
+1t4oojz,2026-05-05T18:51:21.000Z,computerscience,Real Mode 20 Bits,,,0
+1t0jjy4,2026-05-01T04:54:07.000Z,computerscience,Research in Distributed Systems? Is it good?,,,0
+1syntr1,2026-04-29T04:00:17.000Z,computerscience,Compression and Optimization,,,0
+1sxmznf,2026-04-28T01:22:24.000Z,computerscience,Depth-first search engines without the canonical color array,,,0
+1sxhuxp,2026-04-27T21:47:21.000Z,computerscience,Is there anything else wrong with the global version of Computer Systems: A Programmer's Perspective other than the problems?,,,0
+1swo8zf,2026-04-27T00:24:26.000Z,computerscience,Heuristic prefetching,,,0
+1sw6895,2026-04-26T12:28:01.000Z,computerscience,Subscribing for changes at scale,,,0
+1svfklt,2026-04-25T15:43:26.000Z,computerscience,Looking for an up-to-date formal book on distributed systems,,,0
+1svdf1o,2026-04-25T14:17:47.000Z,computerscience,ELI5 How a Win32 process is spawned?,,,0
+1suejbz,2026-04-24T12:37:46.000Z,computerscience,Sir Tony Hoare - 11/1/34-5/3/26 - RIP,,,0
+1sub3mt,2026-04-24T09:48:23.000Z,computerscience,Issue with my Thesis,Generative AI,"Generative AI: llm, openai",1
+1st1n6p,2026-04-22T23:17:51.000Z,computerscience,Is it still a Brier score if the target is a probability (not 0/1)?,,,0
+1ssvmwr,2026-04-22T19:28:35.000Z,computerscience,Turing Machines and Hilbert’s 10th Problem,,,0
+1sskh66,2026-04-22T12:46:38.000Z,computerscience,How to remember IT books?,,,0
+1sq4ppi,2026-04-19T20:50:24.000Z,computerscience,I was taught nothing about APIs,,,0
+1spy08r,2026-04-19T16:41:38.000Z,computerscience,Gift idea for computer science  bf,,,0
+1sp6wbn,2026-04-18T19:26:28.000Z,computerscience,I made an end to end CLI pipeline for GPS Telementary Movement Analysis for land animals,,,0
+1smwwgn,2026-04-16T07:50:59.000Z,computerscience,What book to read to understand fundamentals behind floating point representation?,,,0
+1slu9ra,2026-04-15T03:15:00.000Z,computerscience,question about ternary and quantum computing?,,,0
+1sk9i0q,2026-04-13T12:34:37.000Z,computerscience,Any reading groups for compilers/PL-related topics?,,,0
+1sh8ekg,2026-04-10T01:19:09.000Z,computerscience,Interesting point of view from Daniel Lemire,,,0
+1sey4iq,2026-04-07T14:48:00.000Z,computerscience,tips on starting,,,0
+1sdfxyn,2026-04-05T21:40:21.000Z,computerscience,Generic polynomial solution for NP-Complete: I have the proof. What next?,,,0
+1sdelgl,2026-04-05T20:45:58.000Z,computerscience,What are the latest breakthroughs for n-body gravity algorithms?,,,0
+1sdb3p4,2026-04-05T18:28:10.000Z,computerscience,What is the one concept that you should really understand if you're serious about learning comp sci?,,,0
+1scz8h4,2026-04-05T09:26:43.000Z,computerscience,Rebalancing Traffic In Leaderless Distributed Architecture,,,0
+1scgmtp,2026-04-04T18:22:46.000Z,computerscience,A Few Questions as a Developer,Generative AI,Generative AI: llm,1
+1scb8lp,2026-04-04T14:52:14.000Z,computerscience,Any good material on BSTs and rotation?,,,0
+1sa7urr,2026-04-02T04:44:59.000Z,computerscience,JesseSort is faster than std::sort on everything but random input,,,0
+1s9rtp5,2026-04-01T17:49:19.000Z,computerscience,What is AIs body?,,,0
+1s8dpvk,2026-03-31T04:40:40.000Z,computerscience,"I'm publishing a preprint on arXiv on Ternary Logic, I'd need endorsement",,,0
+1s7zm96,2026-03-30T18:52:04.000Z,computerscience,Are there any games that can teach basics of reverse engineering,,,0
+1s7vj1j,2026-03-30T16:29:47.000Z,computerscience,"A short article about computer architecture, the condor PS3 supercomputer, and DRM circumnavigation",,,0
+1s669g4,2026-03-28T17:19:25.000Z,computerscience,What happens to computer hardware after the absolute ceiling of Moore's law has been reached?,,,0
+1s5fjmy,2026-03-27T20:23:42.000Z,computerscience,How to design an ETA Algorithm?,,,0
+1s1xai6,2026-03-23T23:26:54.000Z,computerscience,hi r/computerscience! Join Stanford Prof. Mehran Sahami on Thursday for an AMA discussing all things computer science,,,0
+1s1gku7,2026-03-23T13:16:11.000Z,computerscience,What topics are worth exploring?,,,0
+1rzvo2r,2026-03-21T16:22:29.000Z,computerscience,Learning in Public CS of whole 4 years want feedback,,,0
+1ryx2di,2026-03-20T14:02:03.000Z,computerscience,Boolean algebra brainmelt,,,0
+1rxbrb4,2026-03-18T18:20:52.000Z,computerscience,Charles H. Bennett and Gilles Brassard receive the 2025 ACM A.M. Turing Award,,,0
+1rwah4x,2026-03-17T15:55:08.000Z,computerscience,Generating software without LLM using deterministic language scripts research question?,Generative AI,Generative AI: llm,1
+1rvl5c9,2026-03-16T20:26:21.000Z,computerscience,"Continuously talking about ""Women in CS"" hurts feminism",,,0
+1rvjki3,2026-03-16T19:30:46.000Z,computerscience,What’s one computer science idea you understand much better now than 5 years ago?,,,0
+1ruhq8p,2026-03-15T15:58:48.000Z,computerscience,Are there any Journal Websites for Citations?,,,0
+1rtimgr,2026-03-14T12:50:20.000Z,computerscience,"A ""true"" random number generator?",,,0
+1rspp9c,2026-03-13T15:01:02.000Z,computerscience,Struggling to build simple NFA to recognize my name among a substring,,,0
+1rsaozr,2026-03-13T02:06:51.000Z,computerscience,What are the best sorting algorithms for arrays with small-varying values and many repetitions with the fewest possible accesses to the array cells?,,,0
+1rs7ner,2026-03-12T23:55:45.000Z,computerscience,Does this reading list cover the core layers of systems and algorithm design?,,,0
+1rrn2ym,2026-03-12T10:29:06.000Z,computerscience,To understand Operating System | Computer Network,,,0
+1rrci28,2026-03-12T00:59:01.000Z,computerscience,A Looping universal transformer. Has this been proposed?,,,0
+1rqz9eo,2026-03-11T16:54:27.000Z,computerscience,DSA,,,0
+1rq8v39,2026-03-10T20:43:58.000Z,computerscience,What makes a CS student a great computer scientist?,,,0
+1rpqcus,2026-03-10T07:24:27.000Z,computerscience,is it possible to create a binary with a 2?,,,0
+1rp3xhx,2026-03-09T15:53:25.000Z,computerscience,Getting ready for my last term as an undergrad,,,0
+1rp3s9e,2026-03-09T15:48:07.000Z,computerscience,Examples of Low Rank Parameter dependent Matrices - Can you suggest any?,Machine learning,Machine learning: machine learning,1
+1rnsd6m,2026-03-08T02:10:12.000Z,computerscience,Bitwise Operators Fundamentals,,,0
+1rnf4wq,2026-03-07T17:03:45.000Z,computerscience,I made a small Thue-Morse sequence-computing Turing machine,,,0
+1rmspy8,2026-03-06T22:46:41.000Z,computerscience,Looking for CS Communites,,,0
+1rlqkhj,2026-03-05T19:09:29.000Z,computerscience,Pumping Lemma Help,,,0
+1rlknh5,2026-03-05T15:33:45.000Z,computerscience,Computadores ternários,,,0
+1rlhi8w,2026-03-05T13:22:46.000Z,computerscience,I built a Constraint-Based Hamiltonian Cycle Solver (Ben Chiboub Carver) – Handles Dense & Sparse Random Graphs Up to n=100 Efficiently.,,,0
+1rkrp8a,2026-03-04T17:31:00.000Z,computerscience,Open source licenses that boycott GenAI?,Generative AI,Generative AI: genai,1
+1rkpyhf,2026-03-04T16:26:58.000Z,computerscience,Donald Knuth likes Claude,Generative AI,Generative AI: generative ai,1
+1rivwbs,2026-03-02T15:31:09.000Z,computerscience,TLS 1.3,,,0
+1rilwkd,2026-03-02T06:57:08.000Z,computerscience,where can I learn system design from?,,,0
+1rhyqu3,2026-03-01T14:33:47.000Z,computerscience,Resources to learn Computer Networking,,,0
+1rhn6hb,2026-03-01T03:56:45.000Z,computerscience,DSA motivation and personal story,,,0
+1rgqpvm,2026-02-28T02:34:03.000Z,computerscience,How and when to cite CS Research papers,,,0
+1rgh3zz,2026-02-27T19:57:16.000Z,computerscience,Can you really come up with something new if you are a hobbyist doing research?,Knowledge representation and reasoning; Problem solving,Knowledge representation and reasoning: program synthesis | Problem solving: program synthesis,2
+1rf6m07,2026-02-26T10:23:19.000Z,computerscience,"When does a graph algorithm become O(n + e), O(e), O(n) or O(ne)?",,,0
+1repxgm,2026-02-25T21:07:59.000Z,computerscience,Why are all numbers in computing related to the number 16?,,,0
+1rea1g1,2026-02-25T10:49:52.000Z,computerscience,"Tursim: an educational platform built on a CMS architecture, integrating tools for the modeling and simulation of automata and Turing Machines.",,,0
+1rb9e7n,2026-02-22T02:04:34.000Z,computerscience,Wrote a toy interpreter for a language I wish I had,,,0
+1rag8qp,2026-02-21T03:17:58.000Z,computerscience,How to rank competing algorithms in a zero-sum game?,,,0
+1r9ypb7,2026-02-20T15:41:28.000Z,computerscience,"I am reading ""Code: The Hidden Language of Computer Hardware and Software second edition"" and I am confused by the adding of XOR gates on the input and output of the ""Add/subtract unit""",,,0
+1r7mrib,2026-02-17T23:41:27.000Z,computerscience,Boolean Algebra,,,0
+1r5jyrk,2026-02-15T17:10:00.000Z,computerscience,Does Using Immutable Data Structures Make Writing Unit Tests Easier?,,,0
+1r4to6f,2026-02-14T19:34:06.000Z,computerscience,JesseSort is getting faster!,,,0
+1r4p86l,2026-02-14T16:40:05.000Z,computerscience,How to quickly label a thousand images in label studio for YOLO,,,0
+1r4mrfo,2026-02-14T15:00:45.000Z,computerscience,"Why some processors have huge amount of cores, unlike x86?",,,0
+1r4kp6z,2026-02-14T13:31:46.000Z,computerscience,"What's a ""simple"" concept you struggle to understand?",,,0
+1r4kjoj,2026-02-14T13:24:29.000Z,computerscience,Why aren't Linked List ware called Linked Items list?,,,0
+1r4jaor,2026-02-14T12:21:24.000Z,computerscience,Annotate instruction level parallelism at compile time,,,0
+1r4hkgb,2026-02-14T10:42:04.000Z,computerscience,"What does it take to make every machine ""Turing Complete""?",,,0
+1r4dm97,2026-02-14T06:42:06.000Z,computerscience,Database transactions alone don’t always prevent race conditions (i was asked this in my interview),,,0
+1r3in7g,2026-02-13T07:13:39.000Z,computerscience,How is D* lite actors move?,,,0
+1r3cn2e,2026-02-13T02:06:05.000Z,computerscience,What are some uncharted or underdeveloped fields in computer science?,,,0
+1r23jm4,2026-02-11T17:25:19.000Z,computerscience,Is linking a carry output to a xnor gate viable?,,,0
+1r20uex,2026-02-11T15:46:25.000Z,computerscience,K-map doubt: why can’t the remaining single 1 be grouped row-wise?,,,0
+1r173ng,2026-02-10T17:28:29.000Z,computerscience,How long did it take you to develop your programming language?,,,0
+1qyzqr1,2026-02-08T04:48:30.000Z,computerscience,Computer Circuit Surface Area,,,0
+1qyd8aa,2026-02-07T13:01:51.000Z,computerscience,CMU csapp lab fitsBits: different behavior if -O turned on/off?,,,0
+1qyb2ge,2026-02-07T11:05:09.000Z,computerscience,How to academically validate performance/optimization for a custom back-end framework?,,,0
+1qxxy3v,2026-02-06T23:45:35.000Z,computerscience,JesseSort is now faster than std::sort on random inputs,,,0
+1qxccas,2026-02-06T08:39:00.000Z,computerscience,Has anyone done this before to make logic?,,,0
+1qwk8n4,2026-02-05T12:41:18.000Z,computerscience,Enforcing security at compile time,,,0
+1qwjm8w,2026-02-05T12:10:29.000Z,computerscience,Byzantine consensus impossibility results under non-revelation-equivalent mechanisms,,,0
+1qw4bmu,2026-02-04T23:13:24.000Z,computerscience,How to do tests on stack datastructure,,,0
+1qubqqy,2026-02-02T23:40:47.000Z,computerscience,"Confusion about Direct vs Part based Document Compression , looking for resources on Doc compression",,,0
+1qskmcd,2026-02-01T01:28:00.000Z,computerscience,Which areas of computing is often underutilized?,,,0
+1qqbt8y,2026-01-29T15:35:51.000Z,computerscience,What Process would get the First Few Items in a List With Few Writes?,,,0
+1qq16mv,2026-01-29T06:38:04.000Z,computerscience,"File Systems are to Set Theory, as Databases are to Type Theory",,,0
+1qpwlr6,2026-01-29T02:55:29.000Z,computerscience,Is content-addressable memory used in any real-world system?,,,0
+1qps26y,2026-01-28T23:42:29.000Z,computerscience,Will quantum computing make infinite storage possible?,,,0
+1qpd8of,2026-01-28T14:44:16.000Z,computerscience,DISCRETE STRUCTURES,,,0
+1qpab3k,2026-01-28T12:42:00.000Z,computerscience,CPUs with addressable cache?,,,0
+1qp8xx6,2026-01-28T11:33:58.000Z,computerscience,How push and pop work in x86?,,,0
+1qokhgh,2026-01-27T17:33:02.000Z,computerscience,So what is Normalisation?,,,0
+1qo8vqx,2026-01-27T09:08:15.000Z,computerscience,What's your favorite computer science related media?,,,0
+1qnyl5t,2026-01-27T00:40:16.000Z,computerscience,Every idea I have is already a paper,,,0
+1qnl4mm,2026-01-26T16:39:39.000Z,computerscience,What else besides Cyclomatic Complexity?,,,0
+1qndd0j,2026-01-26T11:18:36.000Z,computerscience,Similarity of abstract syntax trees,,,0
+1qm6ydw,2026-01-25T02:42:06.000Z,computerscience,Can a programmer please explain to me the hacking problem in gaming right now...,,,0
+1qldo94,2026-01-24T04:49:37.000Z,computerscience,Tips for low-level design?,,,0
+1qjxypx,2026-01-22T15:46:04.000Z,computerscience,Where can I research single instruction architectures?,,,0
+1qjj54f,2026-01-22T03:11:12.000Z,computerscience,Where to learn Context-Free Grammar?,,,0
+1qjahfp,2026-01-21T21:14:30.000Z,computerscience,cs and social sciences,,,0
+1qhg5j1,2026-01-19T20:44:31.000Z,computerscience,Trying to understand the stack with assembly (x86),,,0
+1qh0jnw,2026-01-19T10:20:53.000Z,computerscience,How is Path Selection Actually Done in Network Slicing?,,,0
+1qgfd4v,2026-01-18T17:56:57.000Z,computerscience,Are there any benefits of using CISC instead of RISC?,,,0
+1qeluzt,2026-01-16T17:12:12.000Z,computerscience,"How do I understand the ""abstraction gap"" of computer science? (Help!)",,,0
+1qebz6i,2026-01-16T09:56:37.000Z,computerscience,How common are author interview videos at flagship ACM journals?,,,0
+1qeacse,2026-01-16T08:14:32.000Z,computerscience,whea to read ebooks for free?,,,0
+1qdvg7z,2026-01-15T20:52:42.000Z,computerscience,PageRank today,,,0
+1qdtn9h,2026-01-15T19:44:42.000Z,computerscience,To all the senior people out here please help this junior out. Having these questions in my mind for a while about abstraction.,,,0
+1qdlllk,2026-01-15T14:53:06.000Z,computerscience,"Anyone have a ongoing Research or research paper in Neuroscience, CS or integrated",,,0
+1qbp9r9,2026-01-13T11:48:06.000Z,computerscience,what is a subsequence?,,,0
+1qbbru7,2026-01-13T00:01:02.000Z,computerscience,"Is ""combinational device"" a legitimate term in computer engineering? What would be the equivalent term?",,,0
+1qbaeyh,2026-01-12T23:05:45.000Z,computerscience,Mechanical Computers,,,0
+1qb5u30,2026-01-12T20:13:45.000Z,computerscience,Confusion about expected information regarding variable-length encoding.,,,0
+1qb3u7o,2026-01-12T19:02:03.000Z,computerscience,What does random access mean in this context?,,,0
+1qaqllr,2026-01-12T09:36:01.000Z,computerscience,FIFO? FILO?,,,0
+1qaq0pg,2026-01-12T08:58:46.000Z,computerscience,Algorithm sorting and algorithm complexity troubles,,,0
+1qa6uk0,2026-01-11T18:27:20.000Z,computerscience,A GPU-accelerated implementation of Forman-Ricci curvature-based graph clustering in CUDA.,Machine learning,Machine learning: machine learning,1
+1q9e3vu,2026-01-10T20:06:37.000Z,computerscience,Parallel processing on clustered microcontrollers?,,,0
+1q97fzy,2026-01-10T15:50:12.000Z,computerscience,Y2k,,,0
+1q8h2ad,2026-01-09T19:01:41.000Z,computerscience,"Does the entire world use ""Western"" technologies for software development?",,,0
+1q88l65,2026-01-09T13:43:36.000Z,computerscience,List of type operators,,,0
+1q7b7be,2026-01-08T13:01:56.000Z,computerscience,How do you calculate the efficiency of an algorithm?,,,0
+1q6g0wl,2026-01-07T13:57:23.000Z,computerscience,I got paid minimum wage to solve an impossible problem (and accidentally learned why most algorithms make life worse),,,0
+1q580zh,2026-01-06T03:51:33.000Z,computerscience,Time addressed memory?,,,0
+1q4wqhn,2026-01-05T20:16:34.000Z,computerscience,"I'm struggling to help someone correct their misunderstanding of the Halting Problem, and am hoping for help.",,,0
+1q4m9cb,2026-01-05T13:54:00.000Z,computerscience,Just as a hypothetical,,,0
+1q3jbd5,2026-01-04T07:04:00.000Z,computerscience,Is CS academia infested with fraud? ICLR 2025 let 2 cool-sounding papers in,,,0
+1q2yl5y,2026-01-03T16:17:07.000Z,computerscience,Is this pseudocode understandable to you? (computer science),,,0
+1q2lhyb,2026-01-03T04:53:20.000Z,computerscience,"I still don't understand how basic arithmetic translates to what all we do on computers, where to start?",,,0
+1q2ex6h,2026-01-02T23:58:38.000Z,computerscience,"What applications, if any, does 'complex analysis' have in Computer Sciences?",,,0
+1q212r2,2026-01-02T15:12:11.000Z,computerscience,SQL and and predicate logic,,,0
+1q1z2mn,2026-01-02T13:49:23.000Z,computerscience,Genuine question is Assembly Language still used???,,,0
+1q1qdzu,2026-01-02T05:36:24.000Z,computerscience,Is LLM the best architecture to solve for human like thinking?,Generative AI,Generative AI: llm,1
+1q0a1yv,2025-12-31T10:37:15.000Z,computerscience,Halting problem (Can a program contain itself?),,,0
+1pzf5sn,2025-12-30T10:52:52.000Z,computerscience,How does a compiler generate machine code for an arbitrary amount of variables and functions under the hood?,,,0
+1pxqzd9,2025-12-28T13:09:23.000Z,computerscience,Finding SICP too hard/boring/un-useful,,,0
+1pxqnkp,2025-12-28T12:52:24.000Z,computerscience,What is Quantum Advantage Really ?,,,0
+1pxl0jx,2025-12-28T07:04:41.000Z,computerscience,PDF to LaTeX,,,0
+1pxcvpb,2025-12-28T00:14:51.000Z,computerscience,Question about cores,,,0
+1pvglzf,2025-12-25T16:14:58.000Z,computerscience,Less commonly known applications of formal language theory?,,,0
+1pvgkuh,2025-12-25T16:13:25.000Z,computerscience,Serial vs Parallel  and Thunderbolt Question,,,0
+1pu65ni,2025-12-23T21:50:18.000Z,computerscience,Let's talk probabalistic computing,,,0
+1ptwuf8,2025-12-23T15:33:44.000Z,computerscience,what happens behind the scene of Computer ?,,,0
+1pttj8t,2025-12-23T13:09:42.000Z,computerscience,Can you say if this repo is generated?,,,0
+1psxfiz,2025-12-22T11:35:21.000Z,computerscience,Resources For Learning,,,0
+1ps9sa3,2025-12-21T15:59:41.000Z,computerscience,K - Map,,,0
+1pqtnwr,2025-12-19T19:14:36.000Z,computerscience,Trying to figure out when inheritance is bad,,,0
+1pqi1of,2025-12-19T10:41:33.000Z,computerscience,Computer Science with basic level math,,,0
+1ppjsan,2025-12-18T06:21:19.000Z,computerscience,I realized that asexual vs sexual reproduction is very analogous to computer science concepts,,,0
+1pp2vqd,2025-12-17T17:43:10.000Z,computerscience,Understanding queues and processes in OS theory,,,0
+1po3rs1,2025-12-16T14:47:31.000Z,computerscience,Where can I learn algorithms by its real motivation first?,,,0
+1pnv3ax,2025-12-16T06:33:32.000Z,computerscience,Is it worth creating a dev blog now?,,,0
+1pltuqk,2025-12-13T19:31:53.000Z,computerscience,Binary Confusion,,,0
+1plc27w,2025-12-13T04:00:55.000Z,computerscience,Converting from Binary to Integer,,,0
+1pkm8op,2025-12-12T07:48:31.000Z,computerscience,Since all modern computers are DFA it means any real algorithm can work in O(n)?,,,0
+1pkcshc,2025-12-11T23:46:40.000Z,computerscience,Does learning something new surprise you?,,,0
+1pjs18s,2025-12-11T07:59:29.000Z,computerscience,What does a master thesis in software engineering vs computer science look like?,,,0
+1pgdbkz,2025-12-07T08:24:45.000Z,computerscience,Redstone circuits,,,0
+1pf7hpm,2025-12-05T21:38:27.000Z,computerscience,Computing the Largest Set of Independent Tasks for Work-Stealing,,,0
+1pehdvk,2025-12-05T00:58:41.000Z,computerscience,Stumbled with this problem while playing minecraft. I'm not a computer scientist but I think you guys will love it. Is there a solution to this?,,,0
+1pdmkr1,2025-12-04T01:17:09.000Z,computerscience,Using Probability in Quicksort observing about 5% faster speeds compared to standard Quicksort,,,0
+1pdgirj,2025-12-03T21:06:55.000Z,computerscience,Optical CPUs: Is the Future of Computing Light-Based?,,,0
+1pderbx,2025-12-03T20:00:35.000Z,computerscience,Why does a double argsort produces a rank vector?,,,0
+1pcegbf,2025-12-02T17:23:44.000Z,computerscience,Struggling With Sparse Matches in a Tree Reconstruction SfM Pipeline (SIFT + RANSAC),,,0
+1pbjw5z,2025-12-01T18:03:16.000Z,computerscience,What are some interesting books I can read about it computer science,,,0
+1pbcy0z,2025-12-01T13:36:14.000Z,computerscience,Mildly diverting :) The CS4FN* Christmas Computing Advent Calendar (*Computer Science For Fun),,,0
+1paif63,2025-11-30T13:34:40.000Z,computerscience,Isn't teaching kids an Assembly like language actually a good idea?,,,0
+1p8zkx0,2025-11-28T16:45:49.000Z,computerscience,I made a website for simulating custom wolfram physics universes,,,0
+1p8hvv2,2025-11-28T01:04:04.000Z,computerscience,"I suck at math and am interest in computer science, what should I do?",,,0
+1p85sbe,2025-11-27T16:01:45.000Z,computerscience,Is it technically fine if I prove a recursive alogrithm using a loop invariant,,,0
+1p7ugo3,2025-11-27T05:52:00.000Z,computerscience,"Systems / networking track in an artificial intelligence heavy era: what does “embracing artificial intelligence"" actually mean for our field, and am I falling behind?",Machine learning,Machine learning: machine learning,1
+1p7p4v9,2025-11-27T01:11:14.000Z,computerscience,Doom running on the Game of Life,,,0
+1p7d2bt,2025-11-26T17:01:07.000Z,computerscience,How I view what a CS curriculum covers,,,0
+1p6yoot,2025-11-26T04:43:42.000Z,computerscience,Is a mechanical computer possible,,,0
+1p6uvai,2025-11-26T01:35:31.000Z,computerscience,Which types of outputs are more likely to be produced by simple rule-based programs with fixed rules?,,,0
+1p6nkww,2025-11-25T20:31:13.000Z,computerscience,SuSe: Summary Selection for Regular Expression Subsequence Aggregation over Streams,,,0
+1p6iu7a,2025-11-25T17:37:16.000Z,computerscience,Starting point for learning how Android works?,,,0
+1p5t34t,2025-11-24T21:02:37.000Z,computerscience,"We are Carlos E. Jimenez-Gomez and Shrinivass A.B, lead co-authors of ""ACM TechBrief: Government Digital Transformation."" AMA! (November 25, 2025 at 1pm EDT)",,,0
+1p4u3bw,2025-11-23T18:30:43.000Z,computerscience,Logic gate question,,,0
+1p4fnfp,2025-11-23T06:27:06.000Z,computerscience,What background knowledge is necessary before reading OSTEP: Operating Systems: Three Easy Steps.,,,0
+1p48n5c,2025-11-23T00:23:15.000Z,computerscience,"What are the ""core"" books everyone in the cs field should read and have in their bookshelf?",,,0
+1p41nqu,2025-11-22T19:17:24.000Z,computerscience,How did coding get invented,,,0
+1p3nu7d,2025-11-22T08:07:20.000Z,computerscience,Was Terry Davis really this legendary god of software to touch the earth?,,,0
+1p3jf6f,2025-11-22T03:52:09.000Z,computerscience,How does an event that is less likely have more information than an event that is more likely?,,,0
+1p391yo,2025-11-21T20:14:25.000Z,computerscience,Is it possible for a 16-thread processor 4GHz to run a single-threaded program in a virtual machine program at 64 Giga computations/s? Latency?,,,0
+1p2b2dt,2025-11-20T18:35:59.000Z,computerscience,"I built a pathfinding algorithm inspired by fungi, and it ended up evolving like a living organism. (Open Source)",Problem solving,"Problem solving: search algorithm, pathfinding algorithm",1
+1p05aon,2025-11-18T07:01:41.000Z,computerscience,How do you learn machine learning?,Machine learning,Machine learning: machine learning,1
+1ozb3u1,2025-11-17T08:34:54.000Z,computerscience,How to stay up with times?,,,0
+1oz8dlw,2025-11-17T05:44:55.000Z,computerscience,I’m looking for a specific post about social media algorithms,,,0
+1oy5ig4,2025-11-15T22:57:32.000Z,computerscience,Microchip Question,,,0
+1ox2aoq,2025-11-14T17:09:23.000Z,computerscience,Sorting is making my hair fall,,,0
+1owvfwu,2025-11-14T12:41:07.000Z,computerscience,How do I study books/topics that don't have any practical exercises and mainly focuses on theory?,,,0
+1ova1if,2025-11-12T16:36:58.000Z,computerscience,how could someone change an algorithm,,,0
+1ot2rfz,2025-11-10T02:59:49.000Z,computerscience,What can be considered a programming language?,,,0
+1orrhwj,2025-11-08T14:59:44.000Z,computerscience,Search for a suitable NP-hard problem for reduction (and then solving),,,0
+1ormoc6,2025-11-08T11:01:23.000Z,computerscience,I'm curious about what if you do PCA analyze to a Poisson Disk ?,,,0
+1orkvlm,2025-11-08T09:09:21.000Z,computerscience,Theoretical Approaches to crack large files encrypted with AES,,,0
+1or3ct5,2025-11-07T19:12:23.000Z,computerscience,What is the most obscure programming language you have had to write code in?,,,0
+1oqqjmh,2025-11-07T10:06:19.000Z,computerscience,Could LZW be improved with a dictionary cache?,,,0
+1oqgmrs,2025-11-07T00:59:38.000Z,computerscience,"If all computers on earth lost power for 30 sec, would the internet be lost?",,,0
+1opldn4,2025-11-06T01:15:01.000Z,computerscience,What happens to computing when we hit the atom?,,,0
+1op93j9,2025-11-05T17:25:11.000Z,computerscience,Suggestion for computer architecture books,,,0
+1op838h,2025-11-05T16:49:48.000Z,computerscience,How far could we already be if chip manufacturers actually bumped specs to peak technology on every iteration instead of small increments for profit?,,,0
+1op5w3h,2025-11-05T15:28:26.000Z,computerscience,"What parameters to use to compare file systems performance such as ext4, Btrfs, NTFS and XFS?",,,0
+1oojgxn,2025-11-04T21:11:14.000Z,computerscience,Greedy property vs optimal substructure,,,0
+1ooe478,2025-11-04T17:54:03.000Z,computerscience,What are some good tech/computer science podcasts?,,,0
+1onjb5u,2025-11-03T18:13:33.000Z,computerscience,"I need help understanding data, problem, functional and procedural abstraction",Problem solving,Problem solving: problem solving,1
+1omw97k,2025-11-02T23:27:02.000Z,computerscience,Any cool topics in CS that use applied stochastic processes and time series ?,,,0
+1ompnp2,2025-11-02T18:59:50.000Z,computerscience,How CPUs store opcode in registers,,,0
+1okzs3l,2025-10-31T16:49:41.000Z,computerscience,What exactly are classes under the hood?,,,0
+1ojtq4x,2025-10-30T07:59:06.000Z,computerscience,Any book recommendations for learning software engineer ?,,,0
+1ojglno,2025-10-29T21:05:00.000Z,computerscience,HALAC 0.4.3,,,0
+1oim1pb,2025-10-28T21:28:36.000Z,computerscience,"Why do so many professors say ""a code"" instead of ""a program"" or ""a script""?",,,0
+1ohjske,2025-10-27T16:54:08.000Z,computerscience,What would be the most efficient and versatile solution to use a bunch of old PCs?,,,0
+1ogqy0t,2025-10-26T17:46:23.000Z,computerscience,Help with embeddings/co-occurence matrix needed!,,,0
+1ogfx4d,2025-10-26T09:05:00.000Z,computerscience,What's the future of HCI as a research field?,,,0
+1og2pe1,2025-10-25T21:07:48.000Z,computerscience,So much computer terminology,,,0
+1ofxyx9,2025-10-25T17:52:31.000Z,computerscience,How do you get to peer review EE/CS research papers & publications ?,,,0
+1oeyk0g,2025-10-24T14:01:29.000Z,computerscience,How do you practically think about computational complexity theory?,,,0
+1oey89t,2025-10-24T13:48:03.000Z,computerscience,Any suggestions about computer architecture books?,,,0
+1oeq5t0,2025-10-24T06:09:14.000Z,computerscience,Computer Ports,,,0
+1oefrkk,2025-10-23T21:28:31.000Z,computerscience,How does the internet work?,,,0
+1ocrfou,2025-10-21T22:41:11.000Z,computerscience,Building a set with higher order of linear independence,,,0
+1ocjg62,2025-10-21T17:37:42.000Z,computerscience,"Guys, How do you stay updated about trending tech, announcement etc?",,,0
+1ocii8t,2025-10-21T17:02:14.000Z,computerscience,Is it okay if I don’t know the answer to every question about my own research?,,,0
+1obtfjn,2025-10-20T20:51:52.000Z,computerscience,My journey to building a ternary computer,,,0
+1obfnxb,2025-10-20T09:54:12.000Z,computerscience,Trying to understand how 8-Bit computers work,,,0
+1oaten0,2025-10-19T16:04:12.000Z,computerscience,I need to understand how computing is distributed (I'm starting out in programming),,,0
+1oam7l0,2025-10-19T10:25:23.000Z,computerscience,Need a clear and detailed guide on the TCP protocol,,,0
+1oak0w9,2025-10-19T08:03:42.000Z,computerscience,Does anybody have a good book on Operating Systems?,,,0
+1oaa9b2,2025-10-18T23:08:28.000Z,computerscience,Looking for very detailed five volume series on computer hardware,,,0
+1o98jc1,2025-10-17T18:03:54.000Z,computerscience,"Assembly syscalls/interrupts, CPU and/or OS dependent?",,,0
+1o91x36,2025-10-17T13:52:38.000Z,computerscience,Why are there so many security loopholes in software and hardware we use?,,,0
+1o8gde6,2025-10-16T19:52:27.000Z,computerscience,Is there any alternative to NAND to Tetris?,,,0
+1o7y4vs,2025-10-16T05:42:10.000Z,computerscience,What are the low-hanging fruits of today research?,,,0
+1o7suoh,2025-10-16T01:06:45.000Z,computerscience,How are individual computer chip circuit controlled?,,,0
+1o7n8tc,2025-10-15T21:06:47.000Z,computerscience,Would I really benefit of learning ‘intro to algorithms' many years after graduation?,,,0
+1o7et1v,2025-10-15T15:52:31.000Z,computerscience,"Is Church-Turing incomplete, or just plain wrong?",,,0
+1o7bsoh,2025-10-15T14:00:10.000Z,computerscience,What is the point of a strong password,,,0
+1o6pte7,2025-10-14T19:52:35.000Z,computerscience,Does quantum entanglement work against overall efficiency of a quantum computer at a certain scale?,,,0
+1o6jhef,2025-10-14T15:59:59.000Z,computerscience,Smallest rule set that collapses but doesn’t die?,,,0
+1o5hc71,2025-10-13T11:40:30.000Z,computerscience,Sometimes I forget that behind every algorithm there’s a story of human curiosity.,,,0
+1o3oh3r,2025-10-11T06:32:45.000Z,computerscience,Isn't it crazy?!? You ever compare your first computer with your most recent?,,,0
+1o30eao,2025-10-10T13:06:43.000Z,computerscience,Am i too old for research?,,,0
+1o2tgab,2025-10-10T06:27:36.000Z,computerscience,Is Canva Turing Complete?,,,0
+1o2t9d7,2025-10-10T06:15:40.000Z,computerscience,What are some examples of non-deep learning neural networks?,Machine learning,Machine learning: deep learning,1
+1o2rqzb,2025-10-10T04:46:58.000Z,computerscience,How to get through theoretical CS?,,,0
+1o26o03,2025-10-09T13:58:49.000Z,computerscience,Best O'REilly books out there for Software Engineers,,,0
+1o1m53j,2025-10-08T20:18:42.000Z,computerscience,Why do so many '80s and '90s programmers seem like legends? What made them so good?,,,0
+1o107fx,2025-10-08T03:46:30.000Z,computerscience,"How do you not get overwhelmed with content when doing research or studying? Also, how do you develop better intuition?",,,0
+1o0yr80,2025-10-08T02:32:31.000Z,computerscience,how 256h = 256 bytes?,,,0
+1o0thwi,2025-10-07T22:33:07.000Z,computerscience,Is there a way to understand the hierarchy theorems in category theory?,,,0
+1nzwxl2,2025-10-06T22:03:37.000Z,computerscience,Exploring Large-Prime Search Efficiency – Looking for Feedback,,,0
+1nznxus,2025-10-06T16:30:35.000Z,computerscience,I think C is less convoluted than Python.,,,0
+1nzinzs,2025-10-06T13:11:40.000Z,computerscience,"The ""Why"" behind your WIFI: Forget Star/Bus, We're in the era of logical networks",,,0
+1nzd5em,2025-10-06T08:05:22.000Z,computerscience,what is cs,,,0
+1nzctmp,2025-10-06T07:43:43.000Z,computerscience,How does software engineer relate to computer science?,,,0
+1nyuxzm,2025-10-05T17:50:15.000Z,computerscience,"Is there a third type of a hypervisor? So called ""Server designer"".",,,0
+1nyeamw,2025-10-05T04:02:36.000Z,computerscience,Extension of halting problem,,,0
+1nx3omi,2025-10-03T16:20:42.000Z,computerscience,Memory Management,,,0
+1nx1ir3,2025-10-03T15:00:36.000Z,computerscience,What Kind of Optimizations Are Used For Single Threaded Programs?,,,0
+1nujfsz,2025-09-30T17:27:40.000Z,computerscience,A compact representation for binary trees in which only the leaves hold a value (useful for storage).,,,0
+1nu2ynj,2025-09-30T03:43:44.000Z,computerscience,dude I love computer science,,,0
+1nu0vri,2025-09-30T02:02:46.000Z,computerscience,How common is to get this publishing privilege in academia?,,,0
+1nsjz91,2025-09-28T09:26:29.000Z,computerscience,How do I do meaningful HS Projects?,,,0
+1ns08id,2025-09-27T16:56:38.000Z,computerscience,Are modern ARM chips still considered RISC?,,,0
+1nqk094,2025-09-25T22:02:22.000Z,computerscience,Just learned about matriods today and I think they're interesting,,,0
+1npw2sn,2025-09-25T03:12:45.000Z,computerscience,Automata & formal languages- Help!,,,0
+1npcq4l,2025-09-24T13:52:18.000Z,computerscience,does sequential search compare every element even if there is an absence?,,,0
+1npam3d,2025-09-24T12:19:56.000Z,computerscience,"Answer Key/Solutions for Discrete mathematics for computer science by Haggard, Gary",,,0
+1np3eh3,2025-09-24T04:55:42.000Z,computerscience,Help with the definition of brute force.,Problem solving,Problem solving: algorithm design,1
+1noj9jg,2025-09-23T14:42:45.000Z,computerscience,Books for coding,,,0
+1nnw8z9,2025-09-22T19:36:03.000Z,computerscience,What would be the future of entirety of Computer Science by 2060.,,,0
+1nmhjbc,2025-09-21T03:27:43.000Z,computerscience,Is anyone doing PhD in non-ML area?,,,0
+1nlmrmy,2025-09-20T02:41:18.000Z,computerscience,Questions about Karnaugh Maps,,,0
+1nkyuv1,2025-09-19T09:24:50.000Z,computerscience,"Our paper ""Code Less to Code More"" is now out in the Journal of Systems and Software!",,,0
+1nkkueo,2025-09-18T21:24:17.000Z,computerscience,Are there are lot of ML faculty in CS Disciplines generally,,,0
+1nj9ocf,2025-09-17T10:43:47.000Z,computerscience,Do you still remember how to make all logic gates?,,,0
+1nigo94,2025-09-16T12:54:40.000Z,computerscience,"I'm bored, give me a couple of interesting topics to look into.",,,0
+1ngtwjg,2025-09-14T15:16:54.000Z,computerscience,Having trouble understanding CPU architecture!,,,0
+1ngieqn,2025-09-14T05:01:00.000Z,computerscience,"Anybody have any books/PDFS, videos, or course info for a self learner who is interested in computer arithmetic and how code is written and hardware is manipulated when doing arithmetic? Thanks!",,,0
+1nfywyx,2025-09-13T14:29:45.000Z,computerscience,"Introduction books on AST, parsers och formal languages?",,,0
+1nekkmg,2025-09-11T21:04:10.000Z,computerscience,how limited is computation in being useful for the human experience?,,,0
+1nea4xt,2025-09-11T14:22:43.000Z,computerscience,An automatically updating list of conferences with journal first track,,,0
+1ne1chw,2025-09-11T06:17:13.000Z,computerscience,What’s your all-time favorite research paper and why?,,,0
+1ndzf9r,2025-09-11T04:21:40.000Z,computerscience,Highschool Student Looking into CS,,,0
+1ndpg6d,2025-09-10T20:31:31.000Z,computerscience,Struggling with Algorithms & Databases — What Resources Helped You Understand?,,,0
+1ndcmwg,2025-09-10T12:19:27.000Z,computerscience,Donald Knuth Q&A session,,,0
+1nbw7wx,2025-09-08T18:47:30.000Z,computerscience,Introduction to Computer Science,,,0
+1naukcj,2025-09-07T14:26:00.000Z,computerscience,Any app to practice discrete math?,,,0
+1napvy3,2025-09-07T10:35:01.000Z,computerscience,Tell me resources for distributed computing?,,,0
+1nad4n2,2025-09-06T22:46:22.000Z,computerscience,How do IP’s work?,,,0
+1nacd91,2025-09-06T22:12:37.000Z,computerscience,Best resource to gain good understanding of networks.,,,0
+1n9ze8d,2025-09-06T13:20:41.000Z,computerscience,Best Book for understanding Computer Architecture but not too much detail as a Software Engineer,,,0
+1n9mnp7,2025-09-06T01:16:28.000Z,computerscience,Need this confusion to resolve,,,0
+1n8bati,2025-09-04T14:12:47.000Z,computerscience,Where do you see theoretical CS making the biggest impact in industry today?,,,0
+1n7zxhg,2025-09-04T03:47:40.000Z,computerscience,What's your recommendation?,,,0
+1n7qupj,2025-09-03T21:00:35.000Z,computerscience,Does your company do code freezes?,,,0
+1n79jzz,2025-09-03T08:48:58.000Z,computerscience,How can I find a collaborator for my novel algorithmic paper?,,,0
+1n70qez,2025-09-03T00:42:03.000Z,computerscience,Temporal logic x lambda calculus,,,0
+1n5d02l,2025-09-01T02:30:51.000Z,computerscience,my idea for variable length float (not sure if this has been discovered before),,,0
+1n4tw6p,2025-08-31T12:51:33.000Z,computerscience,Randomness in theoretical CS,,,0
+1n423ji,2025-08-30T13:49:04.000Z,computerscience,Time-bounded SAT fixed-point with explicit Cook-Levin accounting,,,0
+1n3g32d,2025-08-29T19:00:04.000Z,computerscience,How big would an iphone that was built using vacuum tubes be?,,,0
+1n2r36j,2025-08-28T23:02:06.000Z,computerscience,Picking a book to learn distributed systems,,,0
+1n1vcev,2025-08-27T22:33:17.000Z,computerscience,I want to get into Theoretical Computer Science,,,0
+1n0658c,2025-08-25T23:27:07.000Z,computerscience,what should i be learnt to start learning programming languages?,,,0
+1mzz19o,2025-08-25T18:47:41.000Z,computerscience,How many bits does a song really have? Or am I asking the wrong question?,,,0
+1mz135c,2025-08-24T17:02:59.000Z,computerscience,Single level stores and context switching,,,0
+1myc2qt,2025-08-23T20:26:35.000Z,computerscience,JesseSort2: Electric Boogaloo,,,0
+1mxek13,2025-08-22T18:34:37.000Z,computerscience,Math Required for understanding Algorithms and Programming and Entire CS engineering,,,0
+1mx6t90,2025-08-22T13:39:49.000Z,computerscience,When Would You Want Both Active:Active and Active:Passive Failover?,,,0
+1mx687x,2025-08-22T13:15:31.000Z,computerscience,Are CPUs and GPUs the same from a theoretical computer science perspective?,,,0
+1mwzfny,2025-08-22T06:54:16.000Z,computerscience,Is it true that computer science graduates can do anything that software engineers learn,,,0
+1mwyhel,2025-08-22T05:55:52.000Z,computerscience,"Guíe MHD simulation, astrophysics",,,0
+1mutl80,2025-08-19T20:11:33.000Z,computerscience,Classic article on compiler bootstrapping?,,,0
+1mursqy,2025-08-19T19:06:33.000Z,computerscience,A book that you'd prefer over online resources?,,,0
+1mu6knb,2025-08-19T02:45:30.000Z,computerscience,Neuromorphic architecture?,,,0
+1mtcgn2,2025-08-18T04:39:09.000Z,computerscience,Deferred Representation,,,0
+1mt3gll,2025-08-17T21:39:40.000Z,computerscience,Why are vulnerabilities from CVE's kept in secrecy while rootkits are in the wild,,,0
+1mqob2i,2025-08-15T05:13:53.000Z,computerscience,"""soft hashes"" for image files that produce the same value if the image is slightly modified?",,,0
+1mqlime,2025-08-15T02:53:26.000Z,computerscience,Interesting applications of digital signatures?,,,0
+1mpgxqk,2025-08-13T21:16:57.000Z,computerscience,Is there a formal treatment of design patterns?,,,0
+1mo4hsr,2025-08-12T09:57:27.000Z,computerscience,We have three levels of access... what about a fourth?,,,0
+1mo4chr,2025-08-12T09:48:03.000Z,computerscience,Resources to learn DBMS,,,0
+1mnvpqs,2025-08-12T01:40:29.000Z,computerscience,I've developed an alternative computing system,,,0
+1mmc5nj,2025-08-10T07:17:24.000Z,computerscience,Increased python performance for data science!,,,0
+1mlqvu3,2025-08-09T14:33:10.000Z,computerscience,Seeking Comprehensive Resources for Understanding Social Media Algorithms,,,0
+1mlchi8,2025-08-09T01:04:29.000Z,computerscience,"What's a ""Newbie's Guide” sequence in Computer Science?",,,0
+1ml50k5,2025-08-08T19:44:24.000Z,computerscience,"Looking for a good book on software engineering, design, and/or architecture. Preferably for C++ or TypeScript.",,,0
+1mklmrb,2025-08-08T04:22:40.000Z,computerscience,Self teaching Computer Networking Flop,,,0
+1mjbyz5,2025-08-06T18:06:01.000Z,computerscience,Analog programming of a digital device (Van Eck Phreaking),,,0
+1mhugwm,2025-08-05T00:20:02.000Z,computerscience,"Why do some programming languages have a ""main"" function and don't allow top-level statements?",,,0
+1mgcug8,2025-08-03T07:04:44.000Z,computerscience,What is a computer?,,,0
+1mfts82,2025-08-02T15:47:13.000Z,computerscience,Is there a theory around reverse computing ?,,,0
+1mfoiqp,2025-08-02T11:44:17.000Z,computerscience,Dead Internet Solution- a Tree Inspired Social Network,,,0
+1mf5ucv,2025-08-01T19:28:53.000Z,computerscience,"Question about the usefulness of a ""superposition"" datatype.",,,0
+1met9x7,2025-08-01T10:51:02.000Z,computerscience,Viable programming languages for combinatorial optimization research,Operations research,Operations research: combinatorial optimization,1
+1mejegy,2025-08-01T01:23:41.000Z,computerscience,What is your favorite CS buzzword that you feel deserves its hype?,,,0
+1mdrzse,2025-07-31T04:19:15.000Z,computerscience,Seeking advice on the best way to learn hardware and software interaction.,,,0
+1mddnwc,2025-07-30T18:00:21.000Z,computerscience,How are cs and philosophy related?,,,0
+1md9f9u,2025-07-30T15:21:10.000Z,computerscience,Wouldn't you say JWT tokens are session data,,,0
+1md6c6n,2025-07-30T13:16:38.000Z,computerscience,Quantum computing only concerns about brute forcing a password?,,,0
+1mcht2l,2025-07-29T17:30:43.000Z,computerscience,What's the difference between IOAI and IAIO (AI Olympiads)?,,,0
+1mc1pd2,2025-07-29T04:08:09.000Z,computerscience,"I’m interviewing quantum computing expert Scott Aaronson soon, what questions would you ask him?",,,0
+1mb91za,2025-07-28T06:42:28.000Z,computerscience,Isn't about time to develop a new kind of Neuron?,,,0
+1m9umq9,2025-07-26T14:25:30.000Z,computerscience,Is Manning's Info Retrieval book still the best one?,,,0
+1m95byv,2025-07-25T17:26:14.000Z,computerscience,"Relation between essential, non essential prime implicants and number of minimal equations of a booleon expression",,,0
+1m947i7,2025-07-25T16:44:00.000Z,computerscience,Why is Cs taught like this,,,0
+1m8ssgq,2025-07-25T07:24:44.000Z,computerscience,Computer Engineering/Science Encyclopedia,,,0
+1m68zhl,2025-07-22T08:53:57.000Z,computerscience,How to format code with lines and visibility,,,0
+1m5dpbo,2025-07-21T08:48:07.000Z,computerscience,Protocol to deter piracy with idea from philosophy,,,0
+1m3y43m,2025-07-19T14:51:26.000Z,computerscience,What would happen if P vs NP problem was solved?,,,0
+1m1mchl,2025-07-16T19:38:48.000Z,computerscience,Question regarding the L4 section in the OSI model.,,,0
+1m0z0uc,2025-07-16T00:51:09.000Z,computerscience,Can we measure efficiency brought by abstraction?,,,0
+1m0t1og,2025-07-15T20:36:18.000Z,computerscience,I’m worried that I’m cheating myself when using libraries,,,0
+1lyd3gu,2025-07-12T22:36:08.000Z,computerscience,"Realistically speaking, if you were to pursue a PHD, what topics can you even research anymore?",,,0
+1lxws8d,2025-07-12T09:58:56.000Z,computerscience,Struggling to understand this proof of cost-optimality for A* search,Problem solving,Problem solving: a* search,1
+1lxo2lz,2025-07-12T01:23:33.000Z,computerscience,How to write a CS research paper?,,,0
+1lvz8o9,2025-07-10T00:40:47.000Z,computerscience,"Is there any name for a situation like this, where we can't make computers more advanced",,,0
+1lvi3zu,2025-07-09T12:57:30.000Z,computerscience,What should I study on my own?,,,0
+1luz5xj,2025-07-08T20:19:38.000Z,computerscience,"Tech teachers! Do you let your students tinker with CPUs, old technology, or other tech related gadgets? Rural teacher with a low budget looking to encourage learning the components of technology.",,,0
+1luwta2,2025-07-08T18:48:26.000Z,computerscience,Anyone willing to explain the OSI model to me?,,,0
+1luelmz,2025-07-08T03:37:30.000Z,computerscience,What language did your CS courses start you off with and why?,,,0
+1lsvuih,2025-07-06T07:57:56.000Z,computerscience,Does customization reduce OS performance?,,,0
+1lsscuj,2025-07-06T04:14:29.000Z,computerscience,I finally understand what a linked list is.,,,0
+1lsrk52,2025-07-06T03:28:29.000Z,computerscience,What would the potential applications in computational biology be if the dynamic optimality conjecture was solved?,,,0
+1ls3mom,2025-07-05T06:47:51.000Z,computerscience,Question from a newbie,,,0
+1lrn84g,2025-07-04T16:39:11.000Z,computerscience,"Outside of ML, what CS results from the 2010-2020 period have changed CS the most?",,,0
+1lq7zzu,2025-07-02T21:32:58.000Z,computerscience,EILI5: What exactly is the practical point of quantum computers?,,,0
+1lps28d,2025-07-02T10:12:00.000Z,computerscience,Is python really this big?,,,0
+1lpqpmm,2025-07-02T08:43:24.000Z,computerscience,Why is the Unicode space limited to U+10FFFF?,,,0
+1lpe8im,2025-07-01T21:37:27.000Z,computerscience,Is it hard to read your teammates code? Could source code maintained in natural language improve this?,Generative AI,Generative AI: llm,1
+1loc8lc,2025-06-30T16:36:08.000Z,computerscience,Learning CS using OSSUs roadmap vs roadmap.sh,,,0
+1lleyi3,2025-06-26T23:27:08.000Z,computerscience,Is optimization obsolete with quantum computing?,,,0
+1lkztx5,2025-06-26T13:14:08.000Z,computerscience,can someone list languages between python and machine code in order of complexity.,,,0
+1lkrxuo,2025-06-26T05:23:28.000Z,computerscience,Deterministic Finite Automata,,,0
+1ljl199,2025-06-24T19:48:46.000Z,computerscience,hi reddit im looking for info on rom and eeprom,,,0
+1ljgv5q,2025-06-24T17:11:41.000Z,computerscience,difference between a program having a built in restart button vs powering off and powering on?,,,0
+1lip4yu,2025-06-23T18:58:14.000Z,computerscience,Contributing idle compute power to science?,,,0
+1limnjp,2025-06-23T17:24:26.000Z,computerscience,Can computers forget things in their memory?,,,0
+1li63ij,2025-06-23T03:08:28.000Z,computerscience,What are the odds that P = NP will actually result in faster calculations in any practical sense?,,,0
+1lgqdug,2025-06-21T06:59:43.000Z,computerscience,"Tips on self-studying from textbooks, and how the heck can I verify my solutions?",,,0
+1lflyrr,2025-06-19T21:01:58.000Z,computerscience,Has anyone seriously attempted to make Spiking Transformers/ combine transformers and SNNs?,,,0
+1lezp5z,2025-06-19T02:34:26.000Z,computerscience,How are all NP problems reducible to NP-Complete?,,,0
+1lewo4c,2025-06-19T00:04:22.000Z,computerscience,Heuristic for A* For Terrain Cost,,,0
+1ldm7of,2025-06-17T12:46:46.000Z,computerscience,My teacher's algorithms make no sense to me,,,0
+1lbvd5q,2025-06-15T08:24:14.000Z,computerscience,Exploring Emerging Areas in Computer Science,,,0
+1lbthop,2025-06-15T06:18:42.000Z,computerscience,Graphics cards confuse the hell out of me :(,,,0
+1lbceol,2025-06-14T16:13:52.000Z,computerscience,Cyclic Tag System,,,0
+1l95qw7,2025-06-11T22:09:39.000Z,computerscience,Comparing two adjacency matrices for graph equality,,,0
+1l8ynq8,2025-06-11T17:27:23.000Z,computerscience,CS new frontier,Machine learning,"Machine learning: machine learning, deep learning",1
+1l8by05,2025-06-10T22:08:37.000Z,computerscience,Collatz as Cellular Automata,,,0
+1l7zcrn,2025-06-10T13:55:09.000Z,computerscience,Books for forensics,,,0
+1l7pvv2,2025-06-10T04:32:57.000Z,computerscience,why isn't floating point implemented with some bits for the integer part and some bits for the fractional part?,,,0
+1l6dh66,2025-06-08T14:28:30.000Z,computerscience,i made a mathematics software in computer science which can solve mathematics. how can i publish this research so that it can be known to more people ?,,,0
+1l6b1ic,2025-06-08T12:31:39.000Z,computerscience,"A collection of knowledge cards on basics of boolean logic, low level programming (RISC-V assembly) and computer architecture",,,0
+1l62bis,2025-06-08T03:08:44.000Z,computerscience,Do yall actually like programming?,,,0
+1l50nw5,2025-06-06T19:06:39.000Z,computerscience,"Why are compression algorithms based on Markov Chain better for compressing texts in human languages than Huffman Coding when it is not how real languages are behaving? It predicts that word-initial consonant pairs are strongly correlated with word-final ones, and they're not due to Law of Sonority.",,,0
+1l43dyz,2025-06-05T16:18:59.000Z,computerscience,What situation in the area of Networks would require you to use Bellman Fords algorithm instead of Djikstra’s because there are negative edge weights?,,,0
+1l3uxtn,2025-06-05T09:35:27.000Z,computerscience,History - Modern replication of the first ´modern´ computers?,,,0
+1l3ts43,2025-06-05T08:12:41.000Z,computerscience,Learning DSA (Non programming),,,0
+1l3lk9g,2025-06-05T00:23:02.000Z,computerscience,Highschool extracurricular suggestions,,,0
+1l37ofe,2025-06-04T14:56:46.000Z,computerscience,Computer History,,,0
+1l2o9xb,2025-06-03T21:40:50.000Z,computerscience,Computer Science exta-curriculars?,,,0
+1l15rta,2025-06-02T01:37:02.000Z,computerscience,How actually did you guys learn reverse engineering?,,,0
+1l0jrkw,2025-06-01T08:12:26.000Z,computerscience,Is my paper conference worthy?,,,0
+1l072om,2025-05-31T20:43:08.000Z,computerscience,Couldn’t someone reverse a public key’s steps to decrypt?,,,0
+1kzv34n,2025-05-31T11:42:05.000Z,computerscience,Can quorums be used to reject concurrent writes?,,,0
+1kzp2om,2025-05-31T05:03:47.000Z,computerscience,Shared Database Pattern in Microservices: When Rules Get Broken,,,0
+1kzfdk0,2025-05-30T21:01:13.000Z,computerscience,LLMs replacing Google is just one search level deeper,Generative AI,Generative AI: chatgpt,1
+1kzanmy,2025-05-30T17:47:54.000Z,computerscience,Guidance for continue learning Computer Architecture,,,0
+1kytk0r,2025-05-30T02:49:53.000Z,computerscience,"How hard would it be, theoretically, to get a search engine to be able to look through every YouTube video to get the best search results?",,,0
+1kye7k5,2025-05-29T15:48:36.000Z,computerscience,How much CS do I need to be familiar with to learn theoretical computer science?,,,0
+1kxjlng,2025-05-28T15:11:35.000Z,computerscience,"OSI Reference Model, Data Link Layer",,,0
+1kxc1iw,2025-05-28T08:39:10.000Z,computerscience,Opportunity in Security related to LLMs and conversational agents,,,0
+1kxbpxi,2025-05-28T08:16:24.000Z,computerscience,Topological Sorting,,,0
+1kwyc4t,2025-05-27T20:45:49.000Z,computerscience,"Does memoizing a function make it truly ""idempotent""?",,,0
+1kwg74n,2025-05-27T06:16:39.000Z,computerscience,What do you think is next gamechanging technology?,,,0
+1kvsyex,2025-05-26T12:20:12.000Z,computerscience,Resource on low level math optimisation,,,0
+1kvfo27,2025-05-25T23:07:24.000Z,computerscience,What exactly differentiates data structures?,,,0
+1kuhxok,2025-05-24T18:08:11.000Z,computerscience,Anyone have tips for how I should study compilers?,,,0
+1ktfi35,2025-05-23T09:46:10.000Z,computerscience,C or C++ or some other lang,,,0
+1ksd8sc,2025-05-22T00:10:39.000Z,computerscience,Why Are Recursive Functions Used?,,,0
+1ks16n4,2025-05-21T15:47:38.000Z,computerscience,Best cs book you ever read?,,,0
+1kr9aui,2025-05-20T16:30:40.000Z,computerscience,Can you teach me about Mealie and Moore Machines?,,,0
+1kr6g5h,2025-05-20T14:36:18.000Z,computerscience,How good is your focus?,,,0
+1kr2yfa,2025-05-20T11:53:47.000Z,computerscience,Which CS subfields offer strong theoretical foundations with real-world impact for undergraduates?,Machine learning,Machine learning: machine learning,1
+1kqvtg3,2025-05-20T04:02:45.000Z,computerscience,"Throttles, frontend or backend responsibility?",,,0
+1kq0276,2025-05-19T01:40:06.000Z,computerscience,Built simple http server in c,,,0
+1kp5o55,2025-05-17T22:58:19.000Z,computerscience,Is it worth pursuing an alternative to SIMT using CPU-side DAG scheduling to reduce branch divergence?,,,0
+1koinxc,2025-05-17T02:42:10.000Z,computerscience,Book recommendations?,,,0
+1koesk6,2025-05-16T23:19:19.000Z,computerscience,New computer shortcuts cut method (idea),,,0
+1ko1jfp,2025-05-16T13:58:37.000Z,computerscience,is it possible to implement a quantum/photonics chip in a video game circuit for the sole purpose of ray tracing?,,,0
+1knwhiu,2025-05-16T09:21:09.000Z,computerscience,"Machine learning used to be cool, no?",Machine learning,"Machine learning: machine learning, reinforcement learning",1
+1kn3nm3,2025-05-15T09:07:05.000Z,computerscience,Asynchronous Design Resources,,,0
+1kn159w,2025-05-15T06:10:47.000Z,computerscience,Most underground and unknown stuff,,,0
+1kmrlty,2025-05-14T21:50:10.000Z,computerscience,Master thesis effective time management,,,0
+1kmpnbd,2025-05-14T20:29:41.000Z,computerscience,Designing an 8-bit CPU: How to load constants?,,,0
+1kmalt7,2025-05-14T09:07:48.000Z,computerscience,How screwed am I if I don’t know discrete math,,,0
+1km4dkp,2025-05-14T02:31:06.000Z,computerscience,Calculating checksum collisions appropriately,,,0
+1kk8102,2025-05-11T18:40:50.000Z,computerscience,What books would you recommend as an introduction to computer science?,,,0
+1kk3d50,2025-05-11T15:16:20.000Z,computerscience,What if a float number has an exponent greater than 23 ?,,,0
+1kj3m71,2025-05-10T06:18:19.000Z,computerscience,A question about fundamental structure of algorithms,,,0
+1kikar2,2025-05-09T14:47:04.000Z,computerscience,Hashing isn’t just for lookups: How randomness helps estimate the size of huge sets,,,0
+1kgw29z,2025-05-07T12:26:17.000Z,computerscience,How to carry over DSA Skills from one language to another?,,,0

@@ -11,6 +11,7 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <link rel="stylesheet" href="css/knowledge.css" />
     <link rel="stylesheet" href="css/streamgraph.css" />
+    <link rel="stylesheet" href="css/comparative-streamgraph.css" />
     <link rel="stylesheet" href="css/jobs.css" />
     <style>
       /* SECTION BOXES */
@@ -66,6 +67,7 @@
         <a href="#vis2">Knowledge network</a>
         <a href="#scatter-container">Structure &amp; attention</a>
         <a href="#vis4">Pageview streamgraph</a>
+        <a href="#vis5">Comparative streamgraph</a>
         <a href="#vis6">Knowledge &amp; jobs</a>
         <a href="#evaluation">Evaluation plan</a>
       </nav>
@@ -571,6 +573,128 @@
         </p>
       </section>
 
+      <section id="vis5" class="visualization-section comparative-streamgraph-section">
+        <div class="section-heading">
+          <span class="section-number">05</span>
+          <div>
+            <h2>Wikipedia and Reddit: Comparing Computing Topics Over Time</h2>
+            <p class="viz-description">
+              Explore how attention to ten computing topics changes across Wikipedia
+              pageviews and a sample of r/computerscience discussions.
+            </p>
+          </div>
+        </div>
+
+        <div class="comparison-meta">
+          <span>September 2025 – August 2026</span>
+          <span>10 topics</span>
+          <span>Two sources, one timeline</span>
+        </div>
+
+        <div class="comparison-chart-card">
+
+          <div class="comparison-topbar">
+            <div>
+              <h3>Explore a topic</h3>
+              <p>Select a topic to highlight it across both streams.</p>
+            </div>
+
+            <button id="comparison-reset" type="button">
+              Reset
+            </button>
+          </div>
+
+          <div
+            id="comparison-legend"
+            class="comparison-legend"
+            aria-label="Select a topic to highlight it in both streams"
+          ></div>
+
+          <div class="comparison-chart-heading">
+            <div class="comparison-source-heading">
+              <span class="comparison-source-dot wikipedia-dot"></span>
+              <strong>WIKIPEDIA</strong>
+              <span>Share of pageviews</span>
+            </div>
+
+            <div class="comparison-source-heading">
+              <span class="comparison-source-dot reddit-dot"></span>
+              <strong>REDDIT SAMPLE</strong>
+              <span>Share of classified topic assignments</span>
+            </div>
+          </div>
+
+          <div
+            id="comparative-streamgraph"
+            class="comparison-chart"
+            role="img"
+            aria-label="Mirrored streamgraph comparing monthly topic distributions on Wikipedia and in a sample of Reddit posts"
+          ></div>
+
+          <div
+            id="comparison-month-status"
+            class="comparison-month-status"
+            aria-live="polite"
+          ></div>
+
+          <p class="comparison-chart-hint">
+            Hover over a stream to inspect a topic and month.
+          </p>
+        </div>
+
+        <details class="comparison-method">
+          <summary>About the data and how to read this chart</summary>
+
+          <div class="comparison-method-content">
+            <p>
+              Each topic keeps the same color across both streams. Band thickness
+              represents its share within that source for the month. Wikipedia
+              shares use pageviews across the ten selected topics; Reddit shares
+              use classified topic assignments. These percentages have different
+              denominators and should not be interpreted as equivalent amounts
+              of activity.
+            </p>
+
+            <p>
+              <strong>Topic selection:</strong>
+              Selecting or deselecting topics changes the composition of both streams.
+              When some topics are hidden, the remaining bands are recalculated to sum
+              to 100% of the selected topics for each source and month.
+            </p>
+            
+            <p>
+              <strong>Reddit sample:</strong>
+              We used a random sample of posts from r/computerscience to examine
+              whether discussions in the collected sample covered the same computing
+              topics as the Wikipedia data. Of 427 collected posts in the study period,
+              31 matched at least one selected topic, producing 34 topic assignments
+              because a post can match more than one topic. The sample is small, so
+              monthly patterns should be interpreted cautiously and not as a measure
+              of overall Reddit interest.
+            </p>
+
+            <p>
+              <strong>Missing data:</strong> December 2025 has no classified Reddit
+              posts. The gap represents missing classified evidence, not proof
+              that relevant discussions did not occur.
+            </p>
+
+            <p>
+              Reddit topics were identified using keyword-based classification
+              rules. Wikipedia pageviews and Reddit topic assignments measure
+              different kinds of activity.
+            </p>
+          </div>
+        </details>
+
+        <div
+          id="comparison-tooltip"
+          class="comparison-tooltip"
+          role="status"
+          aria-live="polite"
+        ></div>
+      </section>
+
       <section id="vis6" class="visualization-section knowledge-section">
         <div class="section-heading">
           <span class="section-number">06</span>
@@ -760,6 +884,7 @@
     <script src="js/scatter.js"></script>
     <script src="js/jobs.js"></script>
     <script src="js/streamgraph.js"></script>
+    <script src="js/comparative-streamgraph.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
