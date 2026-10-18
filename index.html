@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <link rel="stylesheet" href="css/knowledge.css" />
+    <link rel="stylesheet" href="css/streamgraph.css" />
     <link rel="stylesheet" href="css/jobs.css" />
     <style>
       /* SECTION BOXES */
@@ -64,6 +65,7 @@
         <a href="#vis1">Popular article paths</a>
         <a href="#vis2">Knowledge network</a>
         <a href="#scatter-container">Structure &amp; attention</a>
+        <a href="#vis4">Pageview streamgraph</a>
         <a href="#vis6">Knowledge &amp; jobs</a>
         <a href="#evaluation">Evaluation plan</a>
       </nav>
@@ -432,6 +434,156 @@
           </p>
         </div>
       </section>
+      
+      <section id="vis4" class="visualization-section">
+        <div class="section-heading">
+          <span class="section-number">04</span>
+          <div>
+            <h2>Pageview Streamgraph</h2>
+            <p class="viz-description">
+              Explore how attention to computing concepts changes over time.
+              Select topics to compare emerging, declining, and sustained
+              popularity across Wikipedia.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Collapsible topic filter -->
+        <div class="streamgraph-controls" id="streamgraph-filter">
+          <button
+            class="streamgraph-filter-header"
+            id="streamgraph-filter-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="streamgraph-filter-content">
+
+            <span class="streamgraph-filter-heading">
+              <span class="streamgraph-filter-icon">☷</span>
+              <span>
+                <strong>Filter topics</strong>
+                <small>Choose which computing topics to compare</small>
+              </span>
+            </span>
+
+            <span class="streamgraph-filter-right">
+              <span id="streamgraph-selected-count"
+                    class="streamgraph-selected-count">
+                10 selected
+              </span>
+              <span class="streamgraph-chevron" aria-hidden="true">⌄</span>
+            </span>
+          </button>
+
+          <div id="streamgraph-filter-content"
+              class="streamgraph-filter-content"
+              hidden>
+
+            <div class="streamgraph-filter-actions">
+              <span class="streamgraph-filter-hint">
+                Select one or more topics
+              </span>
+
+              <div>
+                <button id="streamgraph-select-all" type="button">
+                  Select all
+                </button>
+                <button id="streamgraph-clear" type="button">
+                  Clear
+                </button>
+              </div>
+            </div>
+
+            <div id="streamgraph-topics"
+                class="streamgraph-topic-list"
+                aria-label="Filter topics">
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline playback panel -->
+        <div class="streamgraph-playback">
+          <div class="streamgraph-playback-header">
+            <div>
+              <h3>Explore the timeline</h3>
+              <p>
+                Play the timeline or drag the slider to explore changes
+                in Wikipedia pageviews month by month.
+              </p>
+            </div>
+
+            <span id="streamgraph-date" aria-live="polite">
+              September 2025
+            </span>
+          </div>
+
+          <div class="streamgraph-playback-controls">
+            <button
+              id="streamgraph-play"
+              type="button"
+              aria-label="Play timeline">
+              ▶ Play
+            </button>
+
+            <button
+              id="streamgraph-reset"
+              type="button"
+              aria-label="Reset timeline">
+              ↺ Reset
+            </button>
+
+            <input
+              id="streamgraph-timeline"
+              type="range"
+              min="0"
+              max="11"
+              value="0"
+              step="1"
+              aria-label="Choose month in the timeline"
+            />
+
+            <span id="streamgraph-timeline-label">
+              1 / 12
+            </span>
+          </div>
+
+          <!-- Updates as the timeline progresses -->
+          <div
+            id="streamgraph-month-summary"
+            class="streamgraph-month-summary"
+            aria-live="polite">
+          </div>
+        </div>
+
+        <!-- Loading status and topic legend -->
+        <p id="streamgraph-status" class="chart-help" role="status">
+          Loading monthly pageview data…
+        </p>
+
+        <div
+          id="streamgraph-legend"
+          class="streamgraph-legend"
+          aria-label="Topic color legend">
+        </div>
+
+        <!-- Main streamgraph and hover tooltip -->
+        <div id="streamgraph-chart-wrap">
+          <div id="streamgraph"></div>
+
+          <div
+            id="streamgraph-tooltip"
+            class="streamgraph-tooltip"
+            role="status">
+          </div>
+        </div>
+
+        <!-- Methodology note -->
+        <p id="streamgraph-method" class="method-note">
+          Each colored band represents a computing topic. Follow a band across the timeline to explore changes in its monthly Wikipediapageviews. Thicker bands indicate more pageviews.
+          Monthly pageview totals are aggregated by topic. The streamgraph
+          uses a wiggle baseline, so vertical position is relative rather
+          than an absolute pageview measure. 
+        </p>
+      </section>
 
       <section id="vis6" class="visualization-section knowledge-section">
         <div class="section-heading">
@@ -621,6 +773,7 @@
     <script src="js/network.js"></script>
     <script src="js/scatter.js"></script>
     <script src="js/jobs.js"></script>
+    <script src="js/streamgraph.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
