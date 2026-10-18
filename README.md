@@ -393,5 +393,4 @@ Then open `http://localhost:8000`. If a visualization does not load, inspect the
 -   Wikimedia Analytics API: Pageviews ---
     https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/reference/page-views.html
 -   SocialCrawl --- https://www.socialcrawl.dev/
--   "Job Dataset for IT Professionals" --- **add the exact source
-    citation, version/date, and license here**.
+-   "Job Dataset for IT Professionals" --- Rahman, Shafika; Habiba, Kazi; Roy, Sourab; Nur, Fernaz (2025), “Job Dataset for IT Professionals”, Mendeley Data, V1, doi: 10.17632/8b62nm2gmv.1
