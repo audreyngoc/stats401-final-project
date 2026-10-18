@@ -30,8 +30,6 @@ discussion.
 - `proposal.md` — the formatted project proposal.
 - `assets/` — embedded reference figures used by `proposal.md`.
 
-Keep the `assets/` folder in the same directory as `proposal.md` so that all relative image paths render correctly on GitHub. Keep the final report and poster in the repository as well, and add links to them in the Project Deliverables section once their filenames are finalized.
-
 ## Questions we explore
 
 1.  How does a computing topic expand from a starting Wikipedia article?
