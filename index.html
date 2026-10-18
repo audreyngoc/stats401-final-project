@@ -65,7 +65,7 @@
         <a href="#dataset">Dataset</a>
         <a href="#vis1">Popular article paths</a>
         <a href="#vis2">Knowledge network</a>
-        <a href="#scatter-container">Structure &amp; attention</a>
+        <a href="#vis3">Structure &amp; attention</a>
         <a href="#vis4">Pageview streamgraph</a>
         <a href="#vis5">Comparative streamgraph</a>
         <a href="#vis6">Knowledge &amp; jobs</a>
@@ -378,25 +378,19 @@
         </p>
       </section>
 
-      <section class="visualization-section knowledge-section">
-        <h2>3. Structural Importance vs. Reader Attention</h2>
-        <p class="viz-description">
-          This view compares how structurally prominent an article is within
-          Wikipedia with how much reader attention it received from September
-          2025 through August 2026.
-        </p>
-        <p class="viz-description">
-          Articles farther to the right receive links from more Wikipedia
-          articles. Articles higher on the chart received more pageviews. Point
-          size represents PageRank within the selected Artificial Intelligence
-          network.
-        </p>
-        <p class="viz-description">
-          <strong>Working visualization:</strong> This scatterplot is
-          implemented in D3.js using actual processed network and pageview data
-          from the project. Each point represents an article or concept included
-          in the selected Artificial Intelligence network.
-        </p>
+      <section id="vis3" class="visualization-section knowledge-section">
+        <div class="section-heading">
+          <span class="section-number">03</span>
+          <div>
+            <h2>Structural importance vs. reader attention</h2>
+            <p class="viz-description">
+              Compare how structurally prominent an article is within Wikipedia
+              with how much reader attention it received from September 2025
+              through August 2026. Choose a community to show only its articles,
+              then click a point to select it across the views.
+            </p>
+          </div>
+        </div>
         <div class="view-controls">
           <label for="scatter-community">
             Community
@@ -416,7 +410,14 @@
         <div id="scatter-container">
           <div id="scatter"></div>
         </div>
-        <p class="network-note">
+        <p class="method-note">
+          Each point is an article in the selected Artificial Intelligence
+          network. Articles farther to the right receive links from more
+          Wikipedia articles; articles higher on the chart received more
+          pageviews. Point size represents PageRank and color represents a
+          detected community.
+        </p>
+        <p class="method-note">
           Both axes use logarithmic scales because article connectivity and
           pageviews are strongly skewed. Dashed lines show the median values
           among the selected AI concepts.
